@@ -15,6 +15,9 @@
 		A4E621782C4123EC00D90CD5 /* OtteratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */; };
 		A4E621822C4123EC00D90CD5 /* OtteratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */; };
 		A4E621842C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */; };
+		A4E621962C41271800D90CD5 /* empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4E621952C41271800D90CD5 /* empty.txt */; };
+		A4E621982C41274800D90CD5 /* empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4E621972C41274800D90CD5 /* empty.txt */; };
+		A4E6219C2C41278500D90CD5 /* empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4E6219B2C41278500D90CD5 /* empty.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		A4E6217D2C4123EC00D90CD5 /* OtteratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtteratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorUITests.swift; sourceTree = "<group>"; };
 		A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4E621952C41271800D90CD5 /* empty.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = empty.txt; sourceTree = "<group>"; };
+		A4E621972C41274800D90CD5 /* empty.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = empty.txt; sourceTree = "<group>"; };
+		A4E6219B2C41278500D90CD5 /* empty.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = empty.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +108,6 @@
 				A4E621912C41248600D90CD5 /* View */,
 				A4E621902C41247000D90CD5 /* Model */,
 				A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */,
-				A4E621662C4123EA00D90CD5 /* ContentView.swift */,
-				A4E621682C4123EA00D90CD5 /* Item.swift */,
 				A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */,
 				A4E6216C2C4123EC00D90CD5 /* Preview Content */,
 			);
@@ -138,6 +142,7 @@
 		A4E621902C41247000D90CD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A4E621682C4123EA00D90CD5 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 		A4E621912C41248600D90CD5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4E621662C4123EA00D90CD5 /* ContentView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +158,7 @@
 		A4E621922C41248E00D90CD5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A4E6219B2C41278500D90CD5 /* empty.txt */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -159,6 +166,7 @@
 		A4E621932C4124E800D90CD5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				A4E621972C41274800D90CD5 /* empty.txt */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -166,6 +174,7 @@
 		A4E621942C4124FD00D90CD5 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				A4E621952C41271800D90CD5 /* empty.txt */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -276,6 +285,9 @@
 			files = (
 				A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */,
 				A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */,
+				A4E621982C41274800D90CD5 /* empty.txt in Resources */,
+				A4E621962C41271800D90CD5 /* empty.txt in Resources */,
+				A4E6219C2C41278500D90CD5 /* empty.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
