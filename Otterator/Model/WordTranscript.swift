@@ -31,8 +31,14 @@ class WordTranscript {
     }
 }
 
-struct VoiceAnalyst {
+@Model
+class VoiceAnalyst {
     var pitch : [Double]
     var volume : [Double]
+    
+    init(pitch: [Double], volume: [Double]) {
+        self.pitch = pitch
+        self.volume = volume
+    }
 }
     
