@@ -1,0 +1,637 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */; };
+		A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621662C4123EA00D90CD5 /* ContentView.swift */; };
+		A4E621692C4123EA00D90CD5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621682C4123EA00D90CD5 /* Item.swift */; };
+		A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */; };
+		A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E6216D2C4123EC00D90CD5 /* Preview Assets.xcassets */; };
+		A4E621782C4123EC00D90CD5 /* OtteratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */; };
+		A4E621822C4123EC00D90CD5 /* OtteratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */; };
+		A4E621842C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4E621742C4123EC00D90CD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4E621592C4123EA00D90CD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4E621602C4123EA00D90CD5;
+			remoteInfo = Otterator;
+		};
+		A4E6217E2C4123EC00D90CD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4E621592C4123EA00D90CD5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4E621602C4123EA00D90CD5;
+			remoteInfo = Otterator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A4E621612C4123EA00D90CD5 /* Otterator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otterator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorApp.swift; sourceTree = "<group>"; };
+		A4E621662C4123EA00D90CD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A4E621682C4123EA00D90CD5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4E6216D2C4123EC00D90CD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A4E621732C4123EC00D90CD5 /* OtteratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtteratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorTests.swift; sourceTree = "<group>"; };
+		A4E6217D2C4123EC00D90CD5 /* OtteratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtteratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorUITests.swift; sourceTree = "<group>"; };
+		A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4E6215E2C4123EA00D90CD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E621702C4123EC00D90CD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E6217A2C4123EC00D90CD5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4E621582C4123EA00D90CD5 = {
+			isa = PBXGroup;
+			children = (
+				A4E621632C4123EA00D90CD5 /* Otterator */,
+				A4E621762C4123EC00D90CD5 /* OtteratorTests */,
+				A4E621802C4123EC00D90CD5 /* OtteratorUITests */,
+				A4E621622C4123EA00D90CD5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4E621622C4123EA00D90CD5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4E621612C4123EA00D90CD5 /* Otterator.app */,
+				A4E621732C4123EC00D90CD5 /* OtteratorTests.xctest */,
+				A4E6217D2C4123EC00D90CD5 /* OtteratorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4E621632C4123EA00D90CD5 /* Otterator */ = {
+			isa = PBXGroup;
+			children = (
+				A4E621942C4124FD00D90CD5 /* Extension */,
+				A4E621932C4124E800D90CD5 /* Utils */,
+				A4E621922C41248E00D90CD5 /* ViewModel */,
+				A4E621912C41248600D90CD5 /* View */,
+				A4E621902C41247000D90CD5 /* Model */,
+				A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */,
+				A4E621662C4123EA00D90CD5 /* ContentView.swift */,
+				A4E621682C4123EA00D90CD5 /* Item.swift */,
+				A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */,
+				A4E6216C2C4123EC00D90CD5 /* Preview Content */,
+			);
+			path = Otterator;
+			sourceTree = "<group>";
+		};
+		A4E6216C2C4123EC00D90CD5 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A4E6216D2C4123EC00D90CD5 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A4E621762C4123EC00D90CD5 /* OtteratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */,
+			);
+			path = OtteratorTests;
+			sourceTree = "<group>";
+		};
+		A4E621802C4123EC00D90CD5 /* OtteratorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */,
+				A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */,
+			);
+			path = OtteratorUITests;
+			sourceTree = "<group>";
+		};
+		A4E621902C41247000D90CD5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4E621912C41248600D90CD5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4E621922C41248E00D90CD5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4E621932C4124E800D90CD5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		A4E621942C4124FD00D90CD5 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4E621602C4123EA00D90CD5 /* Otterator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4E621872C4123EC00D90CD5 /* Build configuration list for PBXNativeTarget "Otterator" */;
+			buildPhases = (
+				A4E6215D2C4123EA00D90CD5 /* Sources */,
+				A4E6215E2C4123EA00D90CD5 /* Frameworks */,
+				A4E6215F2C4123EA00D90CD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Otterator;
+			productName = Otterator;
+			productReference = A4E621612C4123EA00D90CD5 /* Otterator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4E621722C4123EC00D90CD5 /* OtteratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4E6218A2C4123EC00D90CD5 /* Build configuration list for PBXNativeTarget "OtteratorTests" */;
+			buildPhases = (
+				A4E6216F2C4123EC00D90CD5 /* Sources */,
+				A4E621702C4123EC00D90CD5 /* Frameworks */,
+				A4E621712C4123EC00D90CD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4E621752C4123EC00D90CD5 /* PBXTargetDependency */,
+			);
+			name = OtteratorTests;
+			productName = OtteratorTests;
+			productReference = A4E621732C4123EC00D90CD5 /* OtteratorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4E6217C2C4123EC00D90CD5 /* OtteratorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4E6218D2C4123EC00D90CD5 /* Build configuration list for PBXNativeTarget "OtteratorUITests" */;
+			buildPhases = (
+				A4E621792C4123EC00D90CD5 /* Sources */,
+				A4E6217A2C4123EC00D90CD5 /* Frameworks */,
+				A4E6217B2C4123EC00D90CD5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4E6217F2C4123EC00D90CD5 /* PBXTargetDependency */,
+			);
+			name = OtteratorUITests;
+			productName = OtteratorUITests;
+			productReference = A4E6217D2C4123EC00D90CD5 /* OtteratorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4E621592C4123EA00D90CD5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					A4E621602C4123EA00D90CD5 = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					A4E621722C4123EC00D90CD5 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A4E621602C4123EA00D90CD5;
+					};
+					A4E6217C2C4123EC00D90CD5 = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A4E621602C4123EA00D90CD5;
+					};
+				};
+			};
+			buildConfigurationList = A4E6215C2C4123EA00D90CD5 /* Build configuration list for PBXProject "Otterator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4E621582C4123EA00D90CD5;
+			productRefGroup = A4E621622C4123EA00D90CD5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4E621602C4123EA00D90CD5 /* Otterator */,
+				A4E621722C4123EC00D90CD5 /* OtteratorTests */,
+				A4E6217C2C4123EC00D90CD5 /* OtteratorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4E6215F2C4123EA00D90CD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */,
+				A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E621712C4123EC00D90CD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E6217B2C4123EC00D90CD5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4E6215D2C4123EA00D90CD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */,
+				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
+				A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E6216F2C4123EC00D90CD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E621782C4123EC00D90CD5 /* OtteratorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4E621792C4123EC00D90CD5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4E621822C4123EC00D90CD5 /* OtteratorUITests.swift in Sources */,
+				A4E621842C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4E621752C4123EC00D90CD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4E621602C4123EA00D90CD5 /* Otterator */;
+			targetProxy = A4E621742C4123EC00D90CD5 /* PBXContainerItemProxy */;
+		};
+		A4E6217F2C4123EC00D90CD5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4E621602C4123EA00D90CD5 /* Otterator */;
+			targetProxy = A4E6217E2C4123EC00D90CD5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A4E621852C4123EC00D90CD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A4E621862C4123EC00D90CD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4E621882C4123EC00D90CD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
+				DEVELOPMENT_TEAM = Y834K368F4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Otterator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4E621892C4123EC00D90CD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
+				DEVELOPMENT_TEAM = Y834K368F4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Otterator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A4E6218B2C4123EC00D90CD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y834K368F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.OtteratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otterator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Otterator";
+			};
+			name = Debug;
+		};
+		A4E6218C2C4123EC00D90CD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y834K368F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.OtteratorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Otterator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Otterator";
+			};
+			name = Release;
+		};
+		A4E6218E2C4123EC00D90CD5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y834K368F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.OtteratorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Otterator;
+			};
+			name = Debug;
+		};
+		A4E6218F2C4123EC00D90CD5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y834K368F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.OtteratorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Otterator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4E6215C2C4123EA00D90CD5 /* Build configuration list for PBXProject "Otterator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E621852C4123EC00D90CD5 /* Debug */,
+				A4E621862C4123EC00D90CD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4E621872C4123EC00D90CD5 /* Build configuration list for PBXNativeTarget "Otterator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E621882C4123EC00D90CD5 /* Debug */,
+				A4E621892C4123EC00D90CD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4E6218A2C4123EC00D90CD5 /* Build configuration list for PBXNativeTarget "OtteratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E6218B2C4123EC00D90CD5 /* Debug */,
+				A4E6218C2C4123EC00D90CD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4E6218D2C4123EC00D90CD5 /* Build configuration list for PBXNativeTarget "OtteratorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4E6218E2C4123EC00D90CD5 /* Debug */,
+				A4E6218F2C4123EC00D90CD5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A4E621592C4123EA00D90CD5 /* Project object */;
+}
