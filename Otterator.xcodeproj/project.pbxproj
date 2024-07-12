@@ -18,6 +18,7 @@
 		A4E621962C41271800D90CD5 /* empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4E621952C41271800D90CD5 /* empty.txt */; };
 		A4E621982C41274800D90CD5 /* empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4E621972C41274800D90CD5 /* empty.txt */; };
 		A4E6219C2C41278500D90CD5 /* empty.txt in Resources */ = {isa = PBXBuildFile; fileRef = A4E6219B2C41278500D90CD5 /* empty.txt */; };
+		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		A4E621952C41271800D90CD5 /* empty.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = empty.txt; sourceTree = "<group>"; };
 		A4E621972C41274800D90CD5 /* empty.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = empty.txt; sourceTree = "<group>"; };
 		A4E6219B2C41278500D90CD5 /* empty.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = empty.txt; sourceTree = "<group>"; };
+		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				A4E621682C4123EA00D90CD5 /* Item.swift */,
+				EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */,
+				EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */,
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
 				A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */,
 			);
