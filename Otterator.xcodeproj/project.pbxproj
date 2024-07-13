@@ -20,6 +20,7 @@
 		A4F1EC342C422F9E00A633CA /* CustomTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC332C422F9E00A633CA /* CustomTranscript.swift */; };
 		A4F1EC4A2C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4F1EC492C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf */; };
 		A4F1EC4D2C42519600A633CA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC4C2C42519600A633CA /* Color.swift */; };
+		A4F1EC4F2C42739600A633CA /* InformationModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC4E2C42739600A633CA /* InformationModalView.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		A4F1EC482C42491600A633CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A4F1EC492C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlaypenSans-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		A4F1EC4C2C42519600A633CA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		A4F1EC4E2C42739600A633CA /* InformationModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationModalView.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -164,6 +166,7 @@
 				A4F1EC302C413BC900A633CA /* Component */,
 				A4E621662C4123EA00D90CD5 /* ContentView.swift */,
 				A4F1EC2E2C41386800A633CA /* TranscriptView.swift */,
+				A4F1EC4E2C42739600A633CA /* InformationModalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -333,6 +336,7 @@
 				A4F1EC322C42289700A633CA /* CustomProgressView.swift in Sources */,
 				A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */,
 				A4F1EC4D2C42519600A633CA /* Color.swift in Sources */,
+				A4F1EC4F2C42739600A633CA /* InformationModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

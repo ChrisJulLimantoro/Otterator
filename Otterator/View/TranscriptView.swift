@@ -11,6 +11,8 @@ struct TranscriptView: View {
     @State var segment = "Transcript"
     @State var isPlay = false
     @State var progress:CGFloat = 0
+    @State var isPresented:[Bool] = [false,false,false]
+    @State var modal = ""
     var duration:Double = 5
     var tabs = ["Transcript","Summary"]
     var body: some View {
@@ -70,11 +72,12 @@ struct TranscriptView: View {
                         }
                         Button(action: {
                             // Action for the edit
+                            
                         }) {
                             Label("Edit Content", systemImage: "pencil")
                         }
                         Button(action: {
-                            // Action for the information
+                            isPresented[2] = true
                         }) {
                             Label("Information", systemImage: "i.circle")
                         }
@@ -83,6 +86,12 @@ struct TranscriptView: View {
                             .imageScale(.large)
                     }
                 }
+            }
+            .sheet(isPresented:$isPresented[2]){
+                    InformationModalView()
+                        .presentationDetents([.large])
+                        .presentationBackgroundInteraction(.disabled)
+                        .presentationBackground(.ultraThickMaterial)
             }
         }
     }
