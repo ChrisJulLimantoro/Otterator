@@ -15,6 +15,8 @@
 		A4E621782C4123EC00D90CD5 /* OtteratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */; };
 		A4E621822C4123EC00D90CD5 /* OtteratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */; };
 		A4E621842C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */; };
+		A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC2E2C41386800A633CA /* TranscriptView.swift */; };
+		A4F1EC322C42289700A633CA /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC312C42289700A633CA /* CustomProgressView.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +50,8 @@
 		A4E6217D2C4123EC00D90CD5 /* OtteratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtteratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorUITests.swift; sourceTree = "<group>"; };
 		A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4F1EC2E2C41386800A633CA /* TranscriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptView.swift; sourceTree = "<group>"; };
+		A4F1EC312C42289700A633CA /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,9 +104,6 @@
 		A4E621632C4123EA00D90CD5 /* Otterator */ = {
 			isa = PBXGroup;
 			children = (
-				A4E621942C4124FD00D90CD5 /* Extension */,
-				A4E621932C4124E800D90CD5 /* Utils */,
-				A4E621922C41248E00D90CD5 /* ViewModel */,
 				A4E621912C41248600D90CD5 /* View */,
 				A4E621902C41247000D90CD5 /* Model */,
 				A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */,
@@ -150,30 +151,19 @@
 		A4E621912C41248600D90CD5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4F1EC302C413BC900A633CA /* Component */,
 				A4E621662C4123EA00D90CD5 /* ContentView.swift */,
+				A4F1EC2E2C41386800A633CA /* TranscriptView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		A4E621922C41248E00D90CD5 /* ViewModel */ = {
+		A4F1EC302C413BC900A633CA /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				A4F1EC312C42289700A633CA /* CustomProgressView.swift */,
 			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		A4E621932C4124E800D90CD5 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
-			sourceTree = "<group>";
-		};
-		A4E621942C4124FD00D90CD5 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extension;
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +300,8 @@
 				EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */,
 				EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */,
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
+				A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */,
+				A4F1EC322C42289700A633CA /* CustomProgressView.swift in Sources */,
 				A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
