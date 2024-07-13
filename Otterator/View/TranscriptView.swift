@@ -11,6 +11,7 @@ struct TranscriptView: View {
     @State var segment = "Transcript"
     @State var isPlay = false
     @State var progress:CGFloat = 0
+    var duration:Double = 5
     var tabs = ["Transcript","Summary"]
     var body: some View {
         NavigationStack{
@@ -21,35 +22,22 @@ struct TranscriptView: View {
             }
             .pickerStyle(.segmented)
             .padding(16)
-            ScrollView{
-                VStack(alignment:.leading,spacing:24){
-                    ForEach(0..<100){index in
-                        HStack(alignment:.top,spacing:4){
-                            Text("Hai")
-                            Text("there")
-                            Text("you")
-                            Text("are")
-                            Text("so")
-                            Text("cool")
-                            Text("i")
-                            Text("like")
-                            Text("you")
-                            Text("very")
-                            Text("much")
-                        }
-                    }
-                }
-            }
-            .padding(8)
+            CustomTranscript(progress:$progress)
+            .padding(.horizontal,20)
+            .padding(.vertical,8)
             Spacer()
-            HStack(alignment:.center){
-                Text("00:00")
+            VStack{
                 CustomProgressView(progress:$progress)
                     .frame(height:20)
                     .padding(.horizontal,16)
-                Text("05:00")
+                HStack(alignment:.center){
+                    Text(formatSec(progress * duration))
+                    Spacer()
+                    Text(formatSec(duration))
+                }.padding(.horizontal,6)
             }
             .padding(.horizontal,16)
+            .padding(.vertical,12)
             HStack{
                 Spacer()
                 Image(systemName:"gobackward.15")
@@ -60,7 +48,9 @@ struct TranscriptView: View {
                     .resizable()
                     .frame(width:40,height:40)
                     .onTapGesture{
-                        isPlay = !isPlay
+                        withAnimation(.easeIn){
+                            isPlay = !isPlay
+                        }
                     }
                 Spacer()
                 Image(systemName:"goforward.15")
@@ -95,6 +85,13 @@ struct TranscriptView: View {
                 }
             }
         }
+    }
+    func formatSec(_ second:Double) -> String
+    {
+        let totalSeconds = Int(floor(second))
+        let minutes = totalSeconds / 60
+        let remainingSeconds = totalSeconds % 60
+        return String(format: "%02d:%02d", minutes, remainingSeconds)
     }
 }
 

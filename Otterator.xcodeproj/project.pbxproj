@@ -17,6 +17,9 @@
 		A4E621842C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */; };
 		A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC2E2C41386800A633CA /* TranscriptView.swift */; };
 		A4F1EC322C42289700A633CA /* CustomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC312C42289700A633CA /* CustomProgressView.swift */; };
+		A4F1EC342C422F9E00A633CA /* CustomTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC332C422F9E00A633CA /* CustomTranscript.swift */; };
+		A4F1EC4A2C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4F1EC492C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf */; };
+		A4F1EC4D2C42519600A633CA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC4C2C42519600A633CA /* Color.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +55,10 @@
 		A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		A4F1EC2E2C41386800A633CA /* TranscriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptView.swift; sourceTree = "<group>"; };
 		A4F1EC312C42289700A633CA /* CustomProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProgressView.swift; sourceTree = "<group>"; };
+		A4F1EC332C422F9E00A633CA /* CustomTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTranscript.swift; sourceTree = "<group>"; };
+		A4F1EC482C42491600A633CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A4F1EC492C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlaypenSans-VariableFont_wght.ttf"; sourceTree = "<group>"; };
+		A4F1EC4C2C42519600A633CA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -104,6 +111,9 @@
 		A4E621632C4123EA00D90CD5 /* Otterator */ = {
 			isa = PBXGroup;
 			children = (
+				A4F1EC4B2C42518900A633CA /* Extension */,
+				A4F1EC482C42491600A633CA /* Info.plist */,
+				A4F1EC352C4247E700A633CA /* Font */,
 				A4E621912C41248600D90CD5 /* View */,
 				A4E621902C41247000D90CD5 /* Model */,
 				A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */,
@@ -162,8 +172,25 @@
 			isa = PBXGroup;
 			children = (
 				A4F1EC312C42289700A633CA /* CustomProgressView.swift */,
+				A4F1EC332C422F9E00A633CA /* CustomTranscript.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		A4F1EC352C4247E700A633CA /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				A4F1EC492C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		A4F1EC4B2C42518900A633CA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A4F1EC4C2C42519600A633CA /* Color.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +298,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */,
+				A4F1EC4A2C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf in Resources */,
 				A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,11 +326,13 @@
 			files = (
 				A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */,
 				EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */,
+				A4F1EC342C422F9E00A633CA /* CustomTranscript.swift in Sources */,
 				EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */,
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
 				A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */,
 				A4F1EC322C42289700A633CA /* CustomProgressView.swift in Sources */,
 				A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */,
+				A4F1EC4D2C42519600A633CA /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,6 +499,7 @@
 				DEVELOPMENT_TEAM = Y834K368F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Otterator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -498,6 +529,7 @@
 				DEVELOPMENT_TEAM = Y834K368F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Otterator/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

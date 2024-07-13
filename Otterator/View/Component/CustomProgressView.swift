@@ -31,11 +31,15 @@ struct CustomProgressView: View {
                                    geometry.size.width) - 10)
             }
             .onTapGesture(coordinateSpace: .local){ location in
-                print("location \(location)")
                 withAnimation(.easeInOut){
                     progress = min(location.x / geometry.size.width,1)
                 }
             }
         }
     }
+}
+
+#Preview {
+    @State var progress:CGFloat = 0
+    return CustomProgressView(progress: $progress)
 }
