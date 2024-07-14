@@ -25,7 +25,7 @@ struct OtteratorApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecordingView()
         }
         .modelContainer(sharedModelContainer)
     }

@@ -17,6 +17,9 @@
 		A4E621842C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
+		EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1122C4138010025FAE6 /* RecordingView.swift */; };
+		EEB8D1152C42816B0025FAE6 /* RecordModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1142C42816B0025FAE6 /* RecordModal.swift */; };
+		EEB8D1172C4298710025FAE6 /* MicRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1162C4298710025FAE6 /* MicRecorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		EEB8D1122C4138010025FAE6 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		EEB8D1142C42816B0025FAE6 /* RecordModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModal.swift; sourceTree = "<group>"; };
+		EEB8D1162C4298710025FAE6 /* MicRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicRecorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				A4E621662C4123EA00D90CD5 /* ContentView.swift */,
+				EEB8D1122C4138010025FAE6 /* RecordingView.swift */,
+				EEB8D1142C42816B0025FAE6 /* RecordModal.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +166,7 @@
 		A4E621922C41248E00D90CD5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EEB8D1162C4298710025FAE6 /* MicRecorder.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -306,8 +315,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB8D1152C42816B0025FAE6 /* RecordModal.swift in Sources */,
 				A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */,
 				EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */,
+				EEB8D1172C4298710025FAE6 /* MicRecorder.swift in Sources */,
+				EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */,
 				EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */,
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
 				A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */,
@@ -474,9 +486,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = 46T3YJRUSN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -503,9 +517,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = 46T3YJRUSN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

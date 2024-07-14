@@ -16,16 +16,18 @@ class WordTranscript {
     var voice_analysis: VoiceAnalyst
     var avg_pitch : Double
     var avg_volume : Double
-    var corrected_word : String
+    var avg_pace : Double
+    var corrected_word : String?
     var is_pause: Bool
     
-    init(word: String, timestamp: Double, duration: Double, voice_analysis: VoiceAnalyst, avg_pitch: Double, avg_volume: Double, corrected_word: String, is_pause: Bool) {
+    init(word: String, timestamp: Double, duration: Double, voice_analysis: VoiceAnalyst, avg_pitch: Double, avg_volume: Double, avg_pace: Double, corrected_word: String? = nil, is_pause: Bool) {
         self.word = word
         self.timestamp = timestamp
         self.duration = duration
         self.voice_analysis = voice_analysis
         self.avg_pitch = avg_pitch
         self.avg_volume = avg_volume
+        self.avg_pace = avg_pace
         self.corrected_word = corrected_word
         self.is_pause = is_pause
     }
