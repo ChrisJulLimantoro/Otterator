@@ -22,6 +22,9 @@
 		A4F1EC4D2C42519600A633CA /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC4C2C42519600A633CA /* Color.swift */; };
 		A4F1EC4F2C42739600A633CA /* InformationModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC4E2C42739600A633CA /* InformationModalView.swift */; };
 		A4F1EC512C42AC9D00A633CA /* TranscriptContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC502C42AC9D00A633CA /* TranscriptContentView.swift */; };
+		A4F1EC532C45215800A633CA /* hello.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4F1EC522C45215800A633CA /* hello.m4a */; };
+		A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */; };
+		A4F1EC582C4667B800A633CA /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC572C4667B800A633CA /* GradientText.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
 /* End PBXBuildFile section */
@@ -63,6 +66,9 @@
 		A4F1EC4C2C42519600A633CA /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A4F1EC4E2C42739600A633CA /* InformationModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationModalView.swift; sourceTree = "<group>"; };
 		A4F1EC502C42AC9D00A633CA /* TranscriptContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptContentView.swift; sourceTree = "<group>"; };
+		A4F1EC522C45215800A633CA /* hello.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hello.m4a; sourceTree = "<group>"; };
+		A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptViewModel.swift; sourceTree = "<group>"; };
+		A4F1EC572C4667B800A633CA /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,12 +121,14 @@
 		A4E621632C4123EA00D90CD5 /* Otterator */ = {
 			isa = PBXGroup;
 			children = (
+				A4F1EC522C45215800A633CA /* hello.m4a */,
 				A4F1EC4B2C42518900A633CA /* Extension */,
 				A4F1EC482C42491600A633CA /* Info.plist */,
 				A4F1EC352C4247E700A633CA /* Font */,
 				A4E621912C41248600D90CD5 /* View */,
 				A4E621902C41247000D90CD5 /* Model */,
 				A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */,
+				A4F1EC542C452CD300A633CA /* ViewModel */,
 				A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */,
 				A4E6216C2C4123EC00D90CD5 /* Preview Content */,
 			);
@@ -179,6 +187,7 @@
 				A4F1EC312C42289700A633CA /* CustomProgressView.swift */,
 				A4F1EC332C422F9E00A633CA /* CustomTranscript.swift */,
 				A4F1EC502C42AC9D00A633CA /* TranscriptContentView.swift */,
+				A4F1EC572C4667B800A633CA /* GradientText.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -197,6 +206,14 @@
 				A4F1EC4C2C42519600A633CA /* Color.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A4F1EC542C452CD300A633CA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */,
+				A4F1EC532C45215800A633CA /* hello.m4a in Resources */,
 				A4F1EC4A2C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf in Resources */,
 				A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */,
 			);
@@ -336,10 +354,12 @@
 				EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */,
 				A4F1EC512C42AC9D00A633CA /* TranscriptContentView.swift in Sources */,
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
+				A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */,
 				A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */,
 				A4F1EC322C42289700A633CA /* CustomProgressView.swift in Sources */,
 				A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */,
 				A4F1EC4D2C42519600A633CA /* Color.swift in Sources */,
+				A4F1EC582C4667B800A633CA /* GradientText.swift in Sources */,
 				A4F1EC4F2C42739600A633CA /* InformationModalView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

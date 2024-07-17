@@ -6,24 +6,26 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct TranscriptContentView: View {
     @State var progress:CGFloat = 0
     @State var isPlay = false
-    var duration:Double = 5
+    @Bindable var viewModel: TranscriptViewModel
+    
     var body: some View {
-        CustomTranscript(progress:$progress)
+        CustomTranscript(viewModel:viewModel)
             .padding(.horizontal,20)
             .padding(.vertical,8)
         Spacer()
         VStack{
-            CustomProgressView(progress:$progress)
+            CustomProgressView(viewModel:viewModel)
                 .frame(height:20)
                 .padding(.horizontal,16)
             HStack(alignment:.center){
-                Text(formatSec(progress * duration))
+                Text(formatSec(viewModel.currentTime))
                 Spacer()
-                Text(formatSec(duration))
+                Text(formatSec(viewModel.audio.duration))
             }.padding(.horizontal,6)
         }
         .padding(.horizontal,16)
@@ -33,19 +35,27 @@ struct TranscriptContentView: View {
             Image(systemName:"gobackward.15")
                 .resizable()
                 .frame(width:40,height:40)
+                .onTapGesture{
+                    withAnimation(.easeInOut){
+                        viewModel.reduceSeconds(15)
+                    }
+                }
             Spacer()
-            Image(systemName: !isPlay ? "play.fill" : "pause.fill")
+            Image(systemName: viewModel.isPlaying ? "pause.fill" : "play.fill")
                 .resizable()
                 .frame(width:40,height:40)
                 .onTapGesture{
-                    withAnimation(.easeIn){
-                        isPlay = !isPlay
-                    }
+                    viewModel.audioToogle()
                 }
             Spacer()
             Image(systemName:"goforward.15")
                 .resizable()
                 .frame(width:40,height:40)
+                .onTapGesture{
+                    withAnimation(.easeInOut){
+                        viewModel.addSeconds(15)
+                    }
+                }
             Spacer()
         }
     }
@@ -58,6 +68,6 @@ struct TranscriptContentView: View {
     }
 }
 
-#Preview {
-    TranscriptContentView()
-}
+//#Preview {
+//    TranscriptContentView()
+//}

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AVFAudio
 
 struct TranscriptView: View {
     @State var segment = "Transcript"
@@ -13,7 +14,9 @@ struct TranscriptView: View {
     @State var progress:CGFloat = 0
     @State var isPresented:[Bool] = [false,false,false]
     @State var modal = ""
-    var duration:Double = 5
+    
+    @State var viewModel = TranscriptViewModel()
+    
     var tabs = ["Transcript","Summary"]
     var body: some View {
         NavigationStack{
@@ -27,7 +30,7 @@ struct TranscriptView: View {
                 .padding(16)
                 
                 if segment == "Transcript" {
-                    TranscriptContentView()
+                    TranscriptContentView(viewModel: viewModel)
                 } else {
                     VStack{
                         Spacer()
@@ -74,5 +77,5 @@ struct TranscriptView: View {
 }
 
 #Preview {
-    TranscriptView()
+    return TranscriptView()
 }

@@ -6,13 +6,14 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct CustomTranscript: View {
-    @Binding var progress:CGFloat
-    var duration:Double = 5
+    //    @Binding var progress:CGFloat
+    @Bindable var viewModel:TranscriptViewModel
     var text:[WordTranscript] = [
         WordTranscript(word: "hai,", timestamp: 0, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.1, avg_volume: 25, avg_pace : 5, corrected_word: "", is_pause: false),
-        WordTranscript(word: "//", timestamp: 0.3, duration: 0.2, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.2, avg_volume: 20,avg_pace : 12, corrected_word: "", is_pause: true),
+        WordTranscript(word: "//", timestamp: 0.3, duration: 0.2, voice_analysis: VoiceAnalyst(pitch: [], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.2, avg_volume: 20,avg_pace : 12, corrected_word: "", is_pause: true),
         WordTranscript(word: "how", timestamp: 0.5, duration: 0.2, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.8, avg_volume: 12,avg_pace : 3, corrected_word: "", is_pause: false),
         WordTranscript(word: "are", timestamp: 0.7, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.5, avg_volume: 20,avg_pace : 15, corrected_word: "", is_pause: false),
         WordTranscript(word: "you?", timestamp: 1, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.5, avg_volume: 65,avg_pace : 16, corrected_word: "", is_pause: false),
@@ -28,8 +29,14 @@ struct CustomTranscript: View {
     var body: some View {
         ScrollView{
             VStack(alignment:.leading,spacing:20){
-                ForEach(0..<splitText(text: text, maxLength:   maxChar).count, id:\.self){rowIndex in
-                    let wordsRow = splitText(text: text, maxLength:   maxChar)[rowIndex]
+                ForEach(0..<splitText(text: text, maxLength:maxChar).count, id:\.self){rowIndex in
+                    let wordsRow = splitText(text: text, maxLength:maxChar)[rowIndex]
+//                    if !wordsRow.isEmpty {
+//                        Circle()
+//                            .frame(width:16,height:16)
+//                            .opacity((viewModel.currentTime > wordsRow.first!.first!.timestamp && viewModel.currentTime < (wordsRow.last!.last!.timestamp + wordsRow.last!.last!.duration)) ? 1 : 0)
+//                            
+//                    }
                     HStack{
                         ForEach(wordsRow.indices, id:\.self){colIndex in
                             let group = wordsRow[colIndex]
@@ -37,18 +44,18 @@ struct CustomTranscript: View {
                                 HStack{
                                     ForEach(group.indices, id:\.self){index in
                                         let wordCol = group[index]
-                                        Text(wordCol.word)
-                                            .font(.custom("Playpen Sans",size:16))
-                                            .fontWeight(wordCol.avg_volume >= highVolume && !wordCol.is_pause ? .bold : .regular)
-                                            .textCase(wordCol.avg_pace < slowPace ? .uppercase : .lowercase)
-                                            .onTapGesture {
-                                                withAnimation(.easeIn){
-                                                    progress = wordCol.timestamp / duration
-                                                }
+                                        GradientText(
+                                            text: wordCol,
+                                            time: viewModel.currentTime
+                                        )
+                                        .onTapGesture {
+                                            withAnimation(.easeInOut){
+                                                viewModel.changeLocation(wordCol.timestamp)
                                             }
-                                            .onLongPressGesture(minimumDuration:0.8){
-                                                // open modal
-                                            }
+                                        }
+                                        .onLongPressGesture(minimumDuration:0.8){
+                                            // open modal
+                                        }
                                     }
                                 }
                             }
@@ -124,9 +131,10 @@ struct CustomTranscript: View {
         }
         return lines
     }
+    
 }
 
-#Preview {
-    @State var progress:CGFloat = 0
-    return CustomTranscript(progress: $progress,duration: 5)
-}
+//#Preview {
+////    @State var progress:CGFloat = 0
+//    return CustomTranscript()
+//}
