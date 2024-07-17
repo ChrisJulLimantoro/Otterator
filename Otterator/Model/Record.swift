@@ -8,8 +8,8 @@
 import Foundation
 import SwiftData
 
-@Model
-class Record {
+//@Model
+struct Record {
     var id: UUID
     var title: String
     var audio_file: String
