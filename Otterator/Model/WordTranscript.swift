@@ -1,0 +1,58 @@
+//
+//  Word.swift
+//  Otterator
+//
+//  Created by Bayu Aditya Triwibowo on 12/07/24.
+//
+
+import Foundation
+import SwiftData
+
+//@Model
+class WordTranscript {
+    var word : String
+    var timestamp : Double
+    var duration : Double
+    var voice_analysis: VoiceAnalyst
+    var avg_pitch : Double
+    var avg_volume : Double
+    var avg_pace : Double
+    var corrected_word : String
+    var is_pause: Bool
+    
+    init(word: String, timestamp: Double, duration: Double, voice_analysis: VoiceAnalyst, avg_pitch: Double, avg_volume: Double,avg_pace : Double, corrected_word: String, is_pause: Bool) {
+        self.word = word
+        self.timestamp = timestamp
+        self.duration = duration
+        self.voice_analysis = voice_analysis
+        self.avg_pitch = avg_pitch
+        self.avg_pace = avg_pace
+        self.avg_volume = avg_volume
+        self.corrected_word = corrected_word
+        self.is_pause = is_pause
+    }
+    
+    init(){
+        self.word = ""
+        self.timestamp = 0
+        self.duration = 0
+        self.voice_analysis = VoiceAnalyst(pitch:[],volume: [])
+        self.avg_pitch = 0
+        self.avg_volume = 0
+        self.avg_pace = 0
+        self.corrected_word = ""
+        self.is_pause = false
+    }
+}
+
+//@Model
+struct VoiceAnalyst {
+    var pitch : [Double]
+    var volume : [Double]
+    
+    init(pitch: [Double], volume: [Double]) {
+        self.pitch = pitch
+        self.volume = volume
+    }
+}
+    
