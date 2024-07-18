@@ -6,31 +6,29 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct RecordModal: View {
     @Environment(\.dismiss) private var dismiss
-    var micRecorder: MicRecorder
+    
+    var audioRecorder: AudioRecorder
     
     var body: some View {
         NavigationStack{
             VStack{
                 Spacer()
-                Text(micRecorder.recognizedText)
+                Text(audioRecorder.recognizedText)
                     .font(.title)
                     .padding()
-                
-                
                 Spacer()
-                Text(formatTime(micRecorder.recordingTime))
+                Text(formatTime(audioRecorder.recordingTime))
                     .font(.system(size: 46, weight: .bold))
                     .padding()
                 HStack{
                     Button{
-                        micRecorder.isRecording ?
-                        micRecorder.pauseRecording() :
-                        micRecorder.resumeRecording()
+                        // TODO: Start Pause
                     } label: {
-                        Image(systemName: micRecorder.isRecording ? "pause.fill" : "play.fill")
+                        Image(systemName: audioRecorder.recording ? "pause.fill" : "play.fill")
                             .resizable()
                             .frame(width: 33, height: 41)
                             .foregroundStyle(.red)
@@ -46,7 +44,7 @@ struct RecordModal: View {
                     })
                 }
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: {/*TODO: Save file*/}, label: {
+                    Button(action: {audioRecorder.saveRecording(); dismiss()}, label: {
                         Text("Save")
                     })
                 }
@@ -64,5 +62,11 @@ struct RecordModal: View {
 }
 
 #Preview {
-    RecordModal(micRecorder: MicRecorder())
+    do{
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: Record.self, configurations: config)
+        return RecordModal(audioRecorder: AudioRecorder(modelContext: container.mainContext))
+    } catch {
+        fatalError("Failed to create model container.")
+    }
 }

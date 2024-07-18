@@ -6,14 +6,21 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct RecordingView: View {
     @State private var searchText = ""
     @State private var showModal = false
-    @Bindable private var micRecorder = MicRecorder()
+    @Query var records: [Record]
+    @Bindable private var audioRecorder: AudioRecorder
+    
+    init(modelContext: ModelContext) {
+        let audioRecorder = AudioRecorder(modelContext: modelContext)
+        _audioRecorder = Bindable(wrappedValue: audioRecorder)
+    }
     
     var body: some View {
-        NavigationView{
+        NavigationStack{
             VStack{
                 List{
                     VStack{
@@ -35,15 +42,41 @@ struct RecordingView: View {
                             Label("Delete", systemImage: "trash")
                         }
                     }
+                    ForEach(records) { item in
+                        ZStack {
+                            NavigationLink(destination: SwiftUIView(record: item)) { EmptyView()
+                            }.opacity(0.0)
+                            VStack{
+                                HStack{
+                                    Text(item.title)
+                                        .foregroundStyle(.primary)
+                                    Spacer()
+                                }
+                                HStack{
+                                    Text(item.datetime.formatted(date: .long, time: .omitted))
+                                    Spacer()
+                                    Text("\(timeFormat(timeInterval: item.duration))")
+                                }
+                                .foregroundStyle(.secondary)
+                            }
+                        }
+                        .swipeActions(edge: .trailing) {
+                            Button(role: .destructive) {
+                                // TODO: delete item from swift data
+                            } label: {
+                                Label("Delete", systemImage: "trash")
+                            }
+                        }
+                    }
                 }
                 .listStyle(.inset)
                 Spacer()
                 Button{
                     showModal.toggle()
-                    micRecorder.startRecording()
+                    audioRecorder.startRecording()
                 } label: {
                     Circle()
-                        .fill(micRecorder.permissionGranted ? Color.red : Color.gray)
+                        .fill(Color.red)
                         .frame(width: 52, height: 52)
                         .overlay(
                             Circle()
@@ -54,7 +87,6 @@ struct RecordingView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .background(Color(.systemGray6))
-                .disabled(!micRecorder.permissionGranted)
             }
             .navigationTitle("All Recordings")
             .toolbar{
@@ -66,21 +98,27 @@ struct RecordingView: View {
         }
         .sheet(
             isPresented: $showModal,
-            onDismiss: {micRecorder.stopRecording()}
+            onDismiss: {audioRecorder.stopRecording()}
         ){
-            RecordModal(micRecorder: micRecorder)
+            RecordModal(audioRecorder: audioRecorder)
                 .interactiveDismissDisabled()
                 .presentationDetents([.medium])
                 .presentationDragIndicator(.visible)
         }
-        .alert(isPresented: $micRecorder.showAlert) {
-            Alert(title: Text("Permission Denied"),
-                  message: Text(micRecorder.alertMessage),
-                  dismissButton: .default(Text("OK")))
-        }
+    }
+    
+    func timeFormat(timeInterval: Double) -> String {
+        let formatter = DateComponentsFormatter()
+        return formatter.string(from: timeInterval)!
     }
 }
 
 #Preview {
-    RecordingView()
+    do{
+        let config = ModelConfiguration(isStoredInMemoryOnly: true)
+        let container = try ModelContainer(for: Record.self, configurations: config)
+        return RecordingView(modelContext: container.mainContext)
+    } catch {
+        fatalError("Failed to create model container.")
+    }
 }

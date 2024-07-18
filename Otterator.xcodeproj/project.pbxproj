@@ -15,11 +15,14 @@
 		A4E621782C4123EC00D90CD5 /* OtteratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */; };
 		A4E621822C4123EC00D90CD5 /* OtteratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */; };
 		A4E621842C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */; };
+		EE1105512C4917ED008D7AFE /* AudioRecorder+SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1105502C4917ED008D7AFE /* AudioRecorder+SaveData.swift */; };
+		EE4209D72C47B9110087E6E7 /* CustomLMData.bin in Resources */ = {isa = PBXBuildFile; fileRef = EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */; };
+		EE7F38F12C479EBF00D700A0 /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7F38F02C479EBF00D700A0 /* AudioRecorder.swift */; };
+		EEA3EDB52C468FCF008EE13D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
 		EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1122C4138010025FAE6 /* RecordingView.swift */; };
 		EEB8D1152C42816B0025FAE6 /* RecordModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1142C42816B0025FAE6 /* RecordModal.swift */; };
-		EEB8D1172C4298710025FAE6 /* MicRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1162C4298710025FAE6 /* MicRecorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,11 +54,14 @@
 		A4E6217D2C4123EC00D90CD5 /* OtteratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtteratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorUITests.swift; sourceTree = "<group>"; };
 		A4E621832C4123EC00D90CD5 /* OtteratorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EE1105502C4917ED008D7AFE /* AudioRecorder+SaveData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AudioRecorder+SaveData.swift"; sourceTree = "<group>"; };
+		EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = CustomLMData.bin; sourceTree = "<group>"; };
+		EE7F38F02C479EBF00D700A0 /* AudioRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		EEB8D1122C4138010025FAE6 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
 		EEB8D1142C42816B0025FAE6 /* RecordModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModal.swift; sourceTree = "<group>"; };
-		EEB8D1162C4298710025FAE6 /* MicRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicRecorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +112,7 @@
 		A4E621632C4123EA00D90CD5 /* Otterator */ = {
 			isa = PBXGroup;
 			children = (
+				EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */,
 				A4E621942C4124FD00D90CD5 /* Extension */,
 				A4E621932C4124E800D90CD5 /* Utils */,
 				A4E621922C41248E00D90CD5 /* ViewModel */,
@@ -159,6 +166,7 @@
 				A4E621662C4123EA00D90CD5 /* ContentView.swift */,
 				EEB8D1122C4138010025FAE6 /* RecordingView.swift */,
 				EEB8D1142C42816B0025FAE6 /* RecordModal.swift */,
+				EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,7 +174,8 @@
 		A4E621922C41248E00D90CD5 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				EEB8D1162C4298710025FAE6 /* MicRecorder.swift */,
+				EE7F38F02C479EBF00D700A0 /* AudioRecorder.swift */,
+				EE1105502C4917ED008D7AFE /* AudioRecorder+SaveData.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -289,6 +298,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE4209D72C47B9110087E6E7 /* CustomLMData.bin in Resources */,
 				A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */,
 				A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */,
 			);
@@ -317,8 +327,10 @@
 			files = (
 				EEB8D1152C42816B0025FAE6 /* RecordModal.swift in Sources */,
 				A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */,
+				EE1105512C4917ED008D7AFE /* AudioRecorder+SaveData.swift in Sources */,
+				EEA3EDB52C468FCF008EE13D /* SwiftUIView.swift in Sources */,
 				EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */,
-				EEB8D1172C4298710025FAE6 /* MicRecorder.swift in Sources */,
+				EE7F38F12C479EBF00D700A0 /* AudioRecorder.swift in Sources */,
 				EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */,
 				EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */,
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
@@ -489,8 +501,8 @@
 				DEVELOPMENT_TEAM = 46T3YJRUSN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Access on microphone";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Access on speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -520,8 +532,8 @@
 				DEVELOPMENT_TEAM = 46T3YJRUSN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
-				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Access on microphone";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Access on speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

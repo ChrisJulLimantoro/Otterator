@@ -15,13 +15,13 @@ class Record {
     var audio_file: String
     var datetime: Date
     var duration: Double
-    var transcript: [WordTranscript]
+    var transcript: [WordTranscript]?
     var avg_pitch : Double
     var avg_volume : Double
     var avg_pause : Double
     var avg_pace : Double
     
-    init(id: UUID, title: String, audio_file: String, datetime: Date, duration: Double, transcript: [WordTranscript], avg_pitch: Double, avg_volume: Double, avg_pause: Double, avg_pace: Double) {
+    init(id: UUID = UUID(), title: String, audio_file: String, datetime: Date, duration: Double, transcript: [WordTranscript]?, avg_pitch: Double, avg_volume: Double, avg_pause: Double, avg_pace: Double) {
         self.id = id
         self.title = title
         self.audio_file = audio_file
