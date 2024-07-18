@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import AVFoundation
 
 @main
 struct OtteratorApp: App {
@@ -23,7 +24,6 @@ struct OtteratorApp: App {
             fatalError("Could not create ModelContainer: \(error)")
         }
     }()
-
     var body: some Scene {
         WindowGroup {
             RecordingView(modelContext: sharedModelContainer.mainContext)

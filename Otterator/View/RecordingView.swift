@@ -44,7 +44,7 @@ struct RecordingView: View {
                     }
                     ForEach(records) { item in
                         ZStack {
-                            NavigationLink(destination: SwiftUIView(record: item)) { EmptyView()
+                            NavigationLink(destination: TranscriptView(viewModel: TranscriptViewModel(item))) { EmptyView()
                             }.opacity(0.0)
                             VStack{
                                 HStack{
