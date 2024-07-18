@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 //@Model
-struct Record {
+class Record {
     var id: UUID
     var title: String
     var audio_file: String

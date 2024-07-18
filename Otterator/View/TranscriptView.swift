@@ -9,15 +9,16 @@ import SwiftUI
 import AVFAudio
 
 struct TranscriptView: View {
-    @State var segment = "Transcript"
+    @State var segment = "Vocal"
     @State var isPlay = false
     @State var progress:CGFloat = 0
     @State var isPresented:[Bool] = [false,false,false]
-    @State var modal = ""
+    @State var edit:Bool = false
     
-    @State var viewModel = TranscriptViewModel()
+    @State var viewModel = TranscriptViewModel("hello")
+    @State var word:WordTranscript = WordTranscript()
     
-    var tabs = ["Transcript","Summary"]
+    var tabs = ["Vocal","Practice","Summary"]
     var body: some View {
         NavigationStack{
             VStack{
@@ -29,8 +30,10 @@ struct TranscriptView: View {
                 .pickerStyle(.segmented)
                 .padding(16)
                 
-                if segment == "Transcript" {
+                if segment == "Vocal" {
                     TranscriptContentView(viewModel: viewModel)
+                } else if segment == "Practice"{
+                    EditContentView(viewModel: viewModel,word: $word,edit: $edit)
                 } else {
                     VStack{
                         Spacer()
@@ -51,7 +54,7 @@ struct TranscriptView: View {
                         }
                         Button(action: {
                             // Action for the edit
-                            
+                            print(viewModel.text.map{$0.corrected_word})
                         }) {
                             Label("Edit Content", systemImage: "pencil")
                         }
@@ -69,6 +72,12 @@ struct TranscriptView: View {
             .sheet(isPresented:$isPresented[2]){
                 InformationModalView()
                     .presentationDetents([.large])
+                    .presentationBackgroundInteraction(.disabled)
+                    .presentationBackground(.ultraThickMaterial)
+            }
+            .sheet(isPresented:$edit){
+                EditModalView(word: $word)
+                    .presentationDetents([.medium])
                     .presentationBackgroundInteraction(.disabled)
                     .presentationBackground(.ultraThickMaterial)
             }

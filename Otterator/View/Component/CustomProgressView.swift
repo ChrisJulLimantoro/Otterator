@@ -21,19 +21,19 @@ struct CustomProgressView: View {
                 
                 Rectangle()
                     .frame(
-                        width: min((viewModel.currentTime / viewModel.audio.duration) * geometry.size.width,
+                        width: min((viewModel.currentTime / viewModel.audio!.duration) * geometry.size.width,
                                    geometry.size.width),
                         height: 8
                     )
                     .foregroundColor(.black)
                 Circle()
                     .frame(width:16,height:16)
-                    .offset(x: min((viewModel.currentTime / viewModel.audio.duration) * geometry.size.width,
+                    .offset(x: min((viewModel.currentTime / viewModel.audio!.duration) * geometry.size.width,
                                    geometry.size.width) - 10)
             }
             .onTapGesture(coordinateSpace: .local){ location in
                 withAnimation(.easeInOut){
-                    viewModel.changeLocation(min(location.x / geometry.size.width,1) * viewModel.audio.duration)
+                    viewModel.changeLocation(min(location.x / geometry.size.width,1) * viewModel.audio!.duration)
                 }
             }
         }

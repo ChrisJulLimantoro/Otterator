@@ -25,7 +25,7 @@ struct TranscriptContentView: View {
             HStack(alignment:.center){
                 Text(formatSec(viewModel.currentTime))
                 Spacer()
-                Text(formatSec(viewModel.audio.duration))
+                Text(formatSec(viewModel.audio!.duration))
             }.padding(.horizontal,6)
         }
         .padding(.horizontal,16)
