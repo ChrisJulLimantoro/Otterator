@@ -90,10 +90,3 @@ struct EditContentView: View {
         return lines
     }
 }
-
-#Preview {
-    @State var viewModel = TranscriptViewModel("hello")
-    @State var word:WordTranscript = WordTranscript()
-    @State var edit:Bool = false
-    return EditContentView(viewModel: viewModel,word: $word,edit: $edit)
-}

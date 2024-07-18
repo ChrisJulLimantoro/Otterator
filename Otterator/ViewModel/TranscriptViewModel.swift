@@ -30,8 +30,15 @@ class TranscriptViewModel {
     var currentTime:Double = 0
     var timer:Timer?
     
-    init(_ fileName:String){
-        audio = try! AVAudioPlayer(contentsOf: Bundle.main.url(forResource:fileName,withExtension:"m4a")!)
+    init(_ record: Record){
+        do{
+            print(record.transcript.map{$0.map{"\($0.word), \($0.duration), \($0.timestamp)"}})
+            audio = try AVAudioPlayer(contentsOf: URL(string: record.audio_file)!)
+            text = record.transcript!
+        } catch {
+            print(error)
+        }
+        
     }
     
     func audioToogle(){
@@ -43,6 +50,15 @@ class TranscriptViewModel {
     }
     
     func audioPlay(){
+        let playSession = AVAudioSession.sharedInstance()
+        
+        do {
+            try playSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
+        } catch {
+            print("Failed")
+        }
+        
+        audio?.prepareToPlay()
         audio!.play()
         isPlaying = true
         timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { _ in

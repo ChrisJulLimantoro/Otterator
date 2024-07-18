@@ -41,7 +41,7 @@ struct SummaryCardView: View {
                 }
                 .padding()
                 .frame(width: 341, height: 70)
-                .background(CardBackground(bgcolor: .blue))
+                .background(CardBackground())
                 .onTapGesture {
                     withAnimation {
                         showTipsnTricks.toggle()

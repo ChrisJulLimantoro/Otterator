@@ -31,8 +31,14 @@
 		A4F1EC632C491CE000A633CA /* CardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC602C491CE000A633CA /* CardBackground.swift */; };
 		A4F1EC642C491CE000A633CA /* SummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC612C491CE000A633CA /* SummaryCard.swift */; };
 		A4F1EC662C491D1700A633CA /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC652C491D1700A633CA /* SummaryView.swift */; };
+		EE4209D72C47B9110087E6E7 /* CustomLMData.bin in Resources */ = {isa = PBXBuildFile; fileRef = EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */; };
+		EE47A1882C49228C0042D10D /* AudioRecorder+SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */; };
+		EE47A18A2C4922B40042D10D /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1892C4922B40042D10D /* AudioRecorder.swift */; };
+		EEA3EDB52C468FCF008EE13D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
+		EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1122C4138010025FAE6 /* RecordingView.swift */; };
+		EEB8D1152C42816B0025FAE6 /* RecordModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1142C42816B0025FAE6 /* RecordModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,8 +87,14 @@
 		A4F1EC602C491CE000A633CA /* CardBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBackground.swift; sourceTree = "<group>"; };
 		A4F1EC612C491CE000A633CA /* SummaryCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryCard.swift; sourceTree = "<group>"; };
 		A4F1EC652C491D1700A633CA /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = CustomLMData.bin; sourceTree = "<group>"; };
+		EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioRecorder+SaveData.swift"; sourceTree = "<group>"; };
+		EE47A1892C4922B40042D10D /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		EEB8D1122C4138010025FAE6 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
+		EEB8D1142C42816B0025FAE6 /* RecordModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +145,7 @@
 		A4E621632C4123EA00D90CD5 /* Otterator */ = {
 			isa = PBXGroup;
 			children = (
+				EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */,
 				A4F1EC522C45215800A633CA /* hello.m4a */,
 				A4F1EC4B2C42518900A633CA /* Extension */,
 				A4F1EC482C42491600A633CA /* Info.plist */,
@@ -187,6 +200,9 @@
 			children = (
 				A4F1EC302C413BC900A633CA /* Component */,
 				A4E621662C4123EA00D90CD5 /* ContentView.swift */,
+				EEB8D1122C4138010025FAE6 /* RecordingView.swift */,
+				EEB8D1142C42816B0025FAE6 /* RecordModal.swift */,
+				EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */,
 				A4F1EC5D2C48FA3900A633CA /* EditModalView.swift */,
 				A4F1EC4E2C42739600A633CA /* InformationModalView.swift */,
 				A4F1EC652C491D1700A633CA /* SummaryView.swift */,
@@ -229,6 +245,8 @@
 		A4F1EC542C452CD300A633CA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EE47A1892C4922B40042D10D /* AudioRecorder.swift */,
+				EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */,
 				A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */,
 			);
 			path = ViewModel;
@@ -338,6 +356,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE4209D72C47B9110087E6E7 /* CustomLMData.bin in Resources */,
 				A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */,
 				A4F1EC532C45215800A633CA /* hello.m4a in Resources */,
 				A4F1EC4A2C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf in Resources */,
@@ -366,9 +385,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEB8D1152C42816B0025FAE6 /* RecordModal.swift in Sources */,
 				A4F1EC5C2C48EFC600A633CA /* EditContentView.swift in Sources */,
 				A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */,
+				EEA3EDB52C468FCF008EE13D /* SwiftUIView.swift in Sources */,
+				EE47A18A2C4922B40042D10D /* AudioRecorder.swift in Sources */,
 				EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */,
+				EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */,
 				A4F1EC632C491CE000A633CA /* CardBackground.swift in Sources */,
 				A4F1EC342C422F9E00A633CA /* CustomTranscript.swift in Sources */,
 				EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */,
@@ -378,6 +401,7 @@
 				A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */,
 				A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */,
 				A4F1EC662C491D1700A633CA /* SummaryView.swift in Sources */,
+				EE47A1882C49228C0042D10D /* AudioRecorder+SaveData.swift in Sources */,
 				A4F1EC322C42289700A633CA /* CustomProgressView.swift in Sources */,
 				A4F1EC642C491CE000A633CA /* SummaryCard.swift in Sources */,
 				A4F1EC5E2C48FA3900A633CA /* EditModalView.swift in Sources */,
@@ -548,10 +572,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = 46T3YJRUSN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Access on microphone";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Access on speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -578,10 +604,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = 46T3YJRUSN;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Access on microphone";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Access on speech recognition";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
