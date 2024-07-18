@@ -25,6 +25,8 @@
 		A4F1EC532C45215800A633CA /* hello.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4F1EC522C45215800A633CA /* hello.m4a */; };
 		A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */; };
 		A4F1EC582C4667B800A633CA /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC572C4667B800A633CA /* GradientText.swift */; };
+		A4F1EC5C2C48EFC600A633CA /* EditContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC5B2C48EFC600A633CA /* EditContentView.swift */; };
+		A4F1EC5E2C48FA3900A633CA /* EditModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC5D2C48FA3900A633CA /* EditModalView.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +71,8 @@
 		A4F1EC522C45215800A633CA /* hello.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hello.m4a; sourceTree = "<group>"; };
 		A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptViewModel.swift; sourceTree = "<group>"; };
 		A4F1EC572C4667B800A633CA /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
+		A4F1EC5B2C48EFC600A633CA /* EditContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContentView.swift; sourceTree = "<group>"; };
+		A4F1EC5D2C48FA3900A633CA /* EditModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModalView.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -177,6 +181,7 @@
 				A4E621662C4123EA00D90CD5 /* ContentView.swift */,
 				A4F1EC2E2C41386800A633CA /* TranscriptView.swift */,
 				A4F1EC4E2C42739600A633CA /* InformationModalView.swift */,
+				A4F1EC5D2C48FA3900A633CA /* EditModalView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				A4F1EC332C422F9E00A633CA /* CustomTranscript.swift */,
 				A4F1EC502C42AC9D00A633CA /* TranscriptContentView.swift */,
 				A4F1EC572C4667B800A633CA /* GradientText.swift */,
+				A4F1EC5B2C48EFC600A633CA /* EditContentView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -348,6 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4F1EC5C2C48EFC600A633CA /* EditContentView.swift in Sources */,
 				A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */,
 				EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */,
 				A4F1EC342C422F9E00A633CA /* CustomTranscript.swift in Sources */,
@@ -357,6 +364,7 @@
 				A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */,
 				A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */,
 				A4F1EC322C42289700A633CA /* CustomProgressView.swift in Sources */,
+				A4F1EC5E2C48FA3900A633CA /* EditModalView.swift in Sources */,
 				A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */,
 				A4F1EC4D2C42519600A633CA /* Color.swift in Sources */,
 				A4F1EC582C4667B800A633CA /* GradientText.swift in Sources */,

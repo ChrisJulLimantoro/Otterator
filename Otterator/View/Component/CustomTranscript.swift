@@ -11,26 +11,17 @@ import AVFoundation
 struct CustomTranscript: View {
     //    @Binding var progress:CGFloat
     @Bindable var viewModel:TranscriptViewModel
-    var text:[WordTranscript] = [
-        WordTranscript(word: "hai,", timestamp: 0, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.1, avg_volume: 25, avg_pace : 5, corrected_word: "", is_pause: false),
-        WordTranscript(word: "//", timestamp: 0.3, duration: 0.2, voice_analysis: VoiceAnalyst(pitch: [], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.2, avg_volume: 20,avg_pace : 12, corrected_word: "", is_pause: true),
-        WordTranscript(word: "how", timestamp: 0.5, duration: 0.2, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.8, avg_volume: 12,avg_pace : 3, corrected_word: "", is_pause: false),
-        WordTranscript(word: "are", timestamp: 0.7, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.5, avg_volume: 20,avg_pace : 15, corrected_word: "", is_pause: false),
-        WordTranscript(word: "you?", timestamp: 1, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.5, avg_volume: 65,avg_pace : 16, corrected_word: "", is_pause: false),
-        WordTranscript(word: "//", timestamp: 1.3, duration: 0.5, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.1, avg_volume: 45,avg_pace : 2, corrected_word: "", is_pause: true),
-        WordTranscript(word: "i'm", timestamp: 1.8, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.85, avg_volume: 20,avg_pace : 14, corrected_word: "", is_pause: false),
-        WordTranscript(word: "fine", timestamp: 2.1, duration: 0.2, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.2, avg_volume: 20,avg_pace : 11, corrected_word: "", is_pause: false),
-        WordTranscript(word: "too.", timestamp: 2.3, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.2, avg_volume: 55,avg_pace : 10, corrected_word: "", is_pause: false)
-    ]
     var maxChar:Int = 30
     var highVolume:Double = 50
     var slowPace:Double = 10
     var pitch:[Double] = [0.3,0.8]
     var body: some View {
         ScrollView{
+            Spacer()
+                .frame(height:16)
             VStack(alignment:.leading,spacing:20){
-                ForEach(0..<splitText(text: text, maxLength:maxChar).count, id:\.self){rowIndex in
-                    let wordsRow = splitText(text: text, maxLength:maxChar)[rowIndex]
+                ForEach(0..<splitText(text: viewModel.text, maxLength:maxChar).count, id:\.self){rowIndex in
+                    let wordsRow = splitText(text: viewModel.text, maxLength:maxChar)[rowIndex]
 //                    if !wordsRow.isEmpty {
 //                        Circle()
 //                            .frame(width:16,height:16)
@@ -52,9 +43,6 @@ struct CustomTranscript: View {
                                             withAnimation(.easeInOut){
                                                 viewModel.changeLocation(wordCol.timestamp)
                                             }
-                                        }
-                                        .onLongPressGesture(minimumDuration:0.8){
-                                            // open modal
                                         }
                                     }
                                 }

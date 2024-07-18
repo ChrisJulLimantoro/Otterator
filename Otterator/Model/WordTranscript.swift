@@ -9,7 +9,7 @@ import Foundation
 import SwiftData
 
 //@Model
-struct WordTranscript {
+class WordTranscript {
     var word : String
     var timestamp : Double
     var duration : Double
@@ -30,6 +30,18 @@ struct WordTranscript {
         self.avg_volume = avg_volume
         self.corrected_word = corrected_word
         self.is_pause = is_pause
+    }
+    
+    init(){
+        self.word = ""
+        self.timestamp = 0
+        self.duration = 0
+        self.voice_analysis = VoiceAnalyst(pitch:[],volume: [])
+        self.avg_pitch = 0
+        self.avg_volume = 0
+        self.avg_pace = 0
+        self.corrected_word = ""
+        self.is_pause = false
     }
 }
 
