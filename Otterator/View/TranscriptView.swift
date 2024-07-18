@@ -15,7 +15,7 @@ struct TranscriptView: View {
     @State var isPresented:[Bool] = [false,false,false]
     @State var edit:Bool = false
     
-    @State var viewModel = TranscriptViewModel("hello")
+    @State var viewModel: TranscriptViewModel
     @State var word:WordTranscript = WordTranscript()
     
     var tabs = ["Vocal","Practice","Summary"]
@@ -83,8 +83,4 @@ struct TranscriptView: View {
             }
         }
     }
-}
-
-#Preview {
-    return TranscriptView()
 }

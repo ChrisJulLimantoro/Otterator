@@ -7,20 +7,21 @@
 
 import Foundation
 import SwiftData
+import Speech
 
-//@Model
+@Model
 class WordTranscript {
     var word : String
     var timestamp : Double
     var duration : Double
-    var voice_analysis: VoiceAnalyst
+    var voice_analysis: VoiceAnalyst?
     var avg_pitch : Double
     var avg_volume : Double
     var avg_pace : Double
     var corrected_word : String
     var is_pause: Bool
     
-    init(word: String, timestamp: Double, duration: Double, voice_analysis: VoiceAnalyst, avg_pitch: Double, avg_volume: Double,avg_pace : Double, corrected_word: String, is_pause: Bool) {
+    init(word: String, timestamp: Double, duration: Double, voice_analysis: VoiceAnalyst? = nil, avg_pitch: Double, avg_volume: Double, avg_pace: Double, corrected_word: String? = nil, is_pause: Bool) {
         self.word = word
         self.timestamp = timestamp
         self.duration = duration
@@ -28,7 +29,8 @@ class WordTranscript {
         self.avg_pitch = avg_pitch
         self.avg_pace = avg_pace
         self.avg_volume = avg_volume
-        self.corrected_word = corrected_word
+        self.avg_pace = avg_pace
+        self.corrected_word = corrected_word ?? word
         self.is_pause = is_pause
     }
     
@@ -45,8 +47,8 @@ class WordTranscript {
     }
 }
 
-//@Model
-struct VoiceAnalyst {
+@Model
+class VoiceAnalyst {
     var pitch : [Double]
     var volume : [Double]
     
@@ -55,4 +57,3 @@ struct VoiceAnalyst {
         self.volume = volume
     }
 }
-    
