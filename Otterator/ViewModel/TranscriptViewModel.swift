@@ -14,17 +14,7 @@ class TranscriptViewModel {
     
     var audio:AVAudioPlayer?
     
-    var text:[WordTranscript] = [
-        WordTranscript(word: "hai,", timestamp: 0, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.1, avg_volume: 25, avg_pace : 5, corrected_word: "hai,", is_pause: false),
-        WordTranscript(word: "//", timestamp: 0.3, duration: 0.2, voice_analysis: VoiceAnalyst(pitch: [], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.2, avg_volume: 20,avg_pace : 12, corrected_word: "", is_pause: true),
-        WordTranscript(word: "how", timestamp: 0.5, duration: 0.2, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.8, avg_volume: 12,avg_pace : 3, corrected_word: "how", is_pause: false),
-        WordTranscript(word: "are", timestamp: 0.7, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.5, avg_volume: 20,avg_pace : 15, corrected_word: "are", is_pause: false),
-        WordTranscript(word: "you?", timestamp: 1, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.5, avg_volume: 65,avg_pace : 16, corrected_word: "", is_pause: false),
-        WordTranscript(word: "//", timestamp: 1.3, duration: 0.5, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.1, avg_volume: 45,avg_pace : 2, corrected_word: "", is_pause: true),
-        WordTranscript(word: "i'm", timestamp: 1.8, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.85, avg_volume: 20,avg_pace : 14, corrected_word: "i'm", is_pause: false),
-        WordTranscript(word: "fine", timestamp: 2.1, duration: 0.2, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.2, avg_volume: 20,avg_pace : 11, corrected_word: "fond", is_pause: false),
-        WordTranscript(word: "too.", timestamp: 2.3, duration: 0.3, voice_analysis: VoiceAnalyst(pitch: [0.0,0.4,0.1,0.3], volume: [50,0.1,0.2,4.2]), avg_pitch: 0.2, avg_volume: 55,avg_pace : 10, corrected_word: "too.", is_pause: false)
-    ]
+    var text:[WordTranscript] = []
     
     var isPlaying: Bool = false
     var currentTime:Double = 0
@@ -32,9 +22,9 @@ class TranscriptViewModel {
     
     init(_ record: Record){
         do{
-            print(record.transcript.map{$0.map{"\($0.word), \($0.duration), \($0.timestamp)"}})
             audio = try AVAudioPlayer(contentsOf: URL(string: record.audio_file)!)
-            text = record.transcript!
+            text = record.transcript!.sorted(by: {$0.timestamp < $1.timestamp})
+            print(text.map{"word: \($0.word), timestamp: \($0.timestamp), duration: \($0.duration)\n"})
         } catch {
             print(error)
         }

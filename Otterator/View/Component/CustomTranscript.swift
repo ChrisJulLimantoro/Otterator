@@ -11,7 +11,7 @@ import AVFoundation
 struct CustomTranscript: View {
     //    @Binding var progress:CGFloat
     @Bindable var viewModel:TranscriptViewModel
-    var maxChar:Int = 30
+    var maxChar:Int = 25
     var highVolume:Double = 50
     var slowPace:Double = 10
     var pitch:[Double] = [0.3,0.8]
@@ -74,6 +74,7 @@ struct CustomTranscript: View {
             
             // for changing the lines logic
             if currentLength + wordLength > maxLength {
+                groups.append(currentGroups)
                 lines.append(groups)
                 groups = []
                 currentGroups = [word]
@@ -117,6 +118,7 @@ struct CustomTranscript: View {
             groups.append(currentGroups)
             lines.append(groups)
         }
+        print(lines.map{$0.map{$0.map{$0.word}}})
         return lines
     }
     
