@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct CardBackground: View {
+    var bgcolor: Color
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RoundedRectangle(cornerRadius: 14.0)
+            .fill(bgcolor)
+            .shadow(color: Color(hex: "#555555"), radius: 0, x: 4, y: 4)
+//            .frame(width: 341)
     }
 }
 
 #Preview {
-    CardBackground()
+    CardBackground(bgcolor: .blue)
 }

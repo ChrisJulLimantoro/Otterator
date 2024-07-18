@@ -31,6 +31,8 @@
 		A4F1EC632C491CE000A633CA /* CardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC602C491CE000A633CA /* CardBackground.swift */; };
 		A4F1EC642C491CE000A633CA /* SummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC612C491CE000A633CA /* SummaryCard.swift */; };
 		A4F1EC662C491D1700A633CA /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC652C491D1700A633CA /* SummaryView.swift */; };
+		C8F33CDF2C492063003F6C3B /* PlaypenSansFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */; };
+		C8F33CE12C492188003F6C3B /* TipsAndTricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
 /* End PBXBuildFile section */
@@ -81,6 +83,8 @@
 		A4F1EC602C491CE000A633CA /* CardBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBackground.swift; sourceTree = "<group>"; };
 		A4F1EC612C491CE000A633CA /* SummaryCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryCard.swift; sourceTree = "<group>"; };
 		A4F1EC652C491D1700A633CA /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaypenSansFont.swift; sourceTree = "<group>"; };
+		C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipsAndTricks.swift; path = ../View/Component/TipsAndTricks.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -175,6 +179,7 @@
 		A4E621902C41247000D90CD5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */,
 				A4E621682C4123EA00D90CD5 /* Item.swift */,
 				EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */,
 				EEB8D1102C4136A10025FAE6 /* Record.swift */,
@@ -222,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				A4F1EC4C2C42519600A633CA /* Color.swift */,
+				C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4F1EC5C2C48EFC600A633CA /* EditContentView.swift in Sources */,
+				C8F33CE12C492188003F6C3B /* TipsAndTricks.swift in Sources */,
 				A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */,
 				EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */,
 				A4F1EC632C491CE000A633CA /* CardBackground.swift in Sources */,
@@ -383,6 +390,7 @@
 				A4F1EC5E2C48FA3900A633CA /* EditModalView.swift in Sources */,
 				A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */,
 				A4F1EC4D2C42519600A633CA /* Color.swift in Sources */,
+				C8F33CDF2C492063003F6C3B /* PlaypenSansFont.swift in Sources */,
 				A4F1EC582C4667B800A633CA /* GradientText.swift in Sources */,
 				A4F1EC4F2C42739600A633CA /* InformationModalView.swift in Sources */,
 			);
