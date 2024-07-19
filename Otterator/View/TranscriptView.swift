@@ -42,6 +42,7 @@ struct TranscriptView: View {
             }
             .navigationTitle("Recording 001")
             .navigationBarTitleDisplayMode(.inline)
+            .background(Color(hex:"#cce5ff"))
             .toolbar{
                 ToolbarItem(placement: .confirmationAction){
                     Menu {

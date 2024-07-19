@@ -43,10 +43,23 @@ struct EditContentView: View {
                 }
             }
         }
+        .padding(.horizontal,8)
+        .background{
+            CardBackground(bgcolor: .white)
+        }
         .padding(.horizontal,20)
         .padding(.vertical,8)
         Spacer()
-        Text("Start Practice")
+        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            HStack {
+                Image(systemName: "music.mic")
+                Text("Start Practice")
+                    .playpenSans(.semiBold, 16)
+            }
+            .padding(12)
+            .frame(maxWidth: .infinity)
+            .background(CardBackground(bgcolor: .white))
+        }).padding()
     }
     func splitText(text:[WordTranscript],maxLength: Int) ->
     [[WordTranscript]] {
