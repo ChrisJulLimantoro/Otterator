@@ -17,17 +17,16 @@ extension AudioRecorder{
         return SFSpeechLanguageModel.Configuration(languageModel: dynamicLanguageModel, vocabulary: dynamicVocabulary)
     }
     
-    func saveRecording() {
+    func saveRecording(title: String) {
         stopRecording()
         
         Task{
             do {
-                let uuid = UUID().uuidString
                 try await transcribeAudio(url: audioRecorder.url)
                 
                 let wordT = self.mapTranscriptionSegments(segments: resultRecognition.bestTranscription.segments)
                 
-                let res: Record = Record(title: uuid, audio_file: "\(audioRecorder.url)", datetime: Date(), duration: resultRecognition.speechRecognitionMetadata?.speechDuration ?? 0, transcript: wordT, avg_pitch: 0.0, avg_volume: 0, avg_pause: resultRecognition.speechRecognitionMetadata?.averagePauseDuration ?? 0, avg_pace: resultRecognition.speechRecognitionMetadata?.speakingRate ?? 0)
+                let res: Record = Record(title: title, audio_file: "\(audioRecorder.url.lastPathComponent)", datetime: Date(), duration: resultRecognition.speechRecognitionMetadata?.speechDuration ?? 0, transcript: wordT, avg_pitch: 0.0, avg_volume: 0, avg_pause: resultRecognition.speechRecognitionMetadata?.averagePauseDuration ?? 0, avg_pace: resultRecognition.speechRecognitionMetadata?.speakingRate ?? 0)
                 
                 self.modelContext.insert(res)
             } catch {
@@ -51,7 +50,7 @@ extension AudioRecorder{
         
         do {
             try await withCheckedThrowingContinuation { continuation in
-                var isResumed = false // Flag to check if the continuation is already resumed
+                var isResumed = false
                 speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
                     if let result = result {
                         self.resultRecognition = result

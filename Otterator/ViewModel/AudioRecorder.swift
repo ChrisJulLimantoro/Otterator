@@ -13,21 +13,23 @@ import SwiftData
 @Observable
 class AudioRecorder: NSObject, AVAudioPlayerDelegate {
     var speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))!
-    var audioRecorder: AVAudioRecorder!
     var timer: Timer?
-    var recording = false
-    var audioPlayer: AVAudioPlayer?
+    var audioRecorder: AVAudioRecorder!
     var resultRecognition: SFSpeechRecognitionResult!
-    
+    var audioPlayer: AVAudioPlayer?
     var modelContext: ModelContext
+    
+    var recording = false
     var recognizedText: String = ""
     var recordingTime: TimeInterval = 0
     
     init(modelContext: ModelContext){
         self.modelContext = modelContext
+        super.init()
+        setup()
     }
     
-    func startRecording() {
+    func setup() {
         let recordingSession = AVAudioSession.sharedInstance()
         
         do {
@@ -44,23 +46,33 @@ class AudioRecorder: NSObject, AVAudioPlayerDelegate {
             let url = getDocumentsDirectory().appendingPathComponent("recording_\(UUID().uuidString).m4a")
             
             audioRecorder = try AVAudioRecorder(url: url, settings: settings)
-            audioRecorder.record()
-            
-            recording = true
-            startTimer()
         } catch {
-            // Handle error
+            print(error)
         }
+    }
+    
+    func startRecording() {
+        audioRecorder.record()
+        recording = true
+        startTimer()
+    }
+    
+    func pauseRecording() {
+        audioRecorder.pause()
+        recording = false
+        stopTimer()
     }
     
     func stopRecording() {
         audioRecorder.stop()
         recording = false
         stopTimer()
+        recordingTime = 0
     }
     
     func playRecording(name: String) {
         let playSession = AVAudioSession.sharedInstance()
+        let url = getDocumentsDirectory().appendingPathComponent(name)
         
         do {
             try playSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
@@ -69,7 +81,7 @@ class AudioRecorder: NSObject, AVAudioPlayerDelegate {
         }
         
         do {
-            audioPlayer = try AVAudioPlayer(contentsOf: URL(string: name)!)
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer?.delegate = self
             audioPlayer?.prepareToPlay()
             audioPlayer?.play()
