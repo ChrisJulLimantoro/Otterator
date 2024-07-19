@@ -36,9 +36,7 @@ struct TranscriptView: View {
                     EditContentView(viewModel: viewModel,word: $word,edit: $edit)
                 } else {
                     VStack{
-                        Spacer()
-                        Text("Summary Page")
-                        Spacer()
+                        SummaryView()
                     }
                 }
             }
