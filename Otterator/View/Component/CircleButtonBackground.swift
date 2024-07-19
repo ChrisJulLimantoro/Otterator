@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct CircleButtonBackground: View {
+    var bgcolor: Color
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Circle()
+            .fill(bgcolor)
+            .shadow(color: Color(hex: "#555555"), radius: 0, x: 3, y: 3)
+            .frame(width: 52, height: 52)
     }
 }
 
 #Preview {
-    CircleButtonBackground()
+    CircleButtonBackground(bgcolor: .blue)
 }

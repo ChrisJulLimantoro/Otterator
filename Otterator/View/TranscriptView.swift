@@ -36,14 +36,13 @@ struct TranscriptView: View {
                     EditContentView(viewModel: viewModel,word: $word,edit: $edit)
                 } else {
                     VStack{
-                        Spacer()
-                        Text("Summary Page")
-                        Spacer()
+                        SummaryView()
                     }
                 }
             }
             .navigationTitle("Recording 001")
             .navigationBarTitleDisplayMode(.inline)
+            .background(Color(hex:"#cce5ff"))
             .toolbar{
                 ToolbarItem(placement: .confirmationAction){
                     Menu {

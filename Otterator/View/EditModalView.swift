@@ -11,13 +11,22 @@ struct EditModalView: View {
     @Binding var word:WordTranscript
     @State var change:String = ""
     @Environment(\.dismiss) var dismiss
-    @FocusState private var isFocused:Bool
+    @FocusState private var isFocused: Bool
     var body: some View {
         NavigationStack{
-            TextField(word.word,text: $change)
-                .focused(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=$isFocused@*/FocusState<Bool>().projectedValue/*@END_MENU_TOKEN@*/)
-                .textFieldStyle(.roundedBorder)
+            Text("Editing the text")
+                .font(.custom("Playpen Sans",size:16))
                 .padding(.horizontal,16)
+                .padding(.vertical,8)
+            TextField(word.word,text: $change)
+                .focused($isFocused)
+                .textFieldStyle(.roundedBorder)
+                .font(.custom("Playpen Sans",size:16))
+                .padding(.horizontal,16)
+                .onAppear(){
+                    isFocused = true
+                    change = word.corrected_word
+                }
             Spacer()
             .toolbar{
                 ToolbarItem(placement: .cancellationAction){
@@ -35,13 +44,9 @@ struct EditModalView: View {
                     }
                 }
             }
-            .navigationTitle("Information")
+            .navigationTitle("Edit Text")
             .navigationBarTitleDisplayMode(.inline)
         }
-        .onAppear(){
-            isFocused = true
-            change = word.corrected_word
-            
-        }
+
     }
 }
