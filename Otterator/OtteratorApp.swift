@@ -25,7 +25,7 @@ struct OtteratorApp: App {
     }()
     var body: some Scene {
         WindowGroup {
-            TranscriptView()
+            PausePracticeView()
         }
         .modelContainer(sharedModelContainer)
     }

@@ -25,6 +25,9 @@
 		A4F1EC532C45215800A633CA /* hello.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4F1EC522C45215800A633CA /* hello.m4a */; };
 		A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */; };
 		A4F1EC582C4667B800A633CA /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC572C4667B800A633CA /* GradientText.swift */; };
+		E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4A92C48F949000C9F5D /* DummyPause.swift */; };
+		E1C1B4AC2C48F9A3000C9F5D /* PausePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */; };
+		E1C1B4AE2C48F9DD000C9F5D /* DummyPauseTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
 /* End PBXBuildFile section */
@@ -69,6 +72,9 @@
 		A4F1EC522C45215800A633CA /* hello.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hello.m4a; sourceTree = "<group>"; };
 		A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptViewModel.swift; sourceTree = "<group>"; };
 		A4F1EC572C4667B800A633CA /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
+		E1C1B4A92C48F949000C9F5D /* DummyPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPause.swift; sourceTree = "<group>"; };
+		E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausePracticeView.swift; sourceTree = "<group>"; };
+		E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPauseTranscript.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -166,6 +172,7 @@
 				A4E621682C4123EA00D90CD5 /* Item.swift */,
 				EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */,
 				EEB8D1102C4136A10025FAE6 /* Record.swift */,
+				E1C1B4A92C48F949000C9F5D /* DummyPause.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -177,6 +184,7 @@
 				A4E621662C4123EA00D90CD5 /* ContentView.swift */,
 				A4F1EC2E2C41386800A633CA /* TranscriptView.swift */,
 				A4F1EC4E2C42739600A633CA /* InformationModalView.swift */,
+				E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +196,7 @@
 				A4F1EC332C422F9E00A633CA /* CustomTranscript.swift */,
 				A4F1EC502C42AC9D00A633CA /* TranscriptContentView.swift */,
 				A4F1EC572C4667B800A633CA /* GradientText.swift */,
+				E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -351,10 +360,13 @@
 				A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */,
 				EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */,
 				A4F1EC342C422F9E00A633CA /* CustomTranscript.swift in Sources */,
+				E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */,
 				EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */,
 				A4F1EC512C42AC9D00A633CA /* TranscriptContentView.swift in Sources */,
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
+				E1C1B4AC2C48F9A3000C9F5D /* PausePracticeView.swift in Sources */,
 				A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */,
+				E1C1B4AE2C48F9DD000C9F5D /* DummyPauseTranscript.swift in Sources */,
 				A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */,
 				A4F1EC322C42289700A633CA /* CustomProgressView.swift in Sources */,
 				A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */,
@@ -524,7 +536,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = PV62VMPQYM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
@@ -554,7 +566,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = PV62VMPQYM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
