@@ -80,6 +80,9 @@ struct TranscriptView: View {
                     .presentationBackgroundInteraction(.disabled)
                     .presentationBackground(.ultraThickMaterial)
             }
+            .onAppear(){
+                print(viewModel.text.filter{$0.timestamp<1}.map{"\($0.word), \($0.duration), \($0.timestamp)"})
+            }
         }
     }
 }
