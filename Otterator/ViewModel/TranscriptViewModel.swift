@@ -22,9 +22,9 @@ class TranscriptViewModel {
     
     init(_ record: Record){
         do{
-            audio = try AVAudioPlayer(contentsOf: URL(string: record.audio_file)!)
+            let url = getDocumentsDirectory().appendingPathComponent(record.audio_file)
+            audio = try AVAudioPlayer(contentsOf: url)
             text = record.transcript!.sorted(by: {$0.timestamp < $1.timestamp})
-            print(text.map{"word: \($0.word), timestamp: \($0.timestamp), duration: \($0.duration)\n"})
         } catch {
             print(error)
         }
@@ -106,4 +106,8 @@ class TranscriptViewModel {
         }
     }
     
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
 }

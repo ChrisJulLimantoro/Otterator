@@ -13,6 +13,7 @@ struct RecordingView: View {
     @State private var showModal = false
     @Query var records: [Record]
     @Bindable private var audioRecorder: AudioRecorder
+    @Environment(\.modelContext) private var modelContext
     
     init(modelContext: ModelContext) {
         let audioRecorder = AudioRecorder(modelContext: modelContext)
@@ -55,7 +56,7 @@ struct RecordingView: View {
                                 HStack{
                                     Text(item.datetime.formatted(date: .long, time: .omitted))
                                     Spacer()
-                                    Text("\(timeFormat(timeInterval: item.duration))")
+                                    Text("\(formatTime(item.duration))")
                                 }
                                 .foregroundStyle(.secondary)
                             }
@@ -100,16 +101,25 @@ struct RecordingView: View {
             isPresented: $showModal,
             onDismiss: {audioRecorder.stopRecording()}
         ){
-            RecordModal(audioRecorder: audioRecorder)
+            RecordModal(stateModal: $showModal, audioRecorder: audioRecorder)
                 .interactiveDismissDisabled()
                 .presentationDetents([.medium])
                 .presentationDragIndicator(.visible)
         }
     }
     
-    func timeFormat(timeInterval: Double) -> String {
-        let formatter = DateComponentsFormatter()
-        return formatter.string(from: timeInterval)!
+    func formatTime(_ time: TimeInterval) -> String {
+        let minutes = Int(time) / 60
+        let seconds = Int(time) % 60
+        return String(format: "%02d:%02d", minutes, seconds)
+    }
+    
+    private func deleteItems(offsets: IndexSet) {
+        withAnimation {
+            for index in offsets {
+                modelContext.delete(records[index])
+            }
+        }
     }
 }
 
