@@ -35,9 +35,7 @@ struct TranscriptView: View {
                 } else if segment == "Practice"{
                     EditContentView(viewModel: viewModel,word: $word,edit: $edit)
                 } else {
-                    VStack{
-                        SummaryView()
-                    }
+                    SummaryView()
                 }
             }
             .navigationTitle("Recording 001")

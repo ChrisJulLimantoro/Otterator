@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 import SwiftUI
+import QuartzCore
 
 @Observable
 class TranscriptViewModel {
@@ -19,6 +20,7 @@ class TranscriptViewModel {
     var isPlaying: Bool = false
     var currentTime:Double = 0
     var timer:Timer?
+    var displayLink: CADisplayLink?
     
     init(_ record: Record){
         do{
@@ -41,7 +43,6 @@ class TranscriptViewModel {
     
     func audioPlay(){
         let playSession = AVAudioSession.sharedInstance()
-        
         do {
             try playSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
         } catch {
@@ -51,16 +52,24 @@ class TranscriptViewModel {
         audio?.prepareToPlay()
         audio!.play()
         isPlaying = true
-        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { _ in
-            if self.currentTime < self.audio!.duration{
-                withAnimation(.bouncy){
-                    self.currentTime += 0.01
-                }
-            } else {
-                self.timer?.invalidate()
-                self.isPlaying = false
+        setupDisplayLink()
+    }
+    
+    private func setupDisplayLink() {
+        displayLink = CADisplayLink(target: self, selector: #selector(updateCurrentTime))
+        displayLink?.add(to: .main, forMode: .default)
+    }
+    
+    @objc private func updateCurrentTime() {
+        if let audioPlayer = self.audio, audioPlayer.isPlaying  {
+            withAnimation(.easeInOut) {
+                self.currentTime = audioPlayer.currentTime
             }
-        })
+        } else {
+            displayLink?.invalidate()
+            displayLink = nil
+            self.isPlaying = false
+        }
     }
     
     func audioPause(){
