@@ -21,7 +21,7 @@ struct ChoiceView: View {
                     }
                     .frame(width: 340, height: 70)
                     .foregroundStyle(.white)
-                    .background(CardBackground(bgcolor: .accent))
+                    .background(CardBackground(bgcolor: Color.accentColor))
                 }
                 NavigationLink(destination: TranscriptView(viewModel: TranscriptViewModel(item))) {
                     HStack{
@@ -30,7 +30,7 @@ struct ChoiceView: View {
                             .font(.playpenSans(.semiBold, 20, .title3))
                     }
                     .frame(width: 340, height: 70)
-                    .foregroundStyle(.accent)
+                    .foregroundStyle(Color.accentColor)
                     .background(CardBackground(bgcolor: .white))
                 }
             }

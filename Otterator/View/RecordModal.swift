@@ -34,7 +34,7 @@ struct RecordModal: View {
                         Image(systemName: audioRecorder.recording ? "pause.fill" : "play.fill")
                             .resizable()
                             .frame(width: 33, height: 41)
-                            .foregroundStyle(.accent)
+                            .foregroundStyle(Color.accentColor)
                     }
                     
                 }
