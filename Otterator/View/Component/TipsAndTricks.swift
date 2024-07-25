@@ -20,37 +20,37 @@ let pitchTricks:[String:String] = [
 ]
 
 let paceTips:[String:String] = [
-    "tooFast" : "A rapid-fire or rap-like delivery can leave your audience lost and overwhelmed, causing them to miss critical information. The ideal pace ranges from 120 to 150 words per minute. To slow down your pace, employ deep breathing techniques. Take deep breaths and exhale slowly as you speak. This controlled breathing will help you calm your nerves and find a more natural, measured pace.",
-    "noPause" : " ",
-    "tooSlow" : "A lethargic pace can quickly bore your audience and leave them feeling disengaged. The ideal pace ranges from 120 to 150 words per minute. To combat this, inject energy and enthusiasm into your presentation. Vary your vocal tone, use expressive gestures, and move around the stage to keep your audience captivated."
+    "too Fast" : "A rapid-fire or rap-like delivery can leave your audience lost and overwhelmed, causing them to miss critical information. The ideal pace ranges from 120 to 150 words per minute. To slow down your pace, employ deep breathing techniques. Take deep breaths and exhale slowly as you speak. This controlled breathing will help you calm your nerves and find a more natural, measured pace.",
+    "no Pause" : " ",
+    "too Slow" : "A lethargic pace can quickly bore your audience and leave them feeling disengaged. The ideal pace ranges from 120 to 150 words per minute. To combat this, inject energy and enthusiasm into your presentation. Vary your vocal tone, use expressive gestures, and move around the stage to keep your audience captivated."
 ]
 
 let paceTricks:[String:String] = [
-    "tooFast" : "Strategic pauses can be your allies in combating a rushed pace. Incorporate pauses after key points to allow your audience time to absorb the information and reflect on its significance. These pauses will also give you a moment to gather your thoughts and maintain a composed demeanor.",
-    "noPause" : " ",
-    "tooSlow" : "Weave storytelling techniques into your presentation. Share anecdotes, personal experiences, and relatable stories to illustrate your points and connect with your audience on an emotional level. This engaging approach will keep your audience hooked and prevent them from losing interest due to a slow pace."
+    "too Fast" : "Strategic pauses can be your allies in combating a rushed pace. Incorporate pauses after key points to allow your audience time to absorb the information and reflect on its significance. These pauses will also give you a moment to gather your thoughts and maintain a composed demeanor.",
+    "no Pause" : " ",
+    "too Slow" : "Weave storytelling techniques into your presentation. Share anecdotes, personal experiences, and relatable stories to illustrate your points and connect with your audience on an emotional level. This engaging approach will keep your audience hooked and prevent them from losing interest due to a slow pace."
 ]
 
 let projectionTips:[String:String] = [
-    "tooLoud" : "Be aware of your natural volume. The ideal volume ranges from 60 to 80 decibels. Try standing near a wall and talk at a comfortable level. If you hear yourself echo significantly, you're likely too loud. When presenting, focus on projecting your voice from your diaphragm instead of staining your throat.",
-    "noPause" : " ",
-    "tooSoft" : " "
+    "too Loud" : "Be aware of your natural volume. The ideal volume ranges from 60 to 80 decibels. Try standing near a wall and talk at a comfortable level. If you hear yourself echo significantly, you're likely too loud. When presenting, focus on projecting your voice from your diaphragm instead of staining your throat.",
+    "no Pause" : " ",
+    "too Soft" : " "
 ]
 
 let projectionTricks:[String:String] = [
-    "tooLoud" : "Think of your presentation as a conversation with a small group instead of a mass audience. Move closer or farther from the microphone or audience for emphasis, rather than relying solely on volume. Regularly practice presentations at a lower volume to train your vocal muscles and build confidence.",
-    "noPause" : " ",
-    "tooSoft" : " "
+    "too Loud" : "Think of your presentation as a conversation with a small group instead of a mass audience. Move closer or farther from the microphone or audience for emphasis, rather than relying solely on volume. Regularly practice presentations at a lower volume to train your vocal muscles and build confidence.",
+    "no Pause" : " ",
+    "too Soft" : " "
 ]
 
 let pauseTips:[String:String] = [
-    "tooMuch" : "Listen back to the recording and analyse the reason: are you searching for words, unsure of the next point, or simply taking breath? A well-structures presentation with clear transitions between points minimizes the need for long pauses to fill gaps.",
-    "noPause" : " ",
-    "tooFew" : " "
+    "too Much" : "Listen back to the recording and analyse the reason: are you searching for words, unsure of the next point, or simply taking breath? A well-structures presentation with clear transitions between points minimizes the need for long pauses to fill gaps.",
+    "no Pause" : " ",
+    "too Few" : " "
 ]
 
 let pauseTricks:[String:String] = [
-    "tooMuch" : "Use brief pause to emphasize key points transition between ideas, or capture attention. Medium pauses allowing audience to process complex information, reflect on questions, or anticipate a change in direction. Reserve longer pauses for moments of high emotional impact, dramatic reveals, or allowing the audience to fully absorb a crucial meaning. Utilize eye contact, facial expressions, and gestures to maintain audience engagements during pauses.",
-    "noPause" : " ",
-    "tooFew" : " "
+    "too Much" : "Use brief pause to emphasize key points transition between ideas, or capture attention. Medium pauses allowing audience to process complex information, reflect on questions, or anticipate a change in direction. Reserve longer pauses for moments of high emotional impact, dramatic reveals, or allowing the audience to fully absorb a crucial meaning. Utilize eye contact, facial expressions, and gestures to maintain audience engagements during pauses.",
+    "no Pause" : " ",
+    "too Few" : " "
 ]

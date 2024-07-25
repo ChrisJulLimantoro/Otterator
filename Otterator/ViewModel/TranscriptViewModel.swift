@@ -22,13 +22,17 @@ class TranscriptViewModel {
     var timer:Timer?
     var displayLink: CADisplayLink?
     var record: Record
+    var pauseCategory: String
     
     init(_ t_record: Record){
         self.record = t_record
+        let word_count = t_record.transcript!.filter{!$0.is_pause}.count
+        let pause_count = t_record.transcript!.filter{$0.is_pause}.count
+        self.pauseCategory = (pause_count > word_count / 5) ? "too Much" : (pause_count < word_count / 12) ? "too Few" : "no Pause"
         do{
             let url = getDocumentsDirectory().appendingPathComponent(t_record.audio_file)
-            audio = try AVAudioPlayer(contentsOf: url)
-            text = t_record.transcript!.sorted(by: {$0.timestamp < $1.timestamp})
+            self.audio = try AVAudioPlayer(contentsOf: url)
+            self.text = t_record.transcript!.sorted(by: {$0.timestamp < $1.timestamp})
         } catch {
             print(error)
         }
