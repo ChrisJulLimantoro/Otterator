@@ -44,13 +44,13 @@ let projectionTricks:[String:String] = [
 ]
 
 let pauseTips:[String:String] = [
-    "too Much" : "Listen back to the recording and analyse the reason: are you searching for words, unsure of the next point, or simply taking breath? A well-structures presentation with clear transitions between points minimizes the need for long pauses to fill gaps.",
+    "too Much" : "**1. Understand the Importance of Pauses**\nRecognize that pauses give the audience time to absorb and process information.\n**2. Plan Your Pauses**\nIdentify key points in your presentation where a pause would be beneficial and make a note to stop briefly at those points.\n**3. Practice with Pauses**\nRehearse your presentation while intentionally incorporating pauses at predetermined spots.\n**4. Use Natural Breaks**\nTake advantage of natural breaks, such as between slides or sections, to insert pauses.",
     "no Pause" : " ",
     "too Few" : " "
 ]
 
 let pauseTricks:[String:String] = [
-    "too Much" : "Use brief pause to emphasize key points transition between ideas, or capture attention. Medium pauses allowing audience to process complex information, reflect on questions, or anticipate a change in direction. Reserve longer pauses for moments of high emotional impact, dramatic reveals, or allowing the audience to fully absorb a crucial meaning. Utilize eye contact, facial expressions, and gestures to maintain audience engagements during pauses.",
+    "too Much" : "**1. Take Deep Breaths**\nUse deep breaths as a cue to remind yourself to pause periodically.\n**2. Count Silently**\nCount silently to three after making an important point to ensure you pause.\n**3. Use Visual Cues**\nPlace visual cues in your notes or slides to remind you to pause.\n**4. Engage with the Audience**\nMake eye contact and observe audience reactions; use this time to pause and gauge their understanding.\n**5. Record and Review**\nRecord your practice sessions and review them to ensure you are effectively using pauses.\n**6. Slow Down Consciously**\nConsciously slow down your speech to naturally create more opportunities for pauses.",
     "no Pause" : " ",
     "too Few" : " "
 ]
