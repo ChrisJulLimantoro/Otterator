@@ -21,16 +21,17 @@ class TranscriptViewModel {
     var currentTime:Double = 0
     var timer:Timer?
     var displayLink: CADisplayLink?
+    var record: Record
     
-    init(_ record: Record){
+    init(_ t_record: Record){
+        self.record = t_record
         do{
-            let url = getDocumentsDirectory().appendingPathComponent(record.audio_file)
+            let url = getDocumentsDirectory().appendingPathComponent(t_record.audio_file)
             audio = try AVAudioPlayer(contentsOf: url)
-            text = record.transcript!.sorted(by: {$0.timestamp < $1.timestamp})
+            text = t_record.transcript!.sorted(by: {$0.timestamp < $1.timestamp})
         } catch {
             print(error)
         }
-        
     }
     
     func audioToogle(){
