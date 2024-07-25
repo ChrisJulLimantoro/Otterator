@@ -10,7 +10,6 @@
 		A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */; };
 		A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621662C4123EA00D90CD5 /* ContentView.swift */; };
 		A4E621692C4123EA00D90CD5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621682C4123EA00D90CD5 /* Item.swift */; };
-		A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */; };
 		A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E6216D2C4123EC00D90CD5 /* Preview Assets.xcassets */; };
 		A4E621782C4123EC00D90CD5 /* OtteratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */; };
 		A4E621822C4123EC00D90CD5 /* OtteratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */; };
@@ -25,6 +24,7 @@
 		A4F1EC532C45215800A633CA /* hello.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A4F1EC522C45215800A633CA /* hello.m4a */; };
 		A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */; };
 		A4F1EC582C4667B800A633CA /* GradientText.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC572C4667B800A633CA /* GradientText.swift */; };
+		E1AFE39D2C50FA40001871ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AFE39C2C50FA40001871ED /* Assets.xcassets */; };
 		E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4A92C48F949000C9F5D /* DummyPause.swift */; };
 		E1C1B4AC2C48F9A3000C9F5D /* PausePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */; };
 		E1C1B4AE2C48F9DD000C9F5D /* DummyPauseTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */; };
@@ -54,7 +54,6 @@
 		A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorApp.swift; sourceTree = "<group>"; };
 		A4E621662C4123EA00D90CD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A4E621682C4123EA00D90CD5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E6216D2C4123EC00D90CD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4E621732C4123EC00D90CD5 /* OtteratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtteratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorTests.swift; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		A4F1EC522C45215800A633CA /* hello.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = hello.m4a; sourceTree = "<group>"; };
 		A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptViewModel.swift; sourceTree = "<group>"; };
 		A4F1EC572C4667B800A633CA /* GradientText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientText.swift; sourceTree = "<group>"; };
+		E1AFE39C2C50FA40001871ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1C1B4A92C48F949000C9F5D /* DummyPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPause.swift; sourceTree = "<group>"; };
 		E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausePracticeView.swift; sourceTree = "<group>"; };
 		E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPauseTranscript.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 				A4E621902C41247000D90CD5 /* Model */,
 				A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */,
 				A4F1EC542C452CD300A633CA /* ViewModel */,
-				A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */,
+				E1AFE39C2C50FA40001871ED /* Assets.xcassets */,
 				A4E6216C2C4123EC00D90CD5 /* Preview Content */,
 			);
 			path = Otterator;
@@ -331,8 +331,8 @@
 			files = (
 				A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */,
 				A4F1EC532C45215800A633CA /* hello.m4a in Resources */,
+				E1AFE39D2C50FA40001871ED /* Assets.xcassets in Resources */,
 				A4F1EC4A2C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf in Resources */,
-				A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
