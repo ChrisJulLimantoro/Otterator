@@ -41,14 +41,18 @@ struct TranscriptView: View {
 //                    }
 //                }
                 
-                //mohon bantuannya ehe
-//                CustomSegmentedControl(tabs: SegmentedTab.allCases, activeTab: $activeTab, activeTint: .oBlack, inactiveTint: .oBlack.opacity(0.7), ){ size in
-//                    RoundedRectangle(cornerRadius: 14)
-//                        .fill(.white)
-//                        .frame(width: size.width, height: size.height)
-//                        .padding(.horizontal, 10)
-//                        .frame(maxHeight: .infinity, alignment: .bottom)
-//                }
+                CustomSegmentedControl(tabs: SegmentedTab.allCases, activeTab: $activeTab, activeTint: .oBlack, inactiveTint: .oBlack.opacity(0.7)){ size in
+                    RoundedRectangle(cornerRadius: 14)
+                        .fill(.white)
+                        .frame(width: size.width, height: size.height)
+                        .padding(.horizontal, 10)
+                        .frame(maxHeight: .infinity, alignment: .bottom)
+                }
+                if activeTab == .summary {
+                    SummaryView()
+                } else {
+                    TranscriptContentView(viewModel: viewModel)
+                }
             }
             .navigationTitle("Recording 001")
             .navigationBarTitleDisplayMode(.inline)

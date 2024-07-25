@@ -15,9 +15,6 @@ struct CustomSegmentedControl<Indicator: View>: View {
     var activeTint: Color
     var inactiveTint: Color
     @ViewBuilder var indicatorView: (CGSize) -> Indicator
-    @State private var excessTabWidth: CGFloat = .zero
-    @State private var minX: CGFloat = .zero
-    @Bindable var viewModel: TranscriptViewModel
     
     var body: some View {
         GeometryReader{
@@ -32,10 +29,7 @@ struct CustomSegmentedControl<Indicator: View>: View {
                     .animation(.snappy, value: activeTab)
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .onTapGesture {
-                        if activeTab == .summary {
-                            SummaryView(activeTab: .summary)                        } else {
-                            TranscriptView(viewModel: viewModel)
-                        }
+                        activeTab = tab
                     }
                     .background {
                         if activeTab == tab {
