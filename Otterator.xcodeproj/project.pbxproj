@@ -12,7 +12,6 @@
 		A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */; };
 		A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621662C4123EA00D90CD5 /* ContentView.swift */; };
 		A4E621692C4123EA00D90CD5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621682C4123EA00D90CD5 /* Item.swift */; };
-		A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */; };
 		A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E6216D2C4123EC00D90CD5 /* Preview Assets.xcassets */; };
 		A4E621782C4123EC00D90CD5 /* OtteratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */; };
 		A4E621822C4123EC00D90CD5 /* OtteratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */; };
@@ -39,6 +38,10 @@
 		EE47A1882C49228C0042D10D /* AudioRecorder+SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */; };
 		EE47A18A2C4922B40042D10D /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1892C4922B40042D10D /* AudioRecorder.swift */; };
 		EEA3EDB52C468FCF008EE13D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */; };
+		E1AFE39D2C50FA40001871ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AFE39C2C50FA40001871ED /* Assets.xcassets */; };
+		E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4A92C48F949000C9F5D /* DummyPause.swift */; };
+		E1C1B4AC2C48F9A3000C9F5D /* PausePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */; };
+		E1C1B4AE2C48F9DD000C9F5D /* DummyPauseTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
 		EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1122C4138010025FAE6 /* RecordingView.swift */; };
@@ -69,7 +72,6 @@
 		A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorApp.swift; sourceTree = "<group>"; };
 		A4E621662C4123EA00D90CD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A4E621682C4123EA00D90CD5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E6216D2C4123EC00D90CD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4E621732C4123EC00D90CD5 /* OtteratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtteratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorTests.swift; sourceTree = "<group>"; };
@@ -99,6 +101,10 @@
 		EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioRecorder+SaveData.swift"; sourceTree = "<group>"; };
 		EE47A1892C4922B40042D10D /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		E1AFE39C2C50FA40001871ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1C1B4A92C48F949000C9F5D /* DummyPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPause.swift; sourceTree = "<group>"; };
+		E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausePracticeView.swift; sourceTree = "<group>"; };
+		E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPauseTranscript.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		EEB8D1122C4138010025FAE6 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
@@ -162,7 +168,7 @@
 				A4E621902C41247000D90CD5 /* Model */,
 				A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */,
 				A4F1EC542C452CD300A633CA /* ViewModel */,
-				A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */,
+				E1AFE39C2C50FA40001871ED /* Assets.xcassets */,
 				A4E6216C2C4123EC00D90CD5 /* Preview Content */,
 			);
 			path = Otterator;
@@ -202,6 +208,7 @@
 				EEB8D1102C4136A10025FAE6 /* Record.swift */,
 				A43BDA672C4FA38200E38B11 /* Practice.swift */,
 				A43BDA6B2C52314100E38B11 /* Message.swift */,
+				E1C1B4A92C48F949000C9F5D /* DummyPause.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -218,6 +225,7 @@
 				A4F1EC4E2C42739600A633CA /* InformationModalView.swift */,
 				A4F1EC652C491D1700A633CA /* SummaryView.swift */,
 				A4F1EC2E2C41386800A633CA /* TranscriptView.swift */,
+				E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,6 +241,7 @@
 				A4F1EC5B2C48EFC600A633CA /* EditContentView.swift */,
 				A4F1EC612C491CE000A633CA /* SummaryCard.swift */,
 				A4F1EC502C42AC9D00A633CA /* TranscriptContentView.swift */,
+				E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -371,8 +380,8 @@
 				EE4209D72C47B9110087E6E7 /* CustomLMData.bin in Resources */,
 				A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */,
 				A4F1EC532C45215800A633CA /* hello.m4a in Resources */,
+				E1AFE39D2C50FA40001871ED /* Assets.xcassets in Resources */,
 				A4F1EC4A2C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf in Resources */,
-				A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,12 +417,15 @@
 				EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */,
 				A4F1EC632C491CE000A633CA /* CardBackground.swift in Sources */,
 				A4F1EC342C422F9E00A633CA /* CustomTranscript.swift in Sources */,
+				E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */,
 				EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */,
 				A4F1EC622C491CE000A633CA /* CircleButtonBackground.swift in Sources */,
 				A43BDA6C2C52314100E38B11 /* Message.swift in Sources */,
 				A4F1EC512C42AC9D00A633CA /* TranscriptContentView.swift in Sources */,
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
+				E1C1B4AC2C48F9A3000C9F5D /* PausePracticeView.swift in Sources */,
 				A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */,
+				E1C1B4AE2C48F9DD000C9F5D /* DummyPauseTranscript.swift in Sources */,
 				A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */,
 				A4F1EC662C491D1700A633CA /* SummaryView.swift in Sources */,
 				EE47A1882C49228C0042D10D /* AudioRecorder+SaveData.swift in Sources */,
@@ -588,7 +600,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = PV62VMPQYM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
@@ -622,7 +634,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = PV62VMPQYM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
