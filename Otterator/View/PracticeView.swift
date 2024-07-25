@@ -8,14 +8,13 @@
 import SwiftUI
 import AVKit
 
-struct PausePracticeView: View {
+struct PracticeView: View {
     @State private var tutorial = true
-    
-    //    let videoURL = URL(fileURLWithPath: Bundle.main.path(forResource: "TutorialPractice", ofType: ".mp4")!)
+    @State var viewModel: PracticeViewModel
     
     var body: some View {
         ZStack(alignment: .center) {
-            DummyPauseTranscript()
+            PracticeTranscript(viewmodel: viewModel)
             if tutorial{
                 Color.black.opacity(0.7)
                 VStack{

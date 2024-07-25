@@ -36,10 +36,11 @@
 		C8416D142C522C410003CCC7 /* ChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8416D132C522C410003CCC7 /* ChoiceView.swift */; };
 		C8F33CDF2C492063003F6C3B /* PlaypenSansFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */; };
 		C8F33CE12C492188003F6C3B /* TipsAndTricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */; };
+		E101FEE72C524B8100D4C9A9 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101FEE62C524B8100D4C9A9 /* PracticeViewModel.swift */; };
 		E1AFE39D2C50FA40001871ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AFE39C2C50FA40001871ED /* Assets.xcassets */; };
 		E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4A92C48F949000C9F5D /* DummyPause.swift */; };
-		E1C1B4AC2C48F9A3000C9F5D /* PausePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */; };
-		E1C1B4AE2C48F9DD000C9F5D /* DummyPauseTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */; };
+		E1C1B4AC2C48F9A3000C9F5D /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AB2C48F9A3000C9F5D /* PracticeView.swift */; };
+		E1C1B4AE2C48F9DD000C9F5D /* PracticeTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AD2C48F9DD000C9F5D /* PracticeTranscript.swift */; };
 		EE4209D72C47B9110087E6E7 /* CustomLMData.bin in Resources */ = {isa = PBXBuildFile; fileRef = EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */; };
 		EE47A1882C49228C0042D10D /* AudioRecorder+SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */; };
 		EE47A18A2C4922B40042D10D /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1892C4922B40042D10D /* AudioRecorder.swift */; };
@@ -102,10 +103,11 @@
 		C8416D132C522C410003CCC7 /* ChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceView.swift; sourceTree = "<group>"; };
 		C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaypenSansFont.swift; sourceTree = "<group>"; };
 		C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipsAndTricks.swift; path = ../View/Component/TipsAndTricks.swift; sourceTree = "<group>"; };
+		E101FEE62C524B8100D4C9A9 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
 		E1AFE39C2C50FA40001871ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1C1B4A92C48F949000C9F5D /* DummyPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPause.swift; sourceTree = "<group>"; };
-		E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausePracticeView.swift; sourceTree = "<group>"; };
-		E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPauseTranscript.swift; sourceTree = "<group>"; };
+		E1C1B4AB2C48F9A3000C9F5D /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
+		E1C1B4AD2C48F9DD000C9F5D /* PracticeTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeTranscript.swift; sourceTree = "<group>"; };
 		EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = CustomLMData.bin; sourceTree = "<group>"; };
 		EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioRecorder+SaveData.swift"; sourceTree = "<group>"; };
 		EE47A1892C4922B40042D10D /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
@@ -231,7 +233,7 @@
 				A4F1EC4E2C42739600A633CA /* InformationModalView.swift */,
 				A4F1EC652C491D1700A633CA /* SummaryView.swift */,
 				A4F1EC2E2C41386800A633CA /* TranscriptView.swift */,
-				E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */,
+				E1C1B4AB2C48F9A3000C9F5D /* PracticeView.swift */,
 				C8416D132C522C410003CCC7 /* ChoiceView.swift */,
 			);
 			path = View;
@@ -248,7 +250,7 @@
 				A4F1EC5B2C48EFC600A633CA /* EditContentView.swift */,
 				A4F1EC612C491CE000A633CA /* SummaryCard.swift */,
 				A4F1EC502C42AC9D00A633CA /* TranscriptContentView.swift */,
-				E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */,
+				E1C1B4AD2C48F9DD000C9F5D /* PracticeTranscript.swift */,
 				C8416D112C50B3470003CCC7 /* CustomSegmentedControl.swift */,
 			);
 			path = Component;
@@ -276,6 +278,7 @@
 			children = (
 				EE47A1892C4922B40042D10D /* AudioRecorder.swift */,
 				EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */,
+				E101FEE62C524B8100D4C9A9 /* PracticeViewModel.swift */,
 				A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */,
 				EEB451B02C52339F00C16668 /* PitchAnalyzer.swift */,
 			);
@@ -432,9 +435,10 @@
 				A43BDA6C2C52314100E38B11 /* Message.swift in Sources */,
 				A4F1EC512C42AC9D00A633CA /* TranscriptContentView.swift in Sources */,
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
-				E1C1B4AC2C48F9A3000C9F5D /* PausePracticeView.swift in Sources */,
+				E1C1B4AC2C48F9A3000C9F5D /* PracticeView.swift in Sources */,
 				A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */,
-				E1C1B4AE2C48F9DD000C9F5D /* DummyPauseTranscript.swift in Sources */,
+				E1C1B4AE2C48F9DD000C9F5D /* PracticeTranscript.swift in Sources */,
+				E101FEE72C524B8100D4C9A9 /* PracticeViewModel.swift in Sources */,
 				A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */,
 				EEB451B12C52339F00C16668 /* PitchAnalyzer.swift in Sources */,
 				A4F1EC662C491D1700A633CA /* SummaryView.swift in Sources */,
@@ -612,7 +616,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = PV62VMPQYM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
@@ -650,7 +654,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = PV62VMPQYM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
