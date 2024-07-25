@@ -11,7 +11,6 @@ struct SummaryCard: View {
     var bgcolor: Color
     var areaName: String
     var areaAverage: String = "AVERAGE"
-    var areaValue: String
     var areaTips: String
     var areaTricks: String
     
@@ -19,22 +18,19 @@ struct SummaryCard: View {
     
     var body: some View {
         //Card
-        VStack (spacing: 12) {
+        VStack /*(spacing: 12) */{
             //Area (Pitch)
-            HStack {
+            HStack{
                 VStack (alignment: .leading) {
                     Text(areaName)
-                        .playpenSans(.bold, 20)
+                        .playpenSans(.bold, 20, .title3)
                         .foregroundStyle(.white)
                     
                     Text(areaAverage)
-                        .font(Font.system(size: 14, weight: .medium))
+                        .font(.caption)
                         .foregroundStyle(.white)
                 }
                 Spacer()
-                Text(areaValue)
-                    .playpenSans(.bold, 20)
-                    .foregroundStyle(.white)
                 Image(systemName: "chevron.down")
                     .font(Font.system(size: 20, weight: .bold))
                     .foregroundStyle(.white)
@@ -51,9 +47,9 @@ struct SummaryCard: View {
             if showTipsnTricks {
                 VStack (alignment: .leading,  spacing: 6) {
                     Text("Tips")
-                        .playpenSans(.bold, 16)
+                        .playpenSans(.bold, 16, .headline)
                     Text(areaTips)
-                        .playpenSans(.regular, 14)
+                        .playpenSans(.regular, 14, .body)
                 }
                 .padding()
                 .background(
@@ -62,9 +58,9 @@ struct SummaryCard: View {
                 //Tricks
                 VStack (alignment: .leading, spacing: 6) {
                     Text("Tricks")
-                        .playpenSans(.bold, 16)
+                        .playpenSans(.bold, 16, .headline)
                     Text(areaTricks)
-                        .playpenSans(.regular, 14)
+                        .playpenSans(.regular, 14, .body)
                 }
                 .padding()
                 .background(
@@ -77,5 +73,5 @@ struct SummaryCard: View {
 }
 
 #Preview {
-    SummaryCard(bgcolor: .blue,areaName: "Pitch", areaValue: "200 Hz", areaTips: "hei", areaTricks: "hei")
+    SummaryCard(bgcolor: .blue,areaName: "Pitch", areaTips: "Ini Tips", areaTricks: "Ini Tricks")
 }

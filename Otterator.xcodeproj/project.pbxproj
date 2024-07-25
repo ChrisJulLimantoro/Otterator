@@ -32,6 +32,8 @@
 		A4F1EC632C491CE000A633CA /* CardBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC602C491CE000A633CA /* CardBackground.swift */; };
 		A4F1EC642C491CE000A633CA /* SummaryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC612C491CE000A633CA /* SummaryCard.swift */; };
 		A4F1EC662C491D1700A633CA /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1EC652C491D1700A633CA /* SummaryView.swift */; };
+		C8416D122C50B3470003CCC7 /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8416D112C50B3470003CCC7 /* CustomSegmentedControl.swift */; };
+		C8416D142C522C410003CCC7 /* ChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8416D132C522C410003CCC7 /* ChoiceView.swift */; };
 		C8F33CDF2C492063003F6C3B /* PlaypenSansFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */; };
 		C8F33CE12C492188003F6C3B /* TipsAndTricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */; };
 		E1AFE39D2C50FA40001871ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AFE39C2C50FA40001871ED /* Assets.xcassets */; };
@@ -95,6 +97,8 @@
 		A4F1EC602C491CE000A633CA /* CardBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBackground.swift; sourceTree = "<group>"; };
 		A4F1EC612C491CE000A633CA /* SummaryCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryCard.swift; sourceTree = "<group>"; };
 		A4F1EC652C491D1700A633CA /* SummaryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		C8416D112C50B3470003CCC7 /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
+		C8416D132C522C410003CCC7 /* ChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceView.swift; sourceTree = "<group>"; };
 		C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaypenSansFont.swift; sourceTree = "<group>"; };
 		C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipsAndTricks.swift; path = ../View/Component/TipsAndTricks.swift; sourceTree = "<group>"; };
 		E1AFE39C2C50FA40001871ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -226,6 +230,7 @@
 				A4F1EC652C491D1700A633CA /* SummaryView.swift */,
 				A4F1EC2E2C41386800A633CA /* TranscriptView.swift */,
 				E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */,
+				C8416D132C522C410003CCC7 /* ChoiceView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 				A4F1EC612C491CE000A633CA /* SummaryCard.swift */,
 				A4F1EC502C42AC9D00A633CA /* TranscriptContentView.swift */,
 				E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */,
+				C8416D112C50B3470003CCC7 /* CustomSegmentedControl.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -428,12 +434,14 @@
 				E1C1B4AE2C48F9DD000C9F5D /* DummyPauseTranscript.swift in Sources */,
 				A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */,
 				A4F1EC662C491D1700A633CA /* SummaryView.swift in Sources */,
+				C8416D142C522C410003CCC7 /* ChoiceView.swift in Sources */,
 				EE47A1882C49228C0042D10D /* AudioRecorder+SaveData.swift in Sources */,
 				A4F1EC322C42289700A633CA /* CustomProgressView.swift in Sources */,
 				A4F1EC642C491CE000A633CA /* SummaryCard.swift in Sources */,
 				A4F1EC5E2C48FA3900A633CA /* EditModalView.swift in Sources */,
 				A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */,
 				A4F1EC4D2C42519600A633CA /* Color.swift in Sources */,
+				C8416D122C50B3470003CCC7 /* CustomSegmentedControl.swift in Sources */,
 				C8F33CDF2C492063003F6C3B /* PlaypenSansFont.swift in Sources */,
 				A4F1EC582C4667B800A633CA /* GradientText.swift in Sources */,
 				A4F1EC4F2C42739600A633CA /* InformationModalView.swift in Sources */,
@@ -611,8 +619,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -620,6 +629,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Otterator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -645,8 +657,9 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -654,6 +667,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Otterator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

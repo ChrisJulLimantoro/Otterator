@@ -18,12 +18,15 @@ struct RecordingView: View {
     init(modelContext: ModelContext) {
         let audioRecorder = AudioRecorder(modelContext: modelContext)
         _audioRecorder = Bindable(wrappedValue: audioRecorder)
+        
+//        UINavigationBar.appearance().largeTitleTextAttributes = [.font : Font.custom("PlaypenSans-Regular_Bold", size: 32, relativeTo: .largeTitle)]
     }
     
     var body: some View {
         NavigationStack{
             VStack{
                 List{
+                    //Dummy
                     VStack{
                         HStack{
                             Text("Latihan Presentasi MC3")
@@ -36,6 +39,7 @@ struct RecordingView: View {
                             Text("12.20")
                         }.foregroundStyle(.secondary)
                     }
+                    .background(CardBackground(bgcolor: .white))
                     .swipeActions(edge: .trailing) {
                         Button(role: .destructive) {
                             // TODO: delete item from swift data
@@ -43,6 +47,7 @@ struct RecordingView: View {
                             Label("Delete", systemImage: "trash")
                         }
                     }
+                    //Records
                     ForEach(records) { item in
                         ZStack {
                             NavigationLink(destination: TranscriptView(viewModel: TranscriptViewModel(item))) { EmptyView()
@@ -61,6 +66,7 @@ struct RecordingView: View {
                                 .foregroundStyle(.secondary)
                             }
                         }
+                        .background(CardBackground(bgcolor: .white))
                         .swipeActions(edge: .trailing) {
                             Button(role: .destructive) {
                                 // TODO: delete item from swift data
@@ -72,6 +78,7 @@ struct RecordingView: View {
                 }
                 .listStyle(.inset)
                 Spacer()
+                //Recording button
                 Button{
                     showModal.toggle()
                     audioRecorder.startRecording()
