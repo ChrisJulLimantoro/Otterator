@@ -47,7 +47,7 @@ struct SummaryCard: View {
                 VStack (alignment: .leading,  spacing: 6) {
                     Text("Tips")
                         .playpenSans(.bold, 16, .headline)
-                    Text(areaTips)
+                    Text(try!AttributedString(markdown: areaTips))
                         .playpenSans(.regular, 14, .body)
                 }
                 .padding()
@@ -58,7 +58,7 @@ struct SummaryCard: View {
                 VStack (alignment: .leading, spacing: 6) {
                     Text("Tricks")
                         .playpenSans(.bold, 16, .headline)
-                    Text(areaTricks)
+                    Text(try!AttributedString(markdown: areaTricks))
                         .playpenSans(.regular, 14, .body)
                 }
                 .padding()
