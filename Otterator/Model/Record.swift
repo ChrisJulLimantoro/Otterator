@@ -42,7 +42,7 @@ class Record {
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "content-type")
         
-        var text = self.transcript!.sorted(by: {$0.timestamp < $1.timestamp}).map{
+        var text = self.transcript!.sorted(by: {$0.timestamp < $1.timestamp}).filter{ !$0.is_pause }.map{
             $0.corrected_word
         }.reduce(""){ $0 + " " + $1 }.trimmingCharacters(in: .whitespaces)
         var message = Message(phrase:text)
