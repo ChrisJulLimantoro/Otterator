@@ -23,6 +23,13 @@ class AudioRecorder: NSObject, AVAudioPlayerDelegate {
     var recognizedText: String = ""
     var recordingTime: TimeInterval = 0
     
+    let settings = [
+        AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
+        AVSampleRateKey: 12000,
+        AVNumberOfChannelsKey: 1,
+        AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
+    ]
+    
     init(modelContext: ModelContext){
         self.modelContext = modelContext
         super.init()
@@ -36,16 +43,9 @@ class AudioRecorder: NSObject, AVAudioPlayerDelegate {
             try recordingSession.setCategory(.playAndRecord, mode: .default)
             try recordingSession.setActive(true)
             
-            let settings = [
-                AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
-                AVSampleRateKey: 12000,
-                AVNumberOfChannelsKey: 1,
-                AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
-            ]
-            
             let url = getDocumentsDirectory().appendingPathComponent("recording_\(UUID().uuidString).m4a")
             
-            audioRecorder = try AVAudioRecorder(url: url, settings: settings)
+            audioRecorder = try AVAudioRecorder(url: url, settings: self.settings)
         } catch {
             print(error)
         }
@@ -71,18 +71,12 @@ class AudioRecorder: NSObject, AVAudioPlayerDelegate {
     }
     
     func playRecording(name: String) {
-        let playSession = AVAudioSession.sharedInstance()
         let url = getDocumentsDirectory().appendingPathComponent(name)
-        
-        do {
-            try playSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
-        } catch {
-            print("Failed")
-        }
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer?.delegate = self
+            audioPlayer?.volume = 0.5
             audioPlayer?.prepareToPlay()
             audioPlayer?.play()
         } catch {

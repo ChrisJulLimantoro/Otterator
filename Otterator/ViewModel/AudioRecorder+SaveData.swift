@@ -19,16 +19,24 @@ extension AudioRecorder{
     
     func saveRecording(title: String) {
         stopRecording()
-        
         Task{
             do {
+                // let analyzer = PitchAnalyzer()
+                var avgPitch: Double = 0
+                
                 try await transcribeAudio(url: audioRecorder.url)
                 
                 let wordT = self.mapTranscriptionSegments(segments: resultRecognition.bestTranscription.segments)
                 
-                let res: Record = Record(title: title, audio_file: "\(audioRecorder.url.lastPathComponent)", datetime: Date(), duration: resultRecognition.speechRecognitionMetadata?.speechDuration ?? 0, transcript: wordT, avg_pitch: 0.0, avg_volume: 0, avg_pause: resultRecognition.speechRecognitionMetadata?.averagePauseDuration ?? 0, avg_pace: resultRecognition.speechRecognitionMetadata?.speakingRate ?? 0)
+                // analyzer.analyzePitch(from: audioRecorder.url) { pitch in
+                //     avgPitch = pitch
+                // }
+                
+                let res: Record = Record(title: title, audio_file: "\(audioRecorder.url.lastPathComponent)", datetime: Date(), duration: resultRecognition.speechRecognitionMetadata?.speechDuration ?? 0, transcript: wordT, avg_pitch: avgPitch, avg_volume: 0, avg_pause: resultRecognition.speechRecognitionMetadata?.averagePauseDuration ?? 0, avg_pace: resultRecognition.speechRecognitionMetadata?.speakingRate ?? 0)
                 
                 self.modelContext.insert(res)
+                
+                setup()
             } catch {
                 print("Failed to save recording: \(error)")
             }
@@ -92,7 +100,7 @@ extension AudioRecorder{
             let duration = segment.duration
             let avg_pitch = averageOfFeatures(values: segment.voiceAnalytics?.pitch.acousticFeatureValuePerFrame)
             let avg_volume = averageOfFeatures(values: segment.voiceAnalytics?.shimmer.acousticFeatureValuePerFrame)
-            let avg_pace = averageOfFeatures(values: segment.voiceAnalytics?.jitter.acousticFeatureValuePerFrame)
+            let avg_pace = 60/duration
             let corrected_word = segment.substring
             let is_pause = false
             

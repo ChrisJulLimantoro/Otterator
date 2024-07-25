@@ -37,6 +37,7 @@
 		EE47A1882C49228C0042D10D /* AudioRecorder+SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */; };
 		EE47A18A2C4922B40042D10D /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1892C4922B40042D10D /* AudioRecorder.swift */; };
 		EEA3EDB52C468FCF008EE13D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */; };
+		EEB451B12C52339F00C16668 /* PitchAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB451B02C52339F00C16668 /* PitchAnalyzer.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
 		EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1122C4138010025FAE6 /* RecordingView.swift */; };
@@ -95,6 +96,7 @@
 		EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioRecorder+SaveData.swift"; sourceTree = "<group>"; };
 		EE47A1892C4922B40042D10D /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		EEB451B02C52339F00C16668 /* PitchAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchAnalyzer.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		EEB8D1122C4138010025FAE6 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
@@ -254,6 +256,7 @@
 				EE47A1892C4922B40042D10D /* AudioRecorder.swift */,
 				EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */,
 				A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */,
+				EEB451B02C52339F00C16668 /* PitchAnalyzer.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
 				A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */,
 				A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */,
+				EEB451B12C52339F00C16668 /* PitchAnalyzer.swift in Sources */,
 				A4F1EC662C491D1700A633CA /* SummaryView.swift in Sources */,
 				EE47A1882C49228C0042D10D /* AudioRecorder+SaveData.swift in Sources */,
 				A4F1EC322C42289700A633CA /* CustomProgressView.swift in Sources */,
