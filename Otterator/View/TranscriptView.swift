@@ -9,7 +9,7 @@ import SwiftUI
 import AVFAudio
 
 struct TranscriptView: View {
-    @State var segment = "Vocal"
+    @State private var activeTab: SegmentedTab = .transcript
     @State var isPlay = false
     @State var progress:CGFloat = 0
     @State var isPresented:[Bool] = [false,false,false]
@@ -22,23 +22,33 @@ struct TranscriptView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                Picker("segment",selection:$segment){
-                    ForEach(tabs, id:\.self){
-                        Text($0)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .padding(16)
+//                Picker("segment",selection:$segment){
+//                    ForEach(tabs, id:\.self){
+//                        Text($0)
+//                    }
+//                }
+//                .pickerStyle(.segmented)
+//                .background(CardBackground(bgcolor: .blue))
+//                .padding(16)
+//                
+//                if segment == "Vocal" {
+//                    TranscriptContentView(viewModel: viewModel)
+//                } else if segment == "Practice"{
+//                    EditContentView(viewModel: viewModel,word: $word,edit: $edit)
+//                } else {
+//                    VStack{
+//                        SummaryView()
+//                    }
+//                }
                 
-                if segment == "Vocal" {
-                    TranscriptContentView(viewModel: viewModel)
-                } else if segment == "Practice"{
-                    EditContentView(viewModel: viewModel,word: $word,edit: $edit)
-                } else {
-                    VStack{
-                        SummaryView()
-                    }
-                }
+                //mohon bantuannya ehe
+//                CustomSegmentedControl(tabs: SegmentedTab.allCases, activeTab: $activeTab, activeTint: .oBlack, inactiveTint: .oBlack.opacity(0.7), ){ size in
+//                    RoundedRectangle(cornerRadius: 14)
+//                        .fill(.white)
+//                        .frame(width: size.width, height: size.height)
+//                        .padding(.horizontal, 10)
+//                        .frame(maxHeight: .infinity, alignment: .bottom)
+//                }
             }
             .navigationTitle("Recording 001")
             .navigationBarTitleDisplayMode(.inline)

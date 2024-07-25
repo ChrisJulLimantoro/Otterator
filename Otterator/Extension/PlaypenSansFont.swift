@@ -19,30 +19,33 @@ enum FontWeight {
 }
 
 extension Font {
-    static let playpenSans: (FontWeight, CGFloat) -> Font = { fontType, size in
+    static let playpenSans: (FontWeight, CGFloat, TextStyle) -> Font = { fontType, size, textStyle in
         switch fontType {
         case .thin:
-            Font.custom("PlaypenSans-Regular_Thin", size: size)
+            Font.custom("PlaypenSans-Regular_Thin", size: size, relativeTo: textStyle)
         case .light:
-            Font.custom("PlaypenSans-Regular_Light", size: size)
+            Font.custom("PlaypenSans-Regular_Light", size: size, relativeTo: textStyle)
         case .regular:
-            Font.custom("PlaypenSans-Regular", size: size)
+            Font.custom("PlaypenSans-Regular", size: size, relativeTo: textStyle)
         case .medium:
-            Font.custom("PlaypenSans-Regular_Medium", size: size)
+            Font.custom("PlaypenSans-Regular_Medium", size: size, relativeTo: textStyle)
         case .semiBold:
-            Font.custom("PlaypenSans-Regular_SemiBold", size: size)
+            Font.custom("PlaypenSans-Regular_SemiBold", size: size, relativeTo: textStyle)
         case .bold:
-            Font.custom("PlaypenSans-Regular_Bold", size: size)
+            Font.custom("PlaypenSans-Regular_Bold", size: size, relativeTo: textStyle)
         case .black:
-            Font.custom("PlaypenSans-Regular_ExtraBold", size: size)
+            Font.custom("PlaypenSans-Regular_ExtraBold", size: size, relativeTo: textStyle)
         case .extraLight:
-            Font.custom("PlaypenSans-Regular_ExtraLight", size: size)
+            Font.custom("PlaypenSans-Regular_ExtraLight", size: size, relativeTo: textStyle)
         }
     }
 }
 
 extension Text {
-    func playpenSans(_ fontWeight: FontWeight? = .regular, _ size: CGFloat? = nil) -> Text {
-        return self.font(.playpenSans(fontWeight ?? .regular, size ?? 16))
+//    func playpenSans(_ fontWeight: FontWeight? = .regular, _ size: CGFloat? = nil, _ textStyle: Text? = nil) -> Text {
+//        return self.font(.playpenSans(fontWeight ?? .regular, size ?? 16, .callout))
+//    }
+    func playpenSans(_ fontWeight: FontWeight? = nil, _ size: CGFloat? = nil, _ textStyle: Font? = nil) -> Text {
+        return self.font(.playpenSans(fontWeight ?? .regular, size ?? 16, .callout))
     }
 }
