@@ -14,6 +14,7 @@ struct OtteratorApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
+            Record.self
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
@@ -25,7 +26,7 @@ struct OtteratorApp: App {
     }()
     var body: some Scene {
         WindowGroup {
-            TranscriptView()
+            RecordingView(modelContext: sharedModelContainer.mainContext)
         }
         .modelContainer(sharedModelContainer)
     }

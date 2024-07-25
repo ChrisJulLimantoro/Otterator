@@ -11,7 +11,7 @@ import AVFoundation
 struct CustomTranscript: View {
     //    @Binding var progress:CGFloat
     @Bindable var viewModel:TranscriptViewModel
-    var maxChar:Int = 30
+    var maxChar:Int = 25
     var highVolume:Double = 50
     var slowPace:Double = 10
     var pitch:[Double] = [0.3,0.8]
@@ -31,6 +31,7 @@ struct CustomTranscript: View {
                     HStack{
                         ForEach(wordsRow.indices, id:\.self){colIndex in
                             let group = wordsRow[colIndex]
+                            let random = Int.random(in: 0..<3 )
                             ZStack(alignment:.leading){
                                 HStack{
                                     ForEach(group.indices, id:\.self){index in
@@ -50,7 +51,8 @@ struct CustomTranscript: View {
                             .padding(2)
                             .background{
                                 RoundedRectangle(cornerRadius:5)
-                                    .foregroundColor(group[0].avg_pitch < pitch[0] && !group[0].is_pause ? Color(hex:"#00A3FF").opacity(0.3) : group[0].avg_pitch > pitch[1] && !group[0].is_pause ? Color(hex:"#FF8D23").opacity(0.3) : Color(hex:"#FFFFFF").opacity(0.3))
+//                                    .foregroundColor(group[0].avg_pitch < pitch[0] && !group[0].is_pause ? Color(hex:"#00A3FF").opacity(0.3) : group[0].avg_pitch > pitch[1] && !group[0].is_pause ? Color(hex:"#FF8D23").opacity(0.3) : Color(hex:"#FFFFFF").opacity(0.3))
+                                    .foregroundColor(random == 0 ? Color(hex:"#00A3FF").opacity(0.3) : random == 1 ? Color(hex:"#FF8D23").opacity(0.3) : Color(hex:"#FFFFFF").opacity(0.3))
                             }
                         }
                         Spacer()
@@ -70,10 +72,12 @@ struct CustomTranscript: View {
         
         for word in text{
             let wordLength = word.word.count
-            let wordType = word.is_pause ? 1 : word.avg_pitch < pitch[0] ? 0 : word.avg_pitch < pitch[1] ? 1 : 2
+//            let wordType = word.is_pause ? 1 : word.avg_pitch < pitch[0] ? 0 : word.avg_pitch < pitch[1] ? 1 : 2
+            let wordType = word.is_pause ? 1 : Int.random(in: 0..<3)
             
             // for changing the lines logic
             if currentLength + wordLength > maxLength {
+                groups.append(currentGroups)
                 lines.append(groups)
                 groups = []
                 currentGroups = [word]
@@ -117,6 +121,7 @@ struct CustomTranscript: View {
             groups.append(currentGroups)
             lines.append(groups)
         }
+        print(lines.map{$0.map{$0.map{$0.word}}})
         return lines
     }
     

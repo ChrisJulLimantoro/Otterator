@@ -9,41 +9,54 @@ import SwiftUI
 import AVFAudio
 
 struct TranscriptView: View {
-    @State var segment = "Vocal"
+    @State private var activeTab: SegmentedTab = .transcript
     @State var isPlay = false
     @State var progress:CGFloat = 0
     @State var isPresented:[Bool] = [false,false,false]
     @State var edit:Bool = false
     
-    @State var viewModel = TranscriptViewModel("hello")
+    @State var viewModel: TranscriptViewModel
     @State var word:WordTranscript = WordTranscript()
     
     var tabs = ["Vocal","Practice","Summary"]
     var body: some View {
         NavigationStack{
             VStack{
-                Picker("segment",selection:$segment){
-                    ForEach(tabs, id:\.self){
-                        Text($0)
-                    }
-                }
-                .pickerStyle(.segmented)
-                .padding(16)
+//                Picker("segment",selection:$segment){
+//                    ForEach(tabs, id:\.self){
+//                        Text($0)
+//                    }
+//                }
+//                .pickerStyle(.segmented)
+//                .background(CardBackground(bgcolor: .blue))
+//                .padding(16)
+//                
+//                if segment == "Vocal" {
+//                    TranscriptContentView(viewModel: viewModel)
+//                } else if segment == "Practice"{
+//                    EditContentView(viewModel: viewModel,word: $word,edit: $edit)
+//                } else {
+//                    VStack{
+//                        SummaryView()
+//                    }
+//                }
                 
-                if segment == "Vocal" {
-                    TranscriptContentView(viewModel: viewModel)
-                } else if segment == "Practice"{
-                    EditContentView(viewModel: viewModel,word: $word,edit: $edit)
+                CustomSegmentedControl(tabs: SegmentedTab.allCases, activeTab: $activeTab, activeTint: .oBlack, inactiveTint: .oBlack.opacity(0.7)){ size in
+                    RoundedRectangle(cornerRadius: 14)
+                        .fill(.white)
+                        .frame(width: size.width, height: size.height)
+                        .padding(.horizontal, 10)
+                        .frame(maxHeight: .infinity, alignment: .bottom)
+                }
+                if activeTab == .summary {
+                    SummaryView()
                 } else {
-                    VStack{
-                        Spacer()
-                        Text("Summary Page")
-                        Spacer()
-                    }
+                    TranscriptContentView(viewModel: viewModel)
                 }
             }
             .navigationTitle("Recording 001")
             .navigationBarTitleDisplayMode(.inline)
+            .background(Color(hex:"#cce5ff"))
             .toolbar{
                 ToolbarItem(placement: .confirmationAction){
                     Menu {
@@ -81,10 +94,9 @@ struct TranscriptView: View {
                     .presentationBackgroundInteraction(.disabled)
                     .presentationBackground(.ultraThickMaterial)
             }
+            .onAppear(){
+                print(viewModel.text.filter{$0.timestamp<1}.map{"\($0.word), \($0.duration), \($0.timestamp)"})
+            }
         }
     }
-}
-
-#Preview {
-    return TranscriptView()
 }

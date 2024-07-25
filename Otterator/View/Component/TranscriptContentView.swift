@@ -15,6 +15,10 @@ struct TranscriptContentView: View {
     
     var body: some View {
         CustomTranscript(viewModel:viewModel)
+            .padding(.horizontal,8)
+            .background{
+                CardBackground(bgcolor: .white)
+            }
             .padding(.horizontal,20)
             .padding(.vertical,8)
         Spacer()
@@ -22,6 +26,7 @@ struct TranscriptContentView: View {
             CustomProgressView(viewModel:viewModel)
                 .frame(height:20)
                 .padding(.horizontal,16)
+
             HStack(alignment:.center){
                 Text(formatSec(viewModel.currentTime))
                 Spacer()
@@ -34,7 +39,11 @@ struct TranscriptContentView: View {
             Spacer()
             Image(systemName:"gobackward.15")
                 .resizable()
-                .frame(width:40,height:40)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                .frame(width:26,height:26)
+                .background{
+                    CircleButtonBackground(bgcolor: .white)
+                }
                 .onTapGesture{
                     withAnimation(.easeInOut){
                         viewModel.reduceSeconds(15)
@@ -43,14 +52,22 @@ struct TranscriptContentView: View {
             Spacer()
             Image(systemName: viewModel.isPlaying ? "pause.fill" : "play.fill")
                 .resizable()
-                .frame(width:40,height:40)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                .frame(width:26,height:26)
+                .background{
+                    CircleButtonBackground(bgcolor: .white)
+                }
                 .onTapGesture{
                     viewModel.audioToogle()
                 }
             Spacer()
             Image(systemName:"goforward.15")
                 .resizable()
-                .frame(width:40,height:40)
+                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                .frame(width:26,height:26)
+                .background{
+                    CircleButtonBackground(bgcolor: .white)
+                }
                 .onTapGesture{
                     withAnimation(.easeInOut){
                         viewModel.addSeconds(15)

@@ -25,9 +25,10 @@ struct CustomProgressView: View {
                                    geometry.size.width),
                         height: 8
                     )
-                    .foregroundColor(.black)
+                    .foregroundColor(.blue)
                 Circle()
                     .frame(width:16,height:16)
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                     .offset(x: min((viewModel.currentTime / viewModel.audio!.duration) * geometry.size.width,
                                    geometry.size.width) - 10)
             }
