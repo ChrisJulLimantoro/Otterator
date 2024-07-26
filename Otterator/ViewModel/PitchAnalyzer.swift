@@ -29,7 +29,7 @@ class PitchAnalyzer {
     
     func analyzePitch(from url: URL, completion: @escaping (Double) -> Void) {
         let audioFile = try! AVAudioFile(forReading: url)
-        let format = audioFile.processingFormat
+        _ = audioFile.processingFormat
         let outputFormat = audioEngine.outputNode.outputFormat(forBus: 0)
         
         audioPlayerNode.scheduleFile(audioFile, at: nil, completionHandler: nil)

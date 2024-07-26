@@ -49,28 +49,21 @@ extension AudioRecorder{
         recognitionRequest.shouldReportPartialResults = false
         recognitionRequest.addsPunctuation = true
         
-        if #available(iOS 13, *) {
-            recognitionRequest.requiresOnDeviceRecognition = true
-            if #available(iOS 17, *) {
-                recognitionRequest.customizedLanguageModel = self.lmConfiguration
-            }
-        }
-        
         do {
-            try await withCheckedThrowingContinuation { continuation in
+            try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<Void, Error>) in
                 var isResumed = false
+                var appendedText = []
                 speechRecognizer.recognitionTask(with: recognitionRequest) { result, error in
-                    if let result = result {
-                        self.resultRecognition = result
-                        if !isResumed {
-                            continuation.resume(returning: ())
-                            isResumed = true
-                        }
+                    guard let result else {
+                        continuation.resume(throwing: error!)
                         return
                     }
-                    if error != nil || result?.isFinal == true {
+                            
+                    if result.isFinal {
+                        self.resultRecognition = result
+                        print(result.bestTranscription.formattedString)
                         if !isResumed {
-                            continuation.resume(throwing: error!)
+                            continuation.resume(returning: ())
                             isResumed = true
                         }
                         return

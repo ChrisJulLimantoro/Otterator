@@ -85,7 +85,7 @@ struct RecordingView: View {
     do{
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: Record.self, configurations: config)
-        for index in (0...3) {
+        for _ in (0...3) {
             let rec = Record(id: UUID(), title: "adsad", audio_file: "asdasd", datetime: Date(), duration: 0, transcript: [], avg_pitch: 0, avg_volume: 0, avg_pause: 0, avg_pace: 0)
             container.mainContext.insert(rec)
         }
