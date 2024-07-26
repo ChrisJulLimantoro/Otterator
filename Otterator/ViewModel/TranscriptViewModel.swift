@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 import SwiftUI
+import QuartzCore
 
 @Observable
 class TranscriptViewModel {
@@ -19,16 +20,22 @@ class TranscriptViewModel {
     var isPlaying: Bool = false
     var currentTime:Double = 0
     var timer:Timer?
+    var displayLink: CADisplayLink?
+    var record: Record
+    var pauseCategory: String
     
-    init(_ record: Record){
+    init(_ t_record: Record){
+        self.record = t_record
+        let word_count = t_record.transcript!.filter{!$0.is_pause}.count
+        let pause_count = t_record.transcript!.filter{$0.is_pause}.count
+        self.pauseCategory = (pause_count > word_count / 5) ? "too Much" : (pause_count < word_count / 12) ? "too Few" : "no Pause"
         do{
-            let url = getDocumentsDirectory().appendingPathComponent(record.audio_file)
-            audio = try AVAudioPlayer(contentsOf: url)
-            text = record.transcript!.sorted(by: {$0.timestamp < $1.timestamp})
+            let url = getDocumentsDirectory().appendingPathComponent(t_record.audio_file)
+            self.audio = try AVAudioPlayer(contentsOf: url)
+            self.text = t_record.transcript!.sorted(by: {$0.timestamp < $1.timestamp})
         } catch {
             print(error)
         }
-        
     }
     
     func audioToogle(){
@@ -41,7 +48,6 @@ class TranscriptViewModel {
     
     func audioPlay(){
         let playSession = AVAudioSession.sharedInstance()
-        
         do {
             try playSession.overrideOutputAudioPort(AVAudioSession.PortOverride.speaker)
         } catch {
@@ -51,16 +57,24 @@ class TranscriptViewModel {
         audio?.prepareToPlay()
         audio!.play()
         isPlaying = true
-        timer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { _ in
-            if self.currentTime < self.audio!.duration{
-                withAnimation(.bouncy){
-                    self.currentTime += 0.01
-                }
-            } else {
-                self.timer?.invalidate()
-                self.isPlaying = false
+        setupDisplayLink()
+    }
+    
+    private func setupDisplayLink() {
+        displayLink = CADisplayLink(target: self, selector: #selector(updateCurrentTime))
+        displayLink?.add(to: .main, forMode: .default)
+    }
+    
+    @objc private func updateCurrentTime() {
+        if let audioPlayer = self.audio, audioPlayer.isPlaying  {
+            withAnimation(.easeInOut) {
+                self.currentTime = audioPlayer.currentTime
             }
-        })
+        } else {
+            displayLink?.invalidate()
+            displayLink = nil
+            self.isPlaying = false
+        }
     }
     
     func audioPause(){

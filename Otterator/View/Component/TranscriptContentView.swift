@@ -21,6 +21,11 @@ struct TranscriptContentView: View {
             }
             .padding(.horizontal,20)
             .padding(.vertical,8)
+            .frame(height: 407)
+        Spacer()
+        CustomLegend()
+            .background(CardBackground(bgcolor: .white))
+            .padding(.horizontal,20)
         Spacer()
         VStack{
             CustomProgressView(viewModel:viewModel)
@@ -38,9 +43,8 @@ struct TranscriptContentView: View {
         HStack{
             Spacer()
             Image(systemName:"gobackward.15")
-                .resizable()
-                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                .frame(width:26,height:26)
+                .font(Font.custom("SF Pro", size: 26))
+                .foregroundStyle(Color.accentColor)
                 .background{
                     CircleButtonBackground(bgcolor: .white)
                 }
@@ -50,21 +54,32 @@ struct TranscriptContentView: View {
                     }
                 }
             Spacer()
-            Image(systemName: viewModel.isPlaying ? "pause.fill" : "play.fill")
-                .resizable()
-                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                .frame(width:26,height:26)
-                .background{
-                    CircleButtonBackground(bgcolor: .white)
-                }
-                .onTapGesture{
-                    viewModel.audioToogle()
-                }
+            if viewModel.isPlaying == true {
+                Image(systemName: "pause.fill")
+                    .font(Font.custom("SF Pro", size: 26))
+                    .foregroundStyle(Color.accentColor)
+                    .background{
+                        CircleButtonBackground(bgcolor: .white)
+                    }
+                    .onTapGesture{
+                        viewModel.audioToogle()
+                    }
+            } else {
+                Image(systemName: "play.fill")
+                    .font(Font.custom("SF Pro", size: 26))
+                    .offset(x: 2)
+                    .foregroundStyle(Color.accentColor)
+                    .background{
+                        CircleButtonBackground(bgcolor: .white)
+                    }
+                    .onTapGesture{
+                        viewModel.audioToogle()
+                    }
+            }
             Spacer()
             Image(systemName:"goforward.15")
-                .resizable()
-                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
-                .frame(width:26,height:26)
+                .font(Font.custom("SF Pro", size: 26))
+                .foregroundStyle(Color.accentColor)
                 .background{
                     CircleButtonBackground(bgcolor: .white)
                 }
@@ -75,6 +90,7 @@ struct TranscriptContentView: View {
                 }
             Spacer()
         }
+        Spacer()
     }
     func formatSec(_ second:Double) -> String
     {

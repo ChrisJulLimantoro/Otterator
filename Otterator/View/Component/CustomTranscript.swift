@@ -51,7 +51,6 @@ struct CustomTranscript: View {
                             .padding(2)
                             .background{
                                 RoundedRectangle(cornerRadius:5)
-//                                    .foregroundColor(group[0].avg_pitch < pitch[0] && !group[0].is_pause ? Color(hex:"#00A3FF").opacity(0.3) : group[0].avg_pitch > pitch[1] && !group[0].is_pause ? Color(hex:"#FF8D23").opacity(0.3) : Color(hex:"#FFFFFF").opacity(0.3))
                                     .foregroundColor(random == 0 ? Color(hex:"#00A3FF").opacity(0.3) : random == 1 ? Color(hex:"#FF8D23").opacity(0.3) : Color(hex:"#FFFFFF").opacity(0.3))
                             }
                         }
@@ -121,7 +120,6 @@ struct CustomTranscript: View {
             groups.append(currentGroups)
             lines.append(groups)
         }
-        print(lines.map{$0.map{$0.map{$0.word}}})
         return lines
     }
     

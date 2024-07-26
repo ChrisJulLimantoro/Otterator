@@ -49,7 +49,7 @@ struct TranscriptView: View {
                         .frame(maxHeight: .infinity, alignment: .bottom)
                 }
                 if activeTab == .summary {
-                    SummaryView()
+                    SummaryView(viewModel: viewModel)
                 } else {
                     TranscriptContentView(viewModel: viewModel)
                 }

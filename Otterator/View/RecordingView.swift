@@ -18,91 +18,84 @@ struct RecordingView: View {
     init(modelContext: ModelContext) {
         let audioRecorder = AudioRecorder(modelContext: modelContext)
         _audioRecorder = Bindable(wrappedValue: audioRecorder)
-        
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.font : Font.custom("PlaypenSans-Regular_Bold", size: 32, relativeTo: .largeTitle)]
     }
     
     var body: some View {
         NavigationStack{
-            VStack{
-                List{
-                    //Dummy
-                    VStack{
-                        HStack{
-                            Text("Latihan Presentasi MC3")
-                                .foregroundStyle(.primary)
-                            Spacer()
-                        }
-                        HStack{
-                            Text("5 Jul 2024")
-                            Spacer()
-                            Text("12.20")
-                        }.foregroundStyle(.secondary)
-                    }
-                    .background(CardBackground(bgcolor: .white))
-                    .swipeActions(edge: .trailing) {
-                        Button(role: .destructive) {
-                            // TODO: delete item from swift data
-                        } label: {
-                            Label("Delete", systemImage: "trash")
-                        }
-                    }
-                    //Records
-                    ForEach(records) { item in
-                        ZStack {
-                            NavigationLink(destination: TranscriptView(viewModel: TranscriptViewModel(item))) { EmptyView()
-                            }.opacity(0.0)
-                            VStack{
-                                HStack{
-                                    Text(item.title)
-                                        .foregroundStyle(.primary)
-                                    Spacer()
+            ZStack {
+                VStack{
+                    List{
+                        if (records.isEmpty) {
+                            Text("No recordings found. Start recording now!")
+                        } else {
+                            ForEach(records) { item in
+                                ZStack {
+                                    NavigationLink(destination: ChoiceView(item: item)) { EmptyView()
+                                    }.opacity(0.0)
+                                    VStack{
+                                        HStack{
+                                            Text(item.title)
+                                                .font(.playpenSans(.semiBold, 20, .title3))
+                                            Spacer()
+                                        }
+                                        HStack{
+                                            Text(item.datetime.formatted(date: .long, time: .omitted))
+                                                .font(.playpenSans(.regular, 14, .title3))
+                                            Spacer()
+                                            Text("\(formatTime(item.duration))")
+                                                .font(.playpenSans(.regular, 14, .title3))
+                                        }
+                                        .foregroundStyle(.secondary)
+                                    }
                                 }
-                                HStack{
-                                    Text(item.datetime.formatted(date: .long, time: .omitted))
-                                    Spacer()
-                                    Text("\(formatTime(item.duration))")
+                                .listRowBackground(Color.oBackground)
+                                .padding(.horizontal)
+                                .padding(.vertical, 12)
+                                .background(CardBackground(bgcolor: .white))
+                                .swipeActions(edge: .trailing) {
+                                    Button(role: .destructive) {
+                                        // TODO: delete item from swift data
+                                    } label: {
+                                        Label("Delete", systemImage: "trash")
+                                    }
                                 }
-                                .foregroundStyle(.secondary)
+                                .listRowSeparator(.hidden)
                             }
-                        }
-                        .background(CardBackground(bgcolor: .white))
-                        .swipeActions(edge: .trailing) {
-                            Button(role: .destructive) {
-                                // TODO: delete item from swift data
-                            } label: {
-                                Label("Delete", systemImage: "trash")
-                            }
+                            .background(Color.oBackground)
+                            .listStyle(.inset)
                         }
                     }
-                }
-                .listStyle(.inset)
-                Spacer()
-                //Recording button
-                Button{
-                    showModal.toggle()
-                    audioRecorder.startRecording()
-                } label: {
-                    Circle()
-                        .fill(Color.red)
-                        .frame(width: 52, height: 52)
-                        .overlay(
+                    Spacer()
+                    //Recording button
+                    Button{
+                        showModal.toggle()
+                        audioRecorder.startRecording()
+                    } label: {
+                        ZStack{
                             Circle()
-                                .stroke(Color(.secondaryLabel), lineWidth: 2)
+                                .fill(Color.white)
+                                .frame(width: 52, height: 52)
+                                .shadow(color: Color(hex: "#555555"), radius: 0, x: 3, y: 3)
+                            Circle()
+                                .fill(Color.accentColor)
+                                .frame(width: 30, height: 30)
                                 .padding(-2)
-                        )
-                        .padding(.top)
+                        }.padding(.top)
+                    }
+                    .frame(maxWidth: .infinity)
+                    .background(Color.oBackground)
                 }
-                .frame(maxWidth: .infinity)
-                .background(Color(.systemGray6))
-            }
-            .navigationTitle("All Recordings")
-            .toolbar{
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    EditButton()
+                .scrollContentBackground(.hidden)
+                .background(Color.oBackground)
+                .navigationTitle("All Recordings")
+                .toolbar{
+                    ToolbarItemGroup(placement: .topBarTrailing) {
+                        EditButton()
+                    }
                 }
-            }
+                .toolbarBackground(Color.oBackground, for: .navigationBar)
             .searchable(text: $searchText)
+            }
         }
         .sheet(
             isPresented: $showModal,
@@ -134,7 +127,12 @@ struct RecordingView: View {
     do{
         let config = ModelConfiguration(isStoredInMemoryOnly: true)
         let container = try ModelContainer(for: Record.self, configurations: config)
+        for index in (0...3) {
+            let rec = Record(id: UUID(), title: "adsad", audio_file: "asdasd", datetime: Date(), duration: 0, transcript: [], avg_pitch: 0, avg_volume: 0, avg_pause: 0, avg_pace: 0)
+            container.mainContext.insert(rec)
+        }
         return RecordingView(modelContext: container.mainContext)
+            .modelContainer(container)
     } catch {
         fatalError("Failed to create model container.")
     }

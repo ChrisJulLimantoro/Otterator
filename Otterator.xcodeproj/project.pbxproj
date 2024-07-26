@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A43BDA682C4FA38200E38B11 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BDA672C4FA38200E38B11 /* Practice.swift */; };
+		A43BDA6C2C52314100E38B11 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BDA6B2C52314100E38B11 /* Message.swift */; };
 		A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */; };
 		A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621662C4123EA00D90CD5 /* ContentView.swift */; };
 		A4E621692C4123EA00D90CD5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621682C4123EA00D90CD5 /* Item.swift */; };
-		A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */; };
 		A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4E6216D2C4123EC00D90CD5 /* Preview Assets.xcassets */; };
 		A4E621782C4123EC00D90CD5 /* OtteratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */; };
 		A4E621822C4123EC00D90CD5 /* OtteratorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621812C4123EC00D90CD5 /* OtteratorUITests.swift */; };
@@ -35,10 +36,16 @@
 		C8416D142C522C410003CCC7 /* ChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8416D132C522C410003CCC7 /* ChoiceView.swift */; };
 		C8F33CDF2C492063003F6C3B /* PlaypenSansFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */; };
 		C8F33CE12C492188003F6C3B /* TipsAndTricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */; };
+		C8FC4D052C537D2000061F02 /* CustomLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FC4D042C537D2000061F02 /* CustomLegend.swift */; };
+		E1AFE39D2C50FA40001871ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AFE39C2C50FA40001871ED /* Assets.xcassets */; };
+		E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4A92C48F949000C9F5D /* DummyPause.swift */; };
+		E1C1B4AC2C48F9A3000C9F5D /* PausePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */; };
+		E1C1B4AE2C48F9DD000C9F5D /* DummyPauseTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */; };
 		EE4209D72C47B9110087E6E7 /* CustomLMData.bin in Resources */ = {isa = PBXBuildFile; fileRef = EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */; };
 		EE47A1882C49228C0042D10D /* AudioRecorder+SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */; };
 		EE47A18A2C4922B40042D10D /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1892C4922B40042D10D /* AudioRecorder.swift */; };
 		EEA3EDB52C468FCF008EE13D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */; };
+		EEB451B12C52339F00C16668 /* PitchAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB451B02C52339F00C16668 /* PitchAnalyzer.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
 		EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1122C4138010025FAE6 /* RecordingView.swift */; };
@@ -63,11 +70,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A43BDA672C4FA38200E38B11 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
+		A43BDA6B2C52314100E38B11 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A4E621612C4123EA00D90CD5 /* Otterator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otterator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorApp.swift; sourceTree = "<group>"; };
 		A4E621662C4123EA00D90CD5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A4E621682C4123EA00D90CD5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4E6216D2C4123EC00D90CD5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4E621732C4123EC00D90CD5 /* OtteratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OtteratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E621772C4123EC00D90CD5 /* OtteratorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtteratorTests.swift; sourceTree = "<group>"; };
@@ -95,10 +103,16 @@
 		C8416D132C522C410003CCC7 /* ChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceView.swift; sourceTree = "<group>"; };
 		C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaypenSansFont.swift; sourceTree = "<group>"; };
 		C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipsAndTricks.swift; path = ../View/Component/TipsAndTricks.swift; sourceTree = "<group>"; };
+		C8FC4D042C537D2000061F02 /* CustomLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLegend.swift; sourceTree = "<group>"; };
+		E1AFE39C2C50FA40001871ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1C1B4A92C48F949000C9F5D /* DummyPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPause.swift; sourceTree = "<group>"; };
+		E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausePracticeView.swift; sourceTree = "<group>"; };
+		E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPauseTranscript.swift; sourceTree = "<group>"; };
 		EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = CustomLMData.bin; sourceTree = "<group>"; };
 		EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioRecorder+SaveData.swift"; sourceTree = "<group>"; };
 		EE47A1892C4922B40042D10D /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
 		EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		EEB451B02C52339F00C16668 /* PitchAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchAnalyzer.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		EEB8D1122C4138010025FAE6 /* RecordingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingView.swift; sourceTree = "<group>"; };
@@ -162,7 +176,7 @@
 				A4E621902C41247000D90CD5 /* Model */,
 				A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */,
 				A4F1EC542C452CD300A633CA /* ViewModel */,
-				A4E6216A2C4123EC00D90CD5 /* Assets.xcassets */,
+				E1AFE39C2C50FA40001871ED /* Assets.xcassets */,
 				A4E6216C2C4123EC00D90CD5 /* Preview Content */,
 			);
 			path = Otterator;
@@ -200,6 +214,9 @@
 				A4E621682C4123EA00D90CD5 /* Item.swift */,
 				EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */,
 				EEB8D1102C4136A10025FAE6 /* Record.swift */,
+				A43BDA672C4FA38200E38B11 /* Practice.swift */,
+				A43BDA6B2C52314100E38B11 /* Message.swift */,
+				E1C1B4A92C48F949000C9F5D /* DummyPause.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +233,7 @@
 				A4F1EC4E2C42739600A633CA /* InformationModalView.swift */,
 				A4F1EC652C491D1700A633CA /* SummaryView.swift */,
 				A4F1EC2E2C41386800A633CA /* TranscriptView.swift */,
+				E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */,
 				C8416D132C522C410003CCC7 /* ChoiceView.swift */,
 			);
 			path = View;
@@ -232,7 +250,9 @@
 				A4F1EC5B2C48EFC600A633CA /* EditContentView.swift */,
 				A4F1EC612C491CE000A633CA /* SummaryCard.swift */,
 				A4F1EC502C42AC9D00A633CA /* TranscriptContentView.swift */,
+				E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */,
 				C8416D112C50B3470003CCC7 /* CustomSegmentedControl.swift */,
+				C8FC4D042C537D2000061F02 /* CustomLegend.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -260,6 +280,7 @@
 				EE47A1892C4922B40042D10D /* AudioRecorder.swift */,
 				EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */,
 				A4F1EC552C452D6C00A633CA /* TranscriptViewModel.swift */,
+				EEB451B02C52339F00C16668 /* PitchAnalyzer.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -371,8 +392,8 @@
 				EE4209D72C47B9110087E6E7 /* CustomLMData.bin in Resources */,
 				A4E6216E2C4123EC00D90CD5 /* Preview Assets.xcassets in Resources */,
 				A4F1EC532C45215800A633CA /* hello.m4a in Resources */,
+				E1AFE39D2C50FA40001871ED /* Assets.xcassets in Resources */,
 				A4F1EC4A2C4249DF00A633CA /* PlaypenSans-VariableFont_wght.ttf in Resources */,
-				A4E6216B2C4123EC00D90CD5 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A43BDA682C4FA38200E38B11 /* Practice.swift in Sources */,
 				EEB8D1152C42816B0025FAE6 /* RecordModal.swift in Sources */,
 				A4F1EC5C2C48EFC600A633CA /* EditContentView.swift in Sources */,
 				C8F33CE12C492188003F6C3B /* TipsAndTricks.swift in Sources */,
@@ -407,12 +429,18 @@
 				EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */,
 				A4F1EC632C491CE000A633CA /* CardBackground.swift in Sources */,
 				A4F1EC342C422F9E00A633CA /* CustomTranscript.swift in Sources */,
+				E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */,
 				EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */,
 				A4F1EC622C491CE000A633CA /* CircleButtonBackground.swift in Sources */,
+				C8FC4D052C537D2000061F02 /* CustomLegend.swift in Sources */,
+				A43BDA6C2C52314100E38B11 /* Message.swift in Sources */,
 				A4F1EC512C42AC9D00A633CA /* TranscriptContentView.swift in Sources */,
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
+				E1C1B4AC2C48F9A3000C9F5D /* PausePracticeView.swift in Sources */,
 				A4F1EC562C452D6C00A633CA /* TranscriptViewModel.swift in Sources */,
+				E1C1B4AE2C48F9DD000C9F5D /* DummyPauseTranscript.swift in Sources */,
 				A4F1EC2F2C41386800A633CA /* TranscriptView.swift in Sources */,
+				EEB451B12C52339F00C16668 /* PitchAnalyzer.swift in Sources */,
 				A4F1EC662C491D1700A633CA /* SummaryView.swift in Sources */,
 				C8416D142C522C410003CCC7 /* ChoiceView.swift in Sources */,
 				EE47A1882C49228C0042D10D /* AudioRecorder+SaveData.swift in Sources */,
@@ -602,6 +630,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -614,7 +643,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -640,6 +669,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -652,7 +682,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

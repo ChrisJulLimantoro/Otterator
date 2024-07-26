@@ -19,5 +19,5 @@ struct CircleButtonBackground: View {
 }
 
 #Preview {
-    CircleButtonBackground(bgcolor: .blue)
+    CircleButtonBackground(bgcolor: .yellow)
 }

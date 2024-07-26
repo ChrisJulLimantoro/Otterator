@@ -10,7 +10,7 @@ import SwiftUI
 struct SummaryCard: View {
     var bgcolor: Color
     var areaName: String
-    var areaAverage: String = "AVERAGE"
+    var areaResult : String
     var areaTips: String
     var areaTricks: String
     
@@ -19,18 +19,17 @@ struct SummaryCard: View {
     var body: some View {
         //Card
         VStack /*(spacing: 12) */{
-            //Area (Pitch)
+            
             HStack{
-                VStack (alignment: .leading) {
-                    Text(areaName)
-                        .playpenSans(.bold, 20, .title3)
-                        .foregroundStyle(.white)
-                    
-                    Text(areaAverage)
-                        .font(.caption)
-                        .foregroundStyle(.white)
-                }
+                Text(areaName)
+                    .playpenSans(.bold, 20, .title3)
+                    .foregroundStyle(.white)
+                
                 Spacer()
+                Text(areaResult)
+                    .playpenSans(.regular,20,.body)
+                    .foregroundStyle(.white)
+                    .padding(.trailing,8)
                 Image(systemName: "chevron.down")
                     .font(Font.system(size: 20, weight: .bold))
                     .foregroundStyle(.white)
@@ -70,8 +69,4 @@ struct SummaryCard: View {
         }
         .padding()
     }
-}
-
-#Preview {
-    SummaryCard(bgcolor: .blue,areaName: "Pitch", areaTips: "Ini Tips", areaTricks: "Ini Tricks")
 }
