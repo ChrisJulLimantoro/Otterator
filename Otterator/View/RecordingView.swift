@@ -18,8 +18,6 @@ struct RecordingView: View {
     init(modelContext: ModelContext) {
         let audioRecorder = AudioRecorder(modelContext: modelContext)
         _audioRecorder = Bindable(wrappedValue: audioRecorder)
-        
-//        UINavigationBar.appearance().largeTitleTextAttributes = [.font : Font.custom("PlaypenSans-Regular_Bold", size: 32, relativeTo: .largeTitle)]
     }
     
     var body: some View {
@@ -27,42 +25,46 @@ struct RecordingView: View {
             ZStack {
                 VStack{
                     List{
-                        ForEach(records) { item in
-                            ZStack {
-                                NavigationLink(destination: ChoiceView(item: item)) { EmptyView()
-                                }.opacity(0.0)
-                                VStack{
-                                    HStack{
-                                        Text(item.title)
-                                            .font(.playpenSans(.semiBold, 20, .title3))
-                                        Spacer()
+                        if (records.isEmpty) {
+                            Text("No recordings found. Start recording now!")
+                        } else {
+                            ForEach(records) { item in
+                                ZStack {
+                                    NavigationLink(destination: ChoiceView(item: item)) { EmptyView()
+                                    }.opacity(0.0)
+                                    VStack{
+                                        HStack{
+                                            Text(item.title)
+                                                .font(.playpenSans(.semiBold, 20, .title3))
+                                            Spacer()
+                                        }
+                                        HStack{
+                                            Text(item.datetime.formatted(date: .long, time: .omitted))
+                                                .font(.playpenSans(.regular, 14, .title3))
+                                            Spacer()
+                                            Text("\(formatTime(item.duration))")
+                                                .font(.playpenSans(.regular, 14, .title3))
+                                        }
+                                        .foregroundStyle(.secondary)
                                     }
-                                    HStack{
-                                        Text(item.datetime.formatted(date: .long, time: .omitted))
-                                            .font(.playpenSans(.regular, 14, .title3))
-                                        Spacer()
-                                        Text("\(formatTime(item.duration))")
-                                            .font(.playpenSans(.regular, 14, .title3))
+                                }
+                                .listRowBackground(Color.oBackground)
+                                .padding(.horizontal)
+                                .padding(.vertical, 12)
+                                .background(CardBackground(bgcolor: .white))
+                                .swipeActions(edge: .trailing) {
+                                    Button(role: .destructive) {
+                                        // TODO: delete item from swift data
+                                    } label: {
+                                        Label("Delete", systemImage: "trash")
                                     }
-                                    .foregroundStyle(.secondary)
                                 }
+                                .listRowSeparator(.hidden)
                             }
-                            .listRowBackground(Color.oBackground)
-                            .padding(.horizontal)
-                            .padding(.vertical, 12)
-                            .background(CardBackground(bgcolor: .white))
-                            .swipeActions(edge: .trailing) {
-                                Button(role: .destructive) {
-                                    // TODO: delete item from swift data
-                                } label: {
-                                    Label("Delete", systemImage: "trash")
-                                }
-                            }
-                            .listRowSeparator(.hidden)
+                            .background(Color.oBackground)
+                            .listStyle(.inset)
                         }
                     }
-                    .background(Color.oBackground)
-                    .listStyle(.inset)
                     Spacer()
                     //Recording button
                     Button{
