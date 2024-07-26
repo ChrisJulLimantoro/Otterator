@@ -14,9 +14,7 @@ struct PracticeView: View {
     
     var body: some View {
         ZStack(alignment: .center) {
-            NavigationStack{
-                PracticeTranscript(viewmodel: viewModel)
-            }
+            PracticeTranscript(viewmodel: viewModel)
             .navigationTitle("Practice")
             .navigationBarTitleDisplayMode(.inline)
             

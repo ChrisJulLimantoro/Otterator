@@ -29,10 +29,13 @@ class TranscriptViewModel {
         let word_count = t_record.transcript!.filter{!$0.is_pause}.count
         let pause_count = t_record.transcript!.filter{$0.is_pause}.count
         self.pauseCategory = (pause_count > word_count / 5) ? "too Much" : (pause_count < word_count / 12) ? "too Few" : "no Pause"
+        self.text = t_record.transcript!.sorted(by: {$0.timestamp < $1.timestamp})
+    }
+    
+    func initAudio(){
         do{
-            let url = getDocumentsDirectory().appendingPathComponent(t_record.audio_file)
+            let url = getDocumentsDirectory().appendingPathComponent(record.audio_file)
             self.audio = try AVAudioPlayer(contentsOf: url)
-            self.text = t_record.transcript!.sorted(by: {$0.timestamp < $1.timestamp})
         } catch {
             print(error)
         }

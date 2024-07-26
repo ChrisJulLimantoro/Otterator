@@ -15,12 +15,11 @@ struct TranscriptView: View {
     @State var isPresented:[Bool] = [false,false,false]
     @State var edit:Bool = false
     
-    @State var viewModel: TranscriptViewModel
+    @Bindable var viewModel: TranscriptViewModel
     @State var word:WordTranscript = WordTranscript()
     
     var tabs = ["Vocal","Practice","Summary"]
     var body: some View {
-        NavigationStack{
             VStack{
                 CustomSegmentedControl(tabs: SegmentedTab.allCases, activeTab: $activeTab, activeTint: .oBlack, inactiveTint: .oBlack.opacity(0.7)){ size in
                     RoundedRectangle(cornerRadius: 14)
@@ -37,7 +36,7 @@ struct TranscriptView: View {
             }
             .navigationTitle("Recording 001")
             .navigationBarTitleDisplayMode(.inline)
-            .background(Color(hex:"#cce5ff"))
+            .background(Color.oBackground)
             .toolbar{
                 ToolbarItem(placement: .confirmationAction){
                     Menu {
@@ -69,9 +68,5 @@ struct TranscriptView: View {
                     .presentationBackgroundInteraction(.disabled)
                     .presentationBackground(.ultraThickMaterial)
             }
-            .onAppear(){
-                print(viewModel.text.filter{$0.timestamp<1}.map{"\($0.word), \($0.duration), \($0.timestamp)"})
-            }
         }
-    }
 }

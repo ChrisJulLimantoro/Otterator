@@ -37,8 +37,8 @@
 		C8416D142C522C410003CCC7 /* ChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8416D132C522C410003CCC7 /* ChoiceView.swift */; };
 		C8F33CDF2C492063003F6C3B /* PlaypenSansFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */; };
 		C8F33CE12C492188003F6C3B /* TipsAndTricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */; };
-		E101FEE72C524B8100D4C9A9 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101FEE62C524B8100D4C9A9 /* PracticeViewModel.swift */; };
 		C8FC4D052C537D2000061F02 /* CustomLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FC4D042C537D2000061F02 /* CustomLegend.swift */; };
+		E101FEE72C524B8100D4C9A9 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101FEE62C524B8100D4C9A9 /* PracticeViewModel.swift */; };
 		E1AFE39D2C50FA40001871ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AFE39C2C50FA40001871ED /* Assets.xcassets */; };
 		E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4A92C48F949000C9F5D /* DummyPause.swift */; };
 		E1C1B4AC2C48F9A3000C9F5D /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AB2C48F9A3000C9F5D /* PracticeView.swift */; };
@@ -46,7 +46,6 @@
 		EE4209D72C47B9110087E6E7 /* CustomLMData.bin in Resources */ = {isa = PBXBuildFile; fileRef = EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */; };
 		EE47A1882C49228C0042D10D /* AudioRecorder+SaveData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */; };
 		EE47A18A2C4922B40042D10D /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE47A1892C4922B40042D10D /* AudioRecorder.swift */; };
-		EEA3EDB52C468FCF008EE13D /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */; };
 		EEB451B12C52339F00C16668 /* PitchAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB451B02C52339F00C16668 /* PitchAnalyzer.swift */; };
 		EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */; };
 		EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEB8D1102C4136A10025FAE6 /* Record.swift */; };
@@ -106,8 +105,8 @@
 		C8416D132C522C410003CCC7 /* ChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceView.swift; sourceTree = "<group>"; };
 		C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaypenSansFont.swift; sourceTree = "<group>"; };
 		C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipsAndTricks.swift; path = ../View/Component/TipsAndTricks.swift; sourceTree = "<group>"; };
-		E101FEE62C524B8100D4C9A9 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
 		C8FC4D042C537D2000061F02 /* CustomLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLegend.swift; sourceTree = "<group>"; };
+		E101FEE62C524B8100D4C9A9 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
 		E1AFE39C2C50FA40001871ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1C1B4A92C48F949000C9F5D /* DummyPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPause.swift; sourceTree = "<group>"; };
 		E1C1B4AB2C48F9A3000C9F5D /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
@@ -115,7 +114,6 @@
 		EE4209D42C47B8F70087E6E7 /* CustomLMData.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = CustomLMData.bin; sourceTree = "<group>"; };
 		EE47A1872C49228C0042D10D /* AudioRecorder+SaveData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AudioRecorder+SaveData.swift"; sourceTree = "<group>"; };
 		EE47A1892C4922B40042D10D /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
-		EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		EEB451B02C52339F00C16668 /* PitchAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PitchAnalyzer.swift; sourceTree = "<group>"; };
 		EEB8D10C2C412CD00025FAE6 /* WordTranscript.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTranscript.swift; sourceTree = "<group>"; };
 		EEB8D1102C4136A10025FAE6 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
@@ -232,7 +230,6 @@
 				A4E621662C4123EA00D90CD5 /* ContentView.swift */,
 				EEB8D1122C4138010025FAE6 /* RecordingView.swift */,
 				EEB8D1142C42816B0025FAE6 /* RecordModal.swift */,
-				EEA3EDB42C468FCF008EE13D /* SwiftUIView.swift */,
 				A4F1EC5D2C48FA3900A633CA /* EditModalView.swift */,
 				A4F1EC4E2C42739600A633CA /* InformationModalView.swift */,
 				A4F1EC652C491D1700A633CA /* SummaryView.swift */,
@@ -430,7 +427,6 @@
 				A4F1EC5C2C48EFC600A633CA /* EditContentView.swift in Sources */,
 				C8F33CE12C492188003F6C3B /* TipsAndTricks.swift in Sources */,
 				A4E621672C4123EA00D90CD5 /* ContentView.swift in Sources */,
-				EEA3EDB52C468FCF008EE13D /* SwiftUIView.swift in Sources */,
 				EE47A18A2C4922B40042D10D /* AudioRecorder.swift in Sources */,
 				EEB8D10D2C412CD00025FAE6 /* WordTranscript.swift in Sources */,
 				EEB8D1132C4138010025FAE6 /* RecordingView.swift in Sources */,
