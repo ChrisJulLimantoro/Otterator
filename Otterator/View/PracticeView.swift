@@ -14,7 +14,12 @@ struct PracticeView: View {
     
     var body: some View {
         ZStack(alignment: .center) {
-            PracticeTranscript(viewmodel: viewModel)
+            NavigationStack{
+                PracticeTranscript(viewmodel: viewModel)
+            }
+            .navigationTitle("Practice")
+            .navigationBarTitleDisplayMode(.inline)
+            
             if tutorial{
                 Color.black.opacity(0.7)
                 VStack{
