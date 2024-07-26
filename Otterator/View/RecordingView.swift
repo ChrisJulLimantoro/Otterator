@@ -24,9 +24,13 @@ struct RecordingView: View {
         NavigationStack{
             VStack{
                 List{
+                    if (records.isEmpty) {
+                            Text("No recordings found. Start recording now!")
+                        } else {
                     ForEach(records) { item in
                         CustomListTile(item:item)
                     }
+                        }
                 }
                 .background(Color.oBackground)
                 .listStyle(.inset)
