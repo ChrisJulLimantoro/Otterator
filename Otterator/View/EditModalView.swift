@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EditModalView: View {
     @Binding var word:WordTranscript
+    @Binding var save:Bool
     @State var change:String = ""
     @Environment(\.dismiss) var dismiss
     @FocusState private var isFocused: Bool
@@ -31,6 +32,7 @@ struct EditModalView: View {
             .toolbar{
                 ToolbarItem(placement: .cancellationAction){
                     Button(action: {
+                        save = false
                         dismiss()
                     }, label: {
                         Text("Cancel")
@@ -40,6 +42,7 @@ struct EditModalView: View {
                 ToolbarItem(placement: .confirmationAction){
                     Button("Save"){
                         word.corrected_word = change
+                        save = true
                         dismiss()
                     }
                 }

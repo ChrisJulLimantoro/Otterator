@@ -60,6 +60,8 @@ struct PracticeTranscript: View {
                 }
                 .onAppear {
                     self.proxy = proxy
+                    print("full:", viewmodel.fullSentence)
+                    print("high:", viewmodel.highlightedWord)
                 }
                 .onChange(of: viewmodel.highlightedWord) {
                     withAnimation(){
@@ -71,11 +73,10 @@ struct PracticeTranscript: View {
             Spacer()
             
             HStack {
-                
                 Slider(value: Binding(
-                    get: { Double(viewmodel.currentWordIndex) / Double(viewmodel.practiceText.count) },
+                    get: { Double(viewmodel.currentWordIndex) / Double(viewmodel.record.practice!.count) },
                     set: { newValue in
-                        let newIndex = Int(newValue * Double(viewmodel.practiceText.count))
+                        let newIndex = Int(newValue * Double(viewmodel.record.practice!.count))
                         if newIndex != viewmodel.currentWordIndex {
                             viewmodel.seekToWord(index: newIndex)
                         }
@@ -86,6 +87,7 @@ struct PracticeTranscript: View {
             
             HStack {
                 Button(action: {
+                    
                     if viewmodel.fullSentence.isEmpty {
                         viewmodel.startLyrics()
                     } else if viewmodel.isPlaying {
@@ -114,8 +116,6 @@ struct PracticeTranscript: View {
                 .clipShape(Capsule())
             }
             .padding()
-            
-            
         }
     }
     

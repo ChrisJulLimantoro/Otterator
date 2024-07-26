@@ -9,8 +9,9 @@ import SwiftUI
 
 struct EditContentView: View {
     @Bindable var viewModel:TranscriptViewModel
-    @Binding var word:WordTranscript
-    @Binding var edit:Bool
+    @State var word:WordTranscript = WordTranscript()
+    @State var edit:Bool = false
+    @State var isSave:Bool = false
     var body: some View {
         ScrollView{
             Spacer()
@@ -47,19 +48,20 @@ struct EditContentView: View {
         .background{
             CardBackground(bgcolor: .white)
         }
-        .padding(.horizontal,20)
-        .padding(.vertical,8)
-        Spacer()
-        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-            HStack {
-                Image(systemName: "music.mic")
-                Text("Start Practice")
-                    .playpenSans(.semiBold, 16)
+        .sheet(isPresented:$edit,onDismiss: {
+            if isSave {
+                viewModel.record.version += 1
+                print(viewModel.record.version)
             }
-            .padding(12)
-            .frame(maxWidth: .infinity)
-            .background(CardBackground(bgcolor: .white))
-        }).padding()
+        }){
+            EditModalView(word: $word,save: $isSave)
+                .presentationDetents([.medium])
+                .presentationBackgroundInteraction(.disabled)
+                .presentationBackground(.ultraThickMaterial)
+        }
+        .onAppear{
+            print("hello")
+        }
     }
     func splitText(text:[WordTranscript],maxLength: Int) ->
     [[WordTranscript]] {

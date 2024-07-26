@@ -22,25 +22,6 @@ struct TranscriptView: View {
     var body: some View {
         NavigationStack{
             VStack{
-//                Picker("segment",selection:$segment){
-//                    ForEach(tabs, id:\.self){
-//                        Text($0)
-//                    }
-//                }
-//                .pickerStyle(.segmented)
-//                .background(CardBackground(bgcolor: .blue))
-//                .padding(16)
-//                
-//                if segment == "Vocal" {
-//                    TranscriptContentView(viewModel: viewModel)
-//                } else if segment == "Practice"{
-//                    EditContentView(viewModel: viewModel,word: $word,edit: $edit)
-//                } else {
-//                    VStack{
-//                        SummaryView()
-//                    }
-//                }
-                
                 CustomSegmentedControl(tabs: SegmentedTab.allCases, activeTab: $activeTab, activeTint: .oBlack, inactiveTint: .oBlack.opacity(0.7)){ size in
                     RoundedRectangle(cornerRadius: 14)
                         .fill(.white)
@@ -85,12 +66,6 @@ struct TranscriptView: View {
             .sheet(isPresented:$isPresented[2]){
                 InformationModalView()
                     .presentationDetents([.large])
-                    .presentationBackgroundInteraction(.disabled)
-                    .presentationBackground(.ultraThickMaterial)
-            }
-            .sheet(isPresented:$edit){
-                EditModalView(word: $word)
-                    .presentationDetents([.medium])
                     .presentationBackgroundInteraction(.disabled)
                     .presentationBackground(.ultraThickMaterial)
             }

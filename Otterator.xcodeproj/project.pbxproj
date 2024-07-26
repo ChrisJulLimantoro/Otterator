@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41748BE2C538B6E0052E88B /* CustomListTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41748BD2C538B6E0052E88B /* CustomListTile.swift */; };
 		A43BDA682C4FA38200E38B11 /* Practice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BDA672C4FA38200E38B11 /* Practice.swift */; };
 		A43BDA6C2C52314100E38B11 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43BDA6B2C52314100E38B11 /* Message.swift */; };
 		A4E621652C4123EA00D90CD5 /* OtteratorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E621642C4123EA00D90CD5 /* OtteratorApp.swift */; };
@@ -70,6 +71,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A41748BD2C538B6E0052E88B /* CustomListTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomListTile.swift; sourceTree = "<group>"; };
 		A43BDA672C4FA38200E38B11 /* Practice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Practice.swift; sourceTree = "<group>"; };
 		A43BDA6B2C52314100E38B11 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		A4E621612C4123EA00D90CD5 /* Otterator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otterator.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -252,6 +254,7 @@
 				A4F1EC502C42AC9D00A633CA /* TranscriptContentView.swift */,
 				E1C1B4AD2C48F9DD000C9F5D /* PracticeTranscript.swift */,
 				C8416D112C50B3470003CCC7 /* CustomSegmentedControl.swift */,
+				A41748BD2C538B6E0052E88B /* CustomListTile.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A41748BE2C538B6E0052E88B /* CustomListTile.swift in Sources */,
 				A43BDA682C4FA38200E38B11 /* Practice.swift in Sources */,
 				EEB8D1152C42816B0025FAE6 /* RecordModal.swift in Sources */,
 				A4F1EC5C2C48EFC600A633CA /* EditContentView.swift in Sources */,
@@ -616,7 +620,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = PV62VMPQYM;
+				DEVELOPMENT_TEAM = Y834K368F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
@@ -654,7 +658,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = PV62VMPQYM;
+				DEVELOPMENT_TEAM = Y834K368F4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;

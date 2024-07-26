@@ -8,25 +8,34 @@
 import SwiftUI
 
 struct ChoiceView: View {
+    @State var viewModel:TranscriptViewModel = TranscriptViewModel(Record(id: UUID(), title: "adsad", audio_file: "asdasd", datetime: Date(), duration: 0, transcript: [], avg_pitch: 0, avg_volume: 0, avg_pause: 0, avg_pace: 0))
     var item: Record
     
     var body: some View {
         NavigationStack{
             VStack(alignment: .center, spacing: 20){
-                NavigationLink(destination: PausePracticeView()) {
+                Text("Tap to Edit")
+                    .playpenSans(.light, 14, .caption)
+                    .foregroundStyle(.black)
+                    .padding(.bottom,-15)
+                EditContentView(viewModel: viewModel)
+                    .padding(.horizontal,24)
+                    .padding(.bottom,16)
+                NavigationLink(destination:
+                        TranscriptView(viewModel: viewModel)) {
                     HStack{
                         Image(systemName: "doc.text.magnifyingglass")
-                        Text("Start Practice")
+                        Text("Evaluate")
                             .font(.playpenSans(.semiBold, 20, .title3))
                     }
                     .frame(width: 340, height: 70)
                     .foregroundStyle(.white)
                     .background(CardBackground(bgcolor: Color.accentColor))
                 }
-                NavigationLink(destination: TranscriptView(viewModel: TranscriptViewModel(item))) {
+                NavigationLink(destination: PracticeView(viewModel: PracticeViewModel(item))) {
                     HStack{
                         Image(systemName: "music.mic")
-                        Text("Evaluate")
+                        Text("Start Practice")
                             .font(.playpenSans(.semiBold, 20, .title3))
                     }
                     .frame(width: 340, height: 70)
@@ -42,9 +51,8 @@ struct ChoiceView: View {
             .navigationTitle(item.title)
             .navigationBarTitleDisplayMode(.inline)
         }
+        .onAppear{
+            viewModel = TranscriptViewModel(item)
+        }
     }
-}
-
-#Preview {
-    ChoiceView(item: Record(id: UUID(), title: "adsad", audio_file: "asdasd", datetime: Date(), duration: 0, transcript: [], avg_pitch: 0, avg_volume: 0, avg_pause: 0, avg_pace: 0))
 }

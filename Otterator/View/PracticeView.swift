@@ -48,6 +48,21 @@ struct PracticeView: View {
                 .background(Color(.systemGray6))
                 .clipShape(RoundedRectangle(cornerRadius: 16))
             }
+            
+            if viewModel.isLoading {
+                VStack{
+                    Spacer()
+                    HStack{
+                        Spacer()
+                        ProgressView()
+                        Spacer()
+                    }
+                    Spacer()
+                }.background(.oBackground)
+            }
+        }
+        .onAppear{
+            viewModel.getPractice()
         }
     }
 }
