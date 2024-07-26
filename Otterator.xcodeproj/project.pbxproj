@@ -36,6 +36,7 @@
 		C8416D142C522C410003CCC7 /* ChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8416D132C522C410003CCC7 /* ChoiceView.swift */; };
 		C8F33CDF2C492063003F6C3B /* PlaypenSansFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */; };
 		C8F33CE12C492188003F6C3B /* TipsAndTricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */; };
+		C8FC4D052C537D2000061F02 /* CustomLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FC4D042C537D2000061F02 /* CustomLegend.swift */; };
 		E1AFE39D2C50FA40001871ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AFE39C2C50FA40001871ED /* Assets.xcassets */; };
 		E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4A92C48F949000C9F5D /* DummyPause.swift */; };
 		E1C1B4AC2C48F9A3000C9F5D /* PausePracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */; };
@@ -102,6 +103,7 @@
 		C8416D132C522C410003CCC7 /* ChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoiceView.swift; sourceTree = "<group>"; };
 		C8F33CDE2C492063003F6C3B /* PlaypenSansFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaypenSansFont.swift; sourceTree = "<group>"; };
 		C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipsAndTricks.swift; path = ../View/Component/TipsAndTricks.swift; sourceTree = "<group>"; };
+		C8FC4D042C537D2000061F02 /* CustomLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLegend.swift; sourceTree = "<group>"; };
 		E1AFE39C2C50FA40001871ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1C1B4A92C48F949000C9F5D /* DummyPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPause.swift; sourceTree = "<group>"; };
 		E1C1B4AB2C48F9A3000C9F5D /* PausePracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PausePracticeView.swift; sourceTree = "<group>"; };
@@ -250,6 +252,7 @@
 				A4F1EC502C42AC9D00A633CA /* TranscriptContentView.swift */,
 				E1C1B4AD2C48F9DD000C9F5D /* DummyPauseTranscript.swift */,
 				C8416D112C50B3470003CCC7 /* CustomSegmentedControl.swift */,
+				C8FC4D042C537D2000061F02 /* CustomLegend.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -429,6 +432,7 @@
 				E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */,
 				EEB8D1112C4136A10025FAE6 /* Record.swift in Sources */,
 				A4F1EC622C491CE000A633CA /* CircleButtonBackground.swift in Sources */,
+				C8FC4D052C537D2000061F02 /* CustomLegend.swift in Sources */,
 				A43BDA6C2C52314100E38B11 /* Message.swift in Sources */,
 				A4F1EC512C42AC9D00A633CA /* TranscriptContentView.swift in Sources */,
 				A4E621692C4123EA00D90CD5 /* Item.swift in Sources */,
@@ -612,7 +616,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = 46T3YJRUSN;
+				DEVELOPMENT_TEAM = V383GK4HDH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
@@ -639,7 +643,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -651,7 +655,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = 46T3YJRUSN;
+				DEVELOPMENT_TEAM = V383GK4HDH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
@@ -678,7 +682,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

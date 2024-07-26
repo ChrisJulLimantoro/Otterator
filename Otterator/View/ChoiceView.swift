@@ -16,7 +16,7 @@ struct ChoiceView: View {
                 NavigationLink(destination: PausePracticeView()) {
                     HStack{
                         Image(systemName: "doc.text.magnifyingglass")
-                        Text("Start Practice")
+                        Text("Evaluate")
                             .font(.playpenSans(.semiBold, 20, .title3))
                     }
                     .frame(width: 340, height: 70)
@@ -26,7 +26,7 @@ struct ChoiceView: View {
                 NavigationLink(destination: TranscriptView(viewModel: TranscriptViewModel(item))) {
                     HStack{
                         Image(systemName: "music.mic")
-                        Text("Evaluate")
+                        Text("Start Practice")
                             .font(.playpenSans(.semiBold, 20, .title3))
                     }
                     .frame(width: 340, height: 70)
