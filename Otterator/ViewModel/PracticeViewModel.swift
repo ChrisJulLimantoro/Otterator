@@ -12,33 +12,37 @@ import Foundation
 class PracticeViewModel {
     var record: Record
     var timer: Timer?
-    var currentWordIndex = 0
-    var fullSentence: String = ""
+    var currentWordIndex: Int = 0
     var highlightedWord: String = ""
-    var displaySentence: String = ""
     var isPause = false
     var isPlaying = false
     var pauseDuration: Double = 0.0
     var drawingStroke = true
     var isLoading = false
+    var remainingSentence = ""
+    var fullSentence: [String] = []
+    var time: Double = 0.0
     
     init(_ t_record:Record){
         self.record = t_record
     }
     
-    
     func startLyrics() {
-        var newSentence = ""
-        for transcript in record.practice!.sorted(by:{$0.timestamp < $1.timestamp}) {
-            if transcript.is_pause {
-                newSentence += "\n\n"
-            } else {
-                newSentence += transcript.word
-            }
+        for transcript in record.practice!.sorted(by: {$0.timestamp < $1.timestamp}) {
+                fullSentence.append("\(transcript.word)")
         }
-        fullSentence = newSentence.trimmingCharacters(in: .whitespacesAndNewlines)
         currentWordIndex = 0
         isPause = false
+        isPlaying = true
+        nextWord()
+        print("start", fullSentence)
+    }
+    
+    func resumeLyrics() {
+        isPlaying = true
+        if currentWordIndex == 0 {
+            startLyrics()
+        }
         nextWord()
     }
     
@@ -51,8 +55,6 @@ class PracticeViewModel {
         let currentWord = record.practice!.sorted(by: {$0.timestamp < $1.timestamp})[currentWordIndex]
         if currentWord.is_pause {
             isPause = true
-            //            drawingStroke = true
-            highlightedWord += "\n\n"
             pauseDuration = currentWord.duration
             timer = Timer.scheduledTimer(withTimeInterval: currentWord.duration, repeats: false) { _ in
                 self.isPause = false
@@ -61,11 +63,10 @@ class PracticeViewModel {
             }
         } else {
             isPause = false
-            //            drawingStroke = false
             pauseDuration = 0.0
-            displaySentence += currentWord.word
-            highlightedWord += currentWord.word
+            time = currentWord.duration
             timer = Timer.scheduledTimer(withTimeInterval: currentWord.duration, repeats: false) { _ in
+                self.time -= 0.1
                 self.currentWordIndex += 1
                 self.nextWord()
             }
@@ -74,30 +75,24 @@ class PracticeViewModel {
     
     func pauseLyrics() {
         timer?.invalidate()
-    }
-    
-    func resumeLyrics() {
-        nextWord()
+        isPause = false
+        isPlaying = false
     }
     
     func seekToWord(index: Int) {
         isPause = false
+        isPlaying = false
         timer?.invalidate()
         currentWordIndex = index
-        highlightedWord = record.practice!.prefix(index).map { $0.word }.joined(separator: "")
-        if isPlaying {
-            nextWord()
-        }
     }
     
     func resetLyrics() {
-        fullSentence = ""
-        highlightedWord = ""
-        displaySentence = ""
-        currentWordIndex = 0
-        isPause = false
         timer?.invalidate()
+        currentWordIndex = 0
+        fullSentence = []
+        isPause = false
     }
+    
     
     func getPractice(){
         isLoading = true
