@@ -22,16 +22,10 @@ struct CustomTranscript: View {
             VStack(alignment:.leading,spacing:20){
                 ForEach(0..<splitText(text: viewModel.text, maxLength:maxChar).count, id:\.self){rowIndex in
                     let wordsRow = splitText(text: viewModel.text, maxLength:maxChar)[rowIndex]
-//                    if !wordsRow.isEmpty {
-//                        Circle()
-//                            .frame(width:16,height:16)
-//                            .opacity((viewModel.currentTime > wordsRow.first!.first!.timestamp && viewModel.currentTime < (wordsRow.last!.last!.timestamp + wordsRow.last!.last!.duration)) ? 1 : 0)
-//                            
-//                    }
                     HStack{
                         ForEach(wordsRow.indices, id:\.self){colIndex in
                             let group = wordsRow[colIndex]
-                            let random = Int.random(in: 0..<3 )
+                            let random = group[0].is_pause ? 1 : group[0].avg_pace < 120 ? 0 : group[0].avg_pace > 150 ? 2 : 1
                             ZStack(alignment:.leading){
                                 HStack{
                                     ForEach(group.indices, id:\.self){index in
@@ -51,7 +45,7 @@ struct CustomTranscript: View {
                             .padding(2)
                             .background{
                                 RoundedRectangle(cornerRadius:5)
-                                    .foregroundColor(random == 0 ? Color(hex:"#00A3FF").opacity(0.3) : random == 1 ? Color(hex:"#FF8D23").opacity(0.3) : Color(hex:"#FFFFFF").opacity(0.3))
+                                    .foregroundColor(random == 0 ? Color(hex:"#007AFF").opacity(0.3) : random == 2 ? Color(hex:"#F8A90B").opacity(0.3) : Color(hex:"#FFFFFF").opacity(0.3))
                             }
                         }
                         Spacer()
@@ -71,8 +65,7 @@ struct CustomTranscript: View {
         
         for word in text{
             let wordLength = word.word.count
-//            let wordType = word.is_pause ? 1 : word.avg_pitch < pitch[0] ? 0 : word.avg_pitch < pitch[1] ? 1 : 2
-            let wordType = word.is_pause ? 1 : Int.random(in: 0..<3)
+            let wordType = word.is_pause ? 1 : word.avg_pace < 120 ? 0 : word.avg_pace > 150 ? 2 : 1
             
             // for changing the lines logic
             if currentLength + wordLength > maxLength {
