@@ -59,9 +59,6 @@ struct EditContentView: View {
                 .presentationBackgroundInteraction(.disabled)
                 .presentationBackground(.ultraThickMaterial)
         }
-        .onAppear{
-            print("hello")
-        }
     }
     func splitText(text:[WordTranscript],maxLength: Int) ->
     [[WordTranscript]] {
