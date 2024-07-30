@@ -24,6 +24,8 @@ class AudioRecorder: NSObject, AVAudioPlayerDelegate {
     var recording = false
     var recognizedText: String = ""
     var recordingTime: TimeInterval = 0
+    var showAlert = false
+    var alertMessage = ""
     
     let settings = [
         AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -119,6 +121,8 @@ class AudioRecorder: NSObject, AVAudioPlayerDelegate {
         if self.micPermissionGranted && self.speechPermissionGranted {
             return true
         } else {
+            self.alertMessage = "Microphone and speech permissions are not granted. Please check the settings."
+            self.showAlert = true
             return false
         }
     }
