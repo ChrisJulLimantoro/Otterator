@@ -9,7 +9,8 @@ import SwiftUI
 import AVKit
 
 struct PracticeView: View {
-    @State private var tutorial = true
+//    @AppStorage("isOnboarding") var isOnboarding: Bool = true
+    @State var isOnboarding: Bool = true
     @State var viewModel: PracticeViewModel
     
     var body: some View {
@@ -18,12 +19,13 @@ struct PracticeView: View {
             .navigationTitle("Practice")
             .navigationBarTitleDisplayMode(.inline)
             
-            if tutorial{
+            if isOnboarding{
                 Color.black.opacity(0.7)
                 VStack{
                     //                    VideoPlayer(player: AVPlayer(url: videoURL))
                     Image("TutorialPic")
-                        .resizable()
+                    .resizable()
+//                    GifImageView("TutorialGIF")
                         .frame(width: 311, height: 200)
                     VStack{
                         Text("Tutorial")
@@ -32,7 +34,7 @@ struct PracticeView: View {
                             .foregroundStyle(.secondary)
                         Spacer()
                         Button(action: {
-                            self.tutorial = false
+                            isOnboarding = false
                         },
                                label: {
                             Text("Ok!")
@@ -59,6 +61,7 @@ struct PracticeView: View {
                 }.background(.oBackground)
             }
         }
+        .background(Color.oBackground)
         .onAppear{
             viewModel.getPractice()
         }

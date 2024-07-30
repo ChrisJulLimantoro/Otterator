@@ -39,6 +39,7 @@
 		C8F33CE12C492188003F6C3B /* TipsAndTricks.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */; };
 		C8FC4D052C537D2000061F02 /* CustomLegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8FC4D042C537D2000061F02 /* CustomLegend.swift */; };
 		E101FEE72C524B8100D4C9A9 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101FEE62C524B8100D4C9A9 /* PracticeViewModel.swift */; };
+		E101FEE92C5772DA00D4C9A9 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E101FEE82C5772DA00D4C9A9 /* SwiftUIView.swift */; };
 		E1AFE39D2C50FA40001871ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1AFE39C2C50FA40001871ED /* Assets.xcassets */; };
 		E1C1B4AA2C48F949000C9F5D /* DummyPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4A92C48F949000C9F5D /* DummyPause.swift */; };
 		E1C1B4AC2C48F9A3000C9F5D /* PracticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1C1B4AB2C48F9A3000C9F5D /* PracticeView.swift */; };
@@ -107,6 +108,7 @@
 		C8F33CE02C492188003F6C3B /* TipsAndTricks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TipsAndTricks.swift; path = ../View/Component/TipsAndTricks.swift; sourceTree = "<group>"; };
 		C8FC4D042C537D2000061F02 /* CustomLegend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLegend.swift; sourceTree = "<group>"; };
 		E101FEE62C524B8100D4C9A9 /* PracticeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewModel.swift; sourceTree = "<group>"; };
+		E101FEE82C5772DA00D4C9A9 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		E1AFE39C2C50FA40001871ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E1C1B4A92C48F949000C9F5D /* DummyPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyPause.swift; sourceTree = "<group>"; };
 		E1C1B4AB2C48F9A3000C9F5D /* PracticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeView.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 				C8416D112C50B3470003CCC7 /* CustomSegmentedControl.swift */,
 				A41748BD2C538B6E0052E88B /* CustomListTile.swift */,
 				C8FC4D042C537D2000061F02 /* CustomLegend.swift */,
+				E101FEE82C5772DA00D4C9A9 /* SwiftUIView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -455,6 +458,7 @@
 				A4F1EC4D2C42519600A633CA /* Color.swift in Sources */,
 				C8416D122C50B3470003CCC7 /* CustomSegmentedControl.swift in Sources */,
 				C8F33CDF2C492063003F6C3B /* PlaypenSansFont.swift in Sources */,
+				E101FEE92C5772DA00D4C9A9 /* SwiftUIView.swift in Sources */,
 				A4F1EC582C4667B800A633CA /* GradientText.swift in Sources */,
 				A4F1EC4F2C42739600A633CA /* InformationModalView.swift in Sources */,
 			);
@@ -620,7 +624,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = PV62VMPQYM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;
@@ -658,7 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Otterator/Preview Content\"";
-				DEVELOPMENT_TEAM = Y834K368F4;
+				DEVELOPMENT_TEAM = PV62VMPQYM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Otterator/Info.plist;

@@ -20,52 +20,84 @@ struct PracticeTranscript: View {
     @Bindable var viewmodel: PracticeViewModel
     
     var body: some View {
+//        let gradient = LinearGradient(
+//            gradient: Gradient(colors: [Color(hex:"#000000"), Color(hex:"#BFBFBF")]),
+//            startPoint: .init(x:min(max(viewmodel.time-viewmodel.record.practice!.sorted(by: {$0.timestamp < $1.timestamp})[viewmodel.currentWordIndex].timestamp+viewmodel.record.practice!.sorted(by: {$0.timestamp < $1.timestamp})[viewmodel.currentWordIndex].duration,0)/viewmodel.record.practice!.sorted(by: {$0.timestamp < $1.timestamp})[viewmodel.currentWordIndex].duration,0.99),y:0.5),
+//            endPoint: .init(x:min(max(viewmodel.time-viewmodel.record.practice!.sorted(by: {$0.timestamp < $1.timestamp})[viewmodel.currentWordIndex].timestamp+viewmodel.record.practice!.sorted(by: {$0.timestamp < $1.timestamp})[viewmodel.currentWordIndex].duration,0)/viewmodel.record.practice!.sorted(by: {$0.timestamp < $1.timestamp})[viewmodel.currentWordIndex].duration,1),y:0.5)
+//        )
+        
         VStack {
             ScrollViewReader { proxy in
                 ScrollView {
                     LazyVStack{
-                        if viewmodel.isPause {
-                            VStack(alignment: .center){
-                                Spacer()
-                                ZStack{
-                                    Text("Pause")
-                                        .foregroundColor(.red)
-                                        .font(.system(size: 36, weight: .bold))
-                                        .id(0)
-                                    ring()
-                                        .frame(width: 300)
-                                        .animation(animation, value: viewmodel.drawingStroke)
-                                        .onAppear{
-                                            viewmodel.drawingStroke.toggle()
+                        VStack(alignment: .leading){
+                            if !viewmodel.fullSentence.isEmpty && viewmodel.currentWordIndex < viewmodel.fullSentence.count {
+                                if viewmodel.currentWordIndex > 0{
+                                    ForEach(0..<viewmodel.currentWordIndex, id: \.self) { index in
+                                        if index < viewmodel.fullSentence.count{
+                                            Text(viewmodel.fullSentence[index])
+                                                .foregroundStyle(.secondary)
+                                                .font(.system(size: 24, weight: .regular))
                                         }
+                                    }
                                 }
-                                Spacer()
-                            }
-                        } else {
-                            ZStack(alignment: .topLeading){
-                                Text(viewmodel.fullSentence)
-                                    .foregroundColor(.secondary)
-                                    .font(.system(size: 24, weight: .regular))
-                                Text(viewmodel.highlightedWord)
-                                    .foregroundColor(.primary)
+                                Text(viewmodel.fullSentence[viewmodel.currentWordIndex])
+                                    .foregroundStyle(.primary)
                                     .font(.system(size: 24, weight: .regular))
                                     .id(viewmodel.currentWordIndex)
-                            }
-                            .frame(width: 360, alignment: .leading)
-                            .onAppear{
-                                viewmodel.drawingStroke.toggle()
+                                ForEach(viewmodel.currentWordIndex+1..<viewmodel.fullSentence.count, id: \.self) { index in
+                                    if index < viewmodel.fullSentence.count{
+                                        Text(viewmodel.fullSentence[index])
+                                            .foregroundStyle(.secondary)
+                                            .font(.system(size: 24, weight: .regular))
+                                    }
+                                }
                             }
                         }
                     }.scrollTargetLayout()
                 }
                 .onAppear {
                     self.proxy = proxy
-                    print("full:", viewmodel.fullSentence)
-                    print("high:", viewmodel.highlightedWord)
                 }
                 .onChange(of: viewmodel.highlightedWord) {
                     withAnimation(){
-                        self.proxy?.scrollTo(viewmodel.currentWordIndex) //anchor: .top 
+                        self.proxy?.scrollTo(viewmodel.currentWordIndex)
+                    }
+                }
+            }
+            .padding(.horizontal,8)
+            .background{
+                CardBackground(bgcolor: .white)
+            }
+            .padding(.horizontal,20)
+            .padding(.vertical,8)
+            .frame(height: 587)
+            .overlay{
+                if viewmodel.isPause {
+                    Color.black.opacity(0.4)
+                        .ignoresSafeArea()
+                    VStack(alignment: .center){
+                        Spacer()
+                        ZStack{
+                            Text("Pause")
+                                .foregroundColor(.red)
+                                .font(.system(size: 28, weight: .bold))
+                                .id(0)
+                            ring()
+                                .frame(width: 200)
+                                .animation(animation, value: viewmodel.drawingStroke)
+                                .onAppear{
+                                    viewmodel.drawingStroke.toggle()
+                                }
+                        }
+                        Spacer()
+                    }
+                } else {
+                    VStack{
+                        
+                    }
+                    .onAppear{
+                        viewmodel.drawingStroke.toggle()
                     }
                 }
             }
@@ -83,37 +115,38 @@ struct PracticeTranscript: View {
                     }
                 ), in: 0...1)
                 .padding()
-            }
+            }.frame(height: 20)
+                .padding(.horizontal, 6)
             
             HStack {
+                Spacer()
                 Button(action: {
-                    
-                    if viewmodel.fullSentence.isEmpty {
-                        viewmodel.startLyrics()
-                    } else if viewmodel.isPlaying {
+                    if viewmodel.isPlaying {
                         viewmodel.pauseLyrics()
                     } else {
                         viewmodel.resumeLyrics()
                     }
-                    viewmodel.isPlaying.toggle()
                 }, label: {
-                    Text(viewmodel.isPlaying ? "Pause" : "Play")
+                    Image(systemName: viewmodel.isPlaying ? "pause.fill" : "play.fill")
+                        .font(Font.custom("SF Pro", size: 26))
+                        .foregroundStyle(Color.accentColor)
+                        .background{
+                            CircleButtonBackground(bgcolor: .white)
+                        }
                 })
-                .padding()
-                .foregroundStyle(Color.white)
-                .background(Color.blue)
-                .clipShape(Capsule())
-                
+                Spacer()
                 Button(action: {
                     viewmodel.resetLyrics()
                     viewmodel.isPlaying = false
                 }, label: {
-                    Text("Reset")
+                    Image(systemName: "gobackward")
+                        .font(Font.custom("SF Pro", size: 26))
+                        .foregroundStyle(Color.accentColor)
+                        .background{
+                            CircleButtonBackground(bgcolor: .white)
+                        }
                 })
-                .padding()
-                .foregroundStyle(Color.white)
-                .background(Color.blue)
-                .clipShape(Capsule())
+                Spacer()
             }
             .padding()
         }
