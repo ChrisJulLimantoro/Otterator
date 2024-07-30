@@ -21,6 +21,7 @@ extension AudioRecorder{
         stopRecording()
         Task{
             do {
+                let audio = try AVAudioPlayer(contentsOf: audioRecorder.url)
                 // let analyzer = PitchAnalyzer()
                 var avgPitch: Double = 0
                 
@@ -32,7 +33,7 @@ extension AudioRecorder{
                 //     avgPitch = pitch
                 // }
                 
-                let res: Record = Record(title: title, audio_file: "\(audioRecorder.url.lastPathComponent)", datetime: Date(), duration: resultRecognition.speechRecognitionMetadata?.speechDuration ?? 0, transcript: wordT, avg_pitch: avgPitch, avg_volume: 0, avg_pause: resultRecognition.speechRecognitionMetadata?.averagePauseDuration ?? 0, avg_pace: resultRecognition.speechRecognitionMetadata?.speakingRate ?? 0)
+                let res: Record = Record(title: title, audio_file: "\(audioRecorder.url.lastPathComponent)", datetime: Date(), duration: audio.duration, transcript: wordT, avg_pitch: avgPitch, avg_volume: 0, avg_pause: resultRecognition.speechRecognitionMetadata?.averagePauseDuration ?? 0, avg_pace: resultRecognition.speechRecognitionMetadata?.speakingRate ?? 0)
                 
                 self.modelContext.insert(res)
                 

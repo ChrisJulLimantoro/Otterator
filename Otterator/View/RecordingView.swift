@@ -37,8 +37,7 @@ struct RecordingView: View {
                 Spacer()
                 //Recording button
                 Button{
-                    showModal.toggle()
-                    audioRecorder.startRecording()
+                    showModal = audioRecorder.checkPermissions()
                 } label: {
                     ZStack{
                         Circle()
