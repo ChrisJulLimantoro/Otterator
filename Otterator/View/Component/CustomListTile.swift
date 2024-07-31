@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CustomListTile: View {
     var item: Record
+    @Environment(\.modelContext) private var modelContext
+    
     var body: some View {
         ZStack {
             NavigationLink(destination: ChoiceView(item: item)) { EmptyView()
@@ -35,16 +37,23 @@ struct CustomListTile: View {
         .background(CardBackground(bgcolor: .white))
         .swipeActions(edge: .trailing) {
             Button(role: .destructive) {
-                // TODO: delete item from swift data
+                deleteItems()
             } label: {
                 Label("Delete", systemImage: "trash")
             }
         }
         .listRowSeparator(.hidden)
     }
+    
     func formatTime(_ time: TimeInterval) -> String {
         let minutes = Int(time) / 60
         let seconds = Int(time) % 60
         return String(format: "%02d:%02d", minutes, seconds)
+    }
+    
+    private func deleteItems() {
+        withAnimation {
+            modelContext.delete(item)
+        }
     }
 }
