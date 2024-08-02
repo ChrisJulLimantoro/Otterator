@@ -62,6 +62,9 @@ struct RecordModal: View {
             .navigationTitle("Record")
             .navigationBarTitleDisplayMode(.inline)
         }
+        .onAppear(){
+            audioRecorder.startRecording()
+        }
         .alert("Save Recording", isPresented: $showingAlert) {
             TextField("Title", text: $title)
                 .textInputAutocapitalization(.never)

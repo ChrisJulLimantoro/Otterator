@@ -25,20 +25,19 @@ struct RecordingView: View {
             VStack{
                 List{
                     if (records.isEmpty) {
-                            Text("No recordings found. Start recording now!")
-                        } else {
-                    ForEach(records) { item in
-                        CustomListTile(item:item)
-                    }
+                        Text("No recordings found. Start recording now!")
+                    } else {
+                        ForEach(records) { item in
+                            CustomListTile(item:item)
                         }
+                    }
                 }
                 .background(Color.oBackground)
                 .listStyle(.inset)
                 Spacer()
                 //Recording button
                 Button{
-                    showModal.toggle()
-                    audioRecorder.startRecording()
+                    showModal = audioRecorder.checkPermissions()
                 } label: {
                     ZStack{
                         Circle()
@@ -74,13 +73,8 @@ struct RecordingView: View {
                 .presentationDetents([.medium])
                 .presentationDragIndicator(.visible)
         }
-    }
-    
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(records[index])
-            }
+        .alert(isPresented: $audioRecorder.showAlert) {
+            Alert(title: Text("Permission"), message: Text(audioRecorder.alertMessage), dismissButton: .default(Text("OK")))
         }
     }
 }

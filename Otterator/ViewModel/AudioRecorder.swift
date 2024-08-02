@@ -18,10 +18,14 @@ class AudioRecorder: NSObject, AVAudioPlayerDelegate {
     var resultRecognition: SFSpeechRecognitionResult!
     var audioPlayer: AVAudioPlayer?
     var modelContext: ModelContext
+    var micPermissionGranted = false
+    var speechPermissionGranted = false
     
     var recording = false
     var recognizedText: String = ""
     var recordingTime: TimeInterval = 0
+    var showAlert = false
+    var alertMessage = ""
     
     let settings = [
         AVFormatIDKey: Int(kAudioFormatMPEG4AAC),
@@ -71,12 +75,21 @@ class AudioRecorder: NSObject, AVAudioPlayerDelegate {
     }
     
     func playRecording(name: String) {
+        let session = AVAudioSession.sharedInstance()
+        
+        do {
+            try session.setCategory(.playAndRecord, mode: .default, options: [.allowBluetoothA2DP, .allowBluetooth, .defaultToSpeaker])
+            try session.setActive(true, options: .notifyOthersOnDeactivation)
+        } catch {
+            debugPrint("error: \(error.localizedDescription)")
+        }
+        
         let url = getDocumentsDirectory().appendingPathComponent(name)
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
             audioPlayer?.delegate = self
-            audioPlayer?.volume = 0.5
+            audioPlayer?.volume = 1
             audioPlayer?.prepareToPlay()
             audioPlayer?.play()
         } catch {
@@ -99,4 +112,42 @@ class AudioRecorder: NSObject, AVAudioPlayerDelegate {
         timer?.invalidate()
         timer = nil
     }
+    
+    func checkPermissions() -> Bool {
+        Task {
+            await checkMicrophonePermission()
+            checkSpeechRecognitionPermission()
+        }
+        if self.micPermissionGranted && self.speechPermissionGranted {
+            return true
+        } else {
+            self.alertMessage = "Microphone and speech permissions are not granted. Please check the settings."
+            self.showAlert = true
+            return false
+        }
+    }
+    
+    func checkMicrophonePermission() async {
+        if await AVAudioApplication.requestRecordPermission() {
+            self.micPermissionGranted = true
+        } else {
+            self.micPermissionGranted = false
+        }
+    }
+    
+    func checkSpeechRecognitionPermission() {
+        SFSpeechRecognizer.requestAuthorization { authStatus in
+            DispatchQueue.main.async {
+                switch authStatus {
+                case .authorized:
+                    self.speechPermissionGranted = true
+                case .denied, .restricted, .notDetermined:
+                    self.speechPermissionGranted = false
+                @unknown default:
+                    fatalError("Status otorisasi tidak dikenal.")
+                }
+            }
+        }
+    }
+    
 }
