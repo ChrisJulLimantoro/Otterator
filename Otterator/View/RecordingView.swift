@@ -23,17 +23,25 @@ struct RecordingView: View {
     var body: some View {
         NavigationStack{
             VStack{
-                List{
-                    if (records.isEmpty) {
-                        Text("No recordings found. Start recording now!")
-                    } else {
+                if (records.isEmpty) {
+                    VStack{
+                        Spacer()
+                        Text("Hit the record button!")
+                            .playpenSans(.regular,24,.title3)
+                        Image("empty_otter")
+                            .resizable()
+                            .frame(width:300, height: 200)
+                            .padding(.bottom, 25)
+                    }
+                } else {
+                    List{
                         ForEach(records) { item in
                             CustomListTile(item:item)
                         }
                     }
+                    .background(Color.oBackground)
+                    .listStyle(.inset)
                 }
-                .background(Color.oBackground)
-                .listStyle(.inset)
                 Spacer()
                 //Recording button
                 Button{
@@ -56,11 +64,6 @@ struct RecordingView: View {
             .scrollContentBackground(.hidden)
             .background(Color.oBackground)
             .navigationTitle("All Recordings")
-            .toolbar{
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    EditButton()
-                }
-            }
             .toolbarBackground(Color.oBackground, for: .navigationBar)
             .searchable(text: $searchText)
         }
