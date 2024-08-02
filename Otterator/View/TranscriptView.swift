@@ -34,34 +34,9 @@ struct TranscriptView: View {
                     TranscriptContentView(viewModel: viewModel)
                 }
             }
-            .navigationTitle("Recording 001")
+            .navigationTitle(viewModel.record.title)
             .navigationBarTitleDisplayMode(.inline)
             .background(Color.oBackground)
-            .toolbar{
-                ToolbarItem(placement: .confirmationAction){
-                    Menu {
-                        Button(action: {
-                            
-                        }){
-                            Label("Rename File", systemImage: "square.and.pencil")
-                        }
-                        Button(action: {
-                            // Action for the edit
-                            print(viewModel.text.map{$0.corrected_word})
-                        }) {
-                            Label("Edit Content", systemImage: "pencil")
-                        }
-                        Button(action: {
-                            isPresented[2] = true
-                        }) {
-                            Label("Information", systemImage: "i.circle")
-                        }
-                    } label: {
-                        Image(systemName: "ellipsis.circle")
-                            .imageScale(.large)
-                    }
-                }
-            }
             .sheet(isPresented:$isPresented[2]){
                 InformationModalView()
                     .presentationDetents([.large])

@@ -47,7 +47,10 @@ struct EditModalView: View {
                     }
                 }
             }
-            .navigationTitle("Edit Text")
+            .navigationTitle(
+                Text("Edit Text")
+                    .playpenSans(.bold,17,.title)
+            )
             .navigationBarTitleDisplayMode(.inline)
         }
 
